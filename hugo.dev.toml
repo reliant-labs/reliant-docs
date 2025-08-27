@@ -1,0 +1,104 @@
+baseURL = ''
+languageCode = 'en-us'
+title = 'Reliant AI Docs (Dev)'
+theme = 'lotusdocs'
+
+# Enable Hugo modules
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.100.0"
+  [[module.imports]]
+    path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+    disable = false
+
+# Site parameters
+[params]
+  # Enable search functionality
+  search = true
+
+  # Custom CSS for landing page
+  custom_css = ["css/landing.css"]
+
+  # Site description
+  description = "Documentation for Reliant AI Chat - A powerful AI chat application"
+
+  # GitHub repository
+  github_repo = "https://github.com/reliant-labs/reliant-docs"
+
+  # Enable edit page links
+  edit_page = true
+
+  # Enable "last modified" dates
+  show_lastmod = true
+
+  # Enable table of contents
+  toc = true
+
+  # Enable breadcrumbs
+  breadcrumbs = true
+
+  # Enable sidebar navigation
+  sidebar_menu_compact = false
+
+  # Enable dark mode toggle
+  ui_options = ["dark-mode-toggle"]
+
+  # Lotus Docs specific settings
+  [params.docs]
+    title = "Reliant AI Docs"
+    pathName = "docs"  # This tells Lotus Docs to look in content/docs/
+    darkMode = true
+    prism = true
+    prismTheme = "lotusdocs"
+    repoURL = "https://github.com/reliant-labs/reliant-docs"
+    editPage = true
+    lastMod = true
+    lastModRelative = true
+    sidebarIcons = true
+    breadcrumbs = true
+    backToTop = true
+    toc = true
+    tocMobile = true
+    scrollSpy = true
+
+# Menu configuration for Lotus Docs
+[menu]
+  [[menu.primary]]
+    name = "Docs"
+    url = "docs/"
+    identifier = "docs"
+    weight = 10
+
+# Output formats
+[outputFormats]
+  [outputFormats.PRINT]
+    baseName = "index"
+    isHTML = true
+    mediaType = "text/html"
+    path = "_print"
+    permalinkable = false
+
+# Markup configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style = "github"
+
+# Build configuration
+[build]
+  # Don't fail on warnings
+  noTimes = true
+
+# Logging configuration
+[log]
+  # Set log level to warn to reduce noise
+  level = "warn"
+
+# Server configuration
+[server]
+  # Continue serving despite errors
+  disableFastRender = true

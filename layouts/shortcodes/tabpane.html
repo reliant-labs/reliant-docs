@@ -1,0 +1,4 @@
+{{ $id := .Get "id" | default (printf "tabpane-%d" now.Unix) }}
+<div class="tab-pane" id="{{ $id }}">
+  {{ .Inner }}
+</div>
