@@ -1,6 +1,6 @@
 baseURL = ''
 languageCode = 'en-us'
-title = 'Reliant AI Chat Documentation (Dev)'
+title = 'Reliant AI Docs (Dev)'
 theme = 'lotusdocs'
 
 # Enable Hugo modules
@@ -46,7 +46,7 @@ theme = 'lotusdocs'
 
   # Lotus Docs specific settings
   [params.docs]
-    title = "Reliant AI Chat Documentation"
+    title = "Reliant AI Docs"
     pathName = "docs"  # This tells Lotus Docs to look in content/docs/
     darkMode = true
     prism = true

@@ -13,6 +13,8 @@
     <meta name="Version" content="v1.0.0" />
     <!-- favicon -->
     {{ block "head/favicon" . }}{{ partialCached "head/favicon.html" . }}{{ end }}
+    <!-- Custom icons for Reliant Labs -->
+    {{ partial "head/custom-icons.html" . }}
     <!-- Google Fonts -->
     {{- partial "google-fonts" . }}
     <!-- Custom CSS -->

@@ -14,6 +14,9 @@ help:
 	@echo "  make preview     - Build + serve production locally"
 	@echo "  make test-build  - Quick production build test"
 	@echo "  make pr-check    - Full PR build check (CI simulation)"
+	@echo ""
+	@echo "Assets:"
+	@echo "  make icons       - Generate favicon and icons from logo"
 
 # Development server (uses hugo.dev.toml)
 dev:
@@ -99,3 +102,8 @@ pr-check:
 	@if [ ! -f "public/docs/index.html" ]; then echo "❌ Error: Docs index not generated"; exit 1; fi
 	@echo "✅ All build artifacts verified!"
 	@echo "🎉 PR build check passed!"
+
+# Generate icons from logo
+icons:
+	@echo "🎨 Generating icons from logo..."
+	@./tools/generate-icons.sh
