@@ -10,9 +10,8 @@ help:
 	@echo "  make install     - Install Hugo if not present"
 	@echo "  make help        - Show this help message"
 	@echo ""
-	@echo "PR Preview Testing:"
+	@echo "Testing:"
 	@echo "  make preview     - Build + serve production locally"
-	@echo "  make preview-pr  - Test PR preview build locally"
 	@echo "  make test-build  - Quick production build test"
 
 # Development server (uses hugo.dev.toml)
@@ -72,15 +71,6 @@ check:
 preview: build
 	@echo "🔍 Starting preview server..."
 	@echo "📖 Production build available at: http://localhost:1313/reliant-docs/"
-	@cd public && python3 -m http.server 1313 --bind 0.0.0.0
-
-# Test PR preview build locally (simulates GitHub Pages preview)
-preview-pr:
-	@echo "🔍 Building PR preview locally..."
-	@echo "📁 This simulates what will be deployed for PR previews"
-	@hugo --config hugo.toml --baseURL "/preview-test/"
-	@echo "✅ PR preview build complete!"
-	@echo "📖 Test at: http://localhost:1313/preview-test/"
 	@cd public && python3 -m http.server 1313 --bind 0.0.0.0
 
 # Quick build test (no server)
