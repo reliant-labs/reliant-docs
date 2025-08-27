@@ -1,6 +1,6 @@
-baseURL = '/reliant-docs/'
+baseURL = ''
 languageCode = 'en-us'
-title = 'Reliant AI Chat Documentation'
+title = 'Reliant AI Chat Documentation (Dev)'
 theme = 'lotusdocs'
 
 # Enable Hugo modules
