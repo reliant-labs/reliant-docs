@@ -1,0 +1,87 @@
+name: PR Build Check
+
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "pr-check-${{ github.head_ref }}"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build Hugo site
+        env:
+          HUGO_ENVIRONMENT: production
+        run: |
+          echo "🔨 Building Hugo site..."
+          hugo --gc --minify --baseURL "/reliant-docs/"
+          echo "✅ Build completed successfully!"
+
+      - name: Check build output
+        run: |
+          echo "📁 Build output contents:"
+          ls -la public/
+          echo ""
+          echo "📄 Generated pages:"
+          find public/ -name "*.html" | head -10
+          echo ""
+          echo "📊 Build statistics:"
+          echo "Total files: $(find public/ -type f | wc -l)"
+          echo "HTML files: $(find public/ -name "*.html" | wc -l)"
+          echo "CSS files: $(find public/ -name "*.css" | wc -l)"
+          echo "JS files: $(find public/ -name "*.js" | wc -l)"
+
+      - name: Test build artifacts
+        run: |
+          echo "🧪 Testing build artifacts..."
+
+          # Check if homepage exists
+          if [ ! -f "public/index.html" ]; then
+            echo "❌ Error: Homepage not generated"
+            exit 1
+          fi
+
+          # Check if docs pages exist
+          if [ ! -f "public/docs/index.html" ]; then
+            echo "❌ Error: Docs index not generated"
+            exit 1
+          fi
+
+          # Check if CSS and JS are generated
+          if [ ! -d "public/css" ] && [ ! -d "public/js" ]; then
+            echo "❌ Error: Assets not generated"
+            exit 1
+          fi
+
+          echo "✅ All build artifacts verified!"
+
+      - name: Show Success
+        run: |
+          echo "🎉 PR build check completed successfully!"
+          echo "✅ Hugo site builds without errors"
+          echo "✅ All required files generated"
+          echo "✅ Ready for review and merge"

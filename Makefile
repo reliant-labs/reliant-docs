@@ -13,6 +13,7 @@ help:
 	@echo "Testing:"
 	@echo "  make preview     - Build + serve production locally"
 	@echo "  make test-build  - Quick production build test"
+	@echo "  make pr-check    - Full PR build check (CI simulation)"
 
 # Development server (uses hugo.dev.toml)
 dev:
@@ -28,7 +29,7 @@ serve:
 	@echo "📖 Site will be available at: http://localhost:1313/reliant-docs/"
 	@echo "📁 Using production configuration (hugo.toml)"
 	@echo "🔄 Press Ctrl+C to stop"
-	@hugo server --bind 0.0.0.0 --port 1313
+	@hugo server --port 1313
 
 # Build for production
 build:
@@ -71,7 +72,7 @@ check:
 preview: build
 	@echo "🔍 Starting preview server..."
 	@echo "📖 Production build available at: http://localhost:1313/reliant-docs/"
-	@cd public && python3 -m http.server 1313 --bind 0.0.0.0
+	@cd public && python3 -m http.server 1313
 
 # Quick build test (no server)
 test-build:
@@ -79,3 +80,22 @@ test-build:
 	@hugo --config hugo.toml
 	@echo "✅ Build test successful!"
 	@echo "📁 Output in: public/"
+
+# PR build check (simulates CI build)
+pr-check:
+	@echo "🔍 Running PR build check..."
+	@echo "📁 This simulates what GitHub Actions will do"
+	@hugo --config hugo.toml --gc --minify --baseURL "/reliant-docs/"
+	@echo "✅ Build completed successfully!"
+	@echo ""
+	@echo "📊 Build statistics:"
+	@echo "Total files: $(find public/ -type f | wc -l)"
+	@echo "HTML files: $(find public/ -name "*.html" | wc -l)"
+	@echo "CSS files: $(find public/ -name "*.css" | wc -l)"
+	@echo "JS files: $(find public/ -name "*.js" | wc -l)"
+	@echo ""
+	@echo "🧪 Verifying build artifacts..."
+	@if [ ! -f "public/index.html" ]; then echo "❌ Error: Homepage not generated"; exit 1; fi
+	@if [ ! -f "public/docs/index.html" ]; then echo "❌ Error: Docs index not generated"; exit 1; fi
+	@echo "✅ All build artifacts verified!"
+	@echo "🎉 PR build check passed!"
