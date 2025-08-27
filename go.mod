@@ -1,4 +1,4 @@
-module github.com/reliant-labs/reliant-docs
+module reliant-docs
 
 go 1.21
 

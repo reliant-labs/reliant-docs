@@ -113,21 +113,24 @@ Edit `hugo.toml` to modify:
 
 ### GitHub Pages
 
-This project is configured for GitHub Pages deployment. The site will automatically build and deploy when you push to the main branch.
+This project uses two separate GitHub Actions workflows for optimal deployment:
 
-#### Automatic Deployment (Recommended)
+#### 1. PR Previews
+- **Automatically triggered** on every pull request
+- **Creates preview deployments** for code review
+- **Does NOT deploy** to the main GitHub Pages site
+- **Perfect for testing changes** before merging
 
-1. **Push your changes** to the main branch:
-   ```bash
-   git add .
-   git commit -m "Update documentation"
-   git push origin main
-   ```
+#### 2. Production Deployment
+- **Automatically triggered** when merging to main branch
+- **Deploys to GitHub Pages** production site
+- **Updates the live site** with your changes
+- **Only runs after** successful merge
 
-2. **GitHub Actions** will automatically:
-   - Build the Hugo site
-   - Deploy to GitHub Pages
-   - Update the live site
+#### Workflow Usage
+
+1. **For PRs**: Create a pull request → Get automatic preview
+2. **For deployment**: Merge to main → Automatic production deployment
 
 #### Manual Deployment
 

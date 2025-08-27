@@ -2,24 +2,26 @@
 
 This guide explains how to deploy your Reliant AI Chat documentation site to GitHub Pages.
 
-## 🚀 Automatic Deployment (Recommended)
+## 🚀 Automatic Deployment
 
-The site is configured to automatically deploy to GitHub Pages using GitHub Actions. Here's how it works:
+This project uses two separate GitHub Actions workflows for optimal deployment:
 
-### 1. Push Changes to Main Branch
+### 1. PR Previews (Automatic)
+- **Triggered** on every pull request
+- **Creates preview deployments** for code review
+- **Does NOT deploy** to main GitHub Pages site
+- **Perfect for testing** changes before merging
 
-```bash
-git add .
-git commit -m "Update documentation"
-git push origin main
-```
+### 2. Production Deployment (Automatic)
+- **Triggered** when merging to main branch
+- **Deploys to GitHub Pages** production site
+- **Updates the live site** with your changes
+- **Only runs after** successful merge
 
-### 2. GitHub Actions Automatically Builds and Deploys
+### Workflow Usage
 
-- **Builds** the Hugo site with production settings
-- **Minifies** CSS and JavaScript for performance
-- **Deploys** to GitHub Pages
-- **Updates** the live site automatically
+1. **For PRs**: Create pull request → Get automatic preview
+2. **For deployment**: Merge to main → Automatic production deployment
 
 ### 3. View Your Live Site
 
@@ -70,7 +72,8 @@ git push origin main
 reliant-docs/
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml          # GitHub Actions workflow
+│       ├── deploy.yml          # Production deployment workflow
+│       └── preview.yml         # PR preview workflow
 ├── content/                    # Documentation content
 ├── layouts/                    # Custom layouts
 ├── static/                     # Static assets
