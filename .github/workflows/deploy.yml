@@ -38,8 +38,6 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-
-
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
@@ -62,3 +60,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Show Preview Link
+        run: |
+          echo "🚀 Deployment successful!"
+          echo "🌐 Your site is now live at: https://reliant-labs.github.io/reliant-docs/"
+          echo "📱 GitHub Pages URL: ${{ steps.deployment.outputs.url }}"
+          echo ""
+          echo "Note: It may take a few minutes for changes to be visible."
