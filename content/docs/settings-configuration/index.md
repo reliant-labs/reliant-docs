@@ -1,195 +1,233 @@
 ---
 title: "Settings & Configuration"
-description: "Customize and configure Reliant for your preferences"
-weight: 40
+description: "Configure API keys, customize preferences, and set up keyboard shortcuts"
+weight: 55
 icon: "settings"
 ---
 
-# Settings & Configuration
+Configure Reliant to work seamlessly with your development workflow. Access settings through the **Settings** icon in the sidebar or press `Cmd+,`.
 
-Customize Reliant to match your development workflow and preferences.
+## API Configuration
 
-## Application Settings
+### Setting Up Your API Key
 
-### General Preferences
+To use Reliant's AI features, you need to configure an API key:
 
-Access settings through the sidebar or use `Cmd/Ctrl + ,`:
+1. Open **Settings** → **API Configuration**
+2. Select your AI provider:
+   - **OpenAI** (GPT-4, GPT-3.5)
+   - **Anthropic** (Claude)
+   - **Azure OpenAI**
+   - **Local Models** (Ollama, LM Studio)
+3. Enter your API key
+4. Click **"Test Connection"** to verify
+5. Click **"Save"**
 
-- **Theme**: Choose between light, dark, or system theme
-- **Language**: Select your preferred interface language
-- **Auto-save**: Enable automatic saving of conversations
-- **Notifications**: Configure system notifications and alerts
+### Multiple API Keys
 
-### Interface Customization
+Configure different keys for different purposes:
+- **Primary Key**: Main API for general use
+- **Backup Key**: Fallback when primary limit reached
+- **Project Keys**: Different keys per project
+- **Model Keys**: Specific keys for certain models
 
-- **Sidebar Position**: Left or right sidebar placement
-- **Panel Layout**: Customize the arrangement of panels and views
-- **Font Size**: Adjust text size for better readability
-- **Compact Mode**: Enable condensed interface for smaller screens
+### API Settings
 
-## AI Configuration
+- **Rate Limiting**: Set max requests per minute
+- **Token Limits**: Configure max tokens per request
+- **Retry Policy**: Auto-retry on failures
+- **Timeout**: Request timeout duration
 
-### Model Settings
+## General Settings
 
-Configure how Reliant's AI behaves:
+### Application Preferences
 
-- **Response Style**: Choose between concise, detailed, or balanced responses
-- **Code Formatting**: Set preferred code style and formatting rules
-- **Context Length**: Adjust how much project context the AI considers
-- **Tool Usage**: Enable or disable specific AI tools and capabilities
+**Language & Region**
+- Interface language
+- Date/time format
+- Number format
+- Currency display
 
-### Personalization
+**Startup & Updates**
+- Launch at system startup
+- Auto-check for updates
+- Update channel (stable/beta)
+- Show welcome screen
 
-- **Learning Preferences**: Help Reliant understand your coding style
-- **Common Patterns**: Set frequently used code patterns and preferences
-- **Language Focus**: Prioritize specific programming languages or frameworks
-- **Code Standards**: Define your preferred coding standards and conventions
+**File Handling**
+- Default file encoding
+- Line ending preference
+- Auto-save interval
+- Backup frequency
 
-## Project Settings
+### Privacy & Security
 
-### Default Project Configuration
+**Data Privacy**
+- All data stored locally on your Mac
+- No cloud storage or external servers
+- Clear conversation history
+- Export your data anytime
 
-Set up how Reliant handles new projects:
+**Security**
+- Secure API key storage in macOS Keychain
+- Encrypted local storage
+- File system permissions
+- Application sandboxing
 
-- **Auto-index**: Automatically scan and index new projects
-- **Git Integration**: Enable Git features by default
-- **File Types**: Specify which file types to include or exclude
-- **Ignore Patterns**: Set patterns for files to ignore during indexing
+## Keyboard Shortcuts
 
-### Project-Specific Settings
+### Customizing Shortcuts
 
-Each project can have its own configuration:
+1. Go to **Settings** → **Keyboard Shortcuts**
+2. Search or browse for commands
+3. Click on a shortcut to edit
+4. Press new key combination
+5. Click **"Save"**
 
-- **Indexing Rules**: Customize what gets indexed for each project
-- **AI Context**: Set project-specific AI behavior and preferences
-- **Tool Access**: Control which tools the AI can use in specific projects
-- **Security**: Set access restrictions for sensitive projects
+### Default Shortcuts
 
-## Backend Configuration
+**Essential**
+| Action | Shortcut |
+|--------|----------|
+| Settings | `Cmd+,` |
+| New Chat | `Cmd+N` |
+| New Window | `Cmd+Shift+N` |
+| Search | `Cmd+P` |
+| Advanced Search | `Cmd+Shift+F` |
 
-### Local Backend Settings
+**Tab Management**
+| Action | Shortcut |
+|--------|----------|
+| Close Tab | `Cmd+W` |
+| Close All Tabs | `Cmd+Shift+W` |
+| Reopen Last Tab | `Cmd+Shift+T` |
+| Next Tab | `Cmd+Shift+]` |
+| Previous Tab | `Cmd+Shift+[` |
 
-Configure the local Go backend:
+**Interface**
+| Action | Shortcut |
+|--------|----------|
+| Toggle Sidebar | `Cmd+B` |
+| Search in Chat | `Cmd+F` |
+| Stop AI Response | `Esc` |
 
-- **Port Configuration**: Set preferred ports for backend services
-- **Resource Limits**: Adjust memory and CPU usage limits
-- **Logging**: Configure log levels and output destinations
-- **Performance**: Tune backend performance settings
+### Creating Custom Shortcuts
 
-### Connection Settings
+1. Identify unused key combinations
+2. Assign to frequently used actions
+3. Export shortcuts for backup
+4. Share with team members
 
-- **WebSocket Configuration**: Adjust real-time communication settings
-- **Timeout Values**: Set connection and request timeouts
-- **Retry Logic**: Configure retry behavior for failed connections
-- **Fallback Options**: Set up fallback mechanisms for connection issues
 
-## Security & Privacy
+## Notification Settings
 
-### Access Control
+### System Notifications
 
-- **File Permissions**: Control which files and directories Reliant can access
-- **Network Access**: Limit network connections and external access
-- **Tool Restrictions**: Disable specific tools that may have security implications
-- **Data Handling**: Configure how Reliant processes and stores your data
+Configure when to receive notifications:
+- **Task Completion**: Long-running tasks finish
+- **Errors**: When operations fail
+- **Updates**: New version available
+- **Reminders**: Scheduled task reminders
 
-### Privacy Settings
+### In-App Notifications
 
-- **Data Collection**: Control what information is collected and stored
-- **Analytics**: Enable or disable usage analytics and telemetry
-- **Sharing**: Control whether conversations can be shared or exported
-- **Local Storage**: Manage local data storage and cleanup
+- **Toast Position**: Top-right, bottom-right, etc.
+- **Duration**: How long to show
+- **Sound**: Enable notification sounds
+- **Badge Count**: Show unread count
 
-## Performance Tuning
+## Advanced Options
 
-### Resource Management
+### Developer Settings
 
-Optimize Reliant's performance:
+**Debug Mode**
+- Enable verbose logging
+- Show performance metrics
+- Display network requests
+- Console output
 
-- **Memory Usage**: Adjust memory allocation and garbage collection
-- **CPU Priority**: Set process priority and threading options
-- **Disk I/O**: Configure file system access patterns
-- **Background Tasks**: Manage background processing and indexing
+**Experimental Features**
+- Beta features opt-in
+- A/B testing participation
+- Early access programs
+- Feature flags
 
-### Caching
+### Data Management
 
-- **Response Cache**: Cache AI responses for faster repeated queries
-- **Project Index**: Optimize project indexing and search performance
-- **File Cache**: Cache frequently accessed files and content
-- **Model Cache**: Cache AI models and configurations
+**Import/Export**
+- Export all settings
+- Import from file
+- Sync via cloud
+- Version control integration
 
-## Advanced Configuration
+**Reset Options**
+- Reset specific settings
+- Clear all preferences
+- Factory reset
+- Backup before reset
 
-### Environment Variables
+## Backup & Restore
 
-Set environment variables for advanced configuration:
+### Export Settings
 
-```bash
-# Backend port configuration
-RELIANT_BACKEND_PORT=8080
+Save your configuration for backup:
+1. Go to **Settings** → **Backup**
+2. Click **"Export Settings"**
+3. Choose location to save
+4. Settings exported as JSON file
 
-# Log level settings
-RELIANT_LOG_LEVEL=info
+### Import Settings
 
-# Performance tuning
-RELIANT_MAX_MEMORY=4GB
-RELIANT_WORKER_THREADS=4
-```
+Restore from a backup:
+1. Go to **Settings** → **Backup**
+2. Click **"Import Settings"**
+3. Select your backup file
+4. Choose import options:
+   - **Merge**: Combine with existing settings
+   - **Replace**: Overwrite current settings
 
-### Configuration Files
+## Performance Settings
 
-Advanced users can create configuration files:
+### Resource Usage
 
-- **Backend Config**: YAML or JSON configuration for backend services
-- **AI Models**: Custom model configurations and parameters
-- **Tool Settings**: Detailed tool configuration and permissions
-- **Integration Config**: Third-party service integrations
+Optimize for your system:
+- **Memory Limit**: Max RAM usage
+- **CPU Threads**: Parallel processing
+- **Cache Size**: Local cache limit
+- **Index Size**: Search index limit
 
-## Troubleshooting Configuration
+### Background Tasks
+
+- **Auto-indexing**: Enable/disable
+- **Scheduled Tasks**: Configure timing
+- **Priority**: Background task priority
+- **Throttling**: Limit resource usage
+
+## Troubleshooting Settings
 
 ### Common Issues
 
-**Settings not saving**
-- Check file permissions in the configuration directory
-- Verify the configuration file is not read-only
-- Restart Reliant after making changes
+**API Key Not Working**
+1. Verify key is correct
+2. Check provider status
+3. Confirm billing is active
+4. Test with curl command
 
-**Configuration conflicts**
-- Check for multiple configuration files
-- Verify environment variable precedence
-- Clear configuration cache if needed
+**Shortcuts Not Responding**
+1. Check for conflicts
+2. Restart application
+3. Reset to defaults
+4. Verify system permissions
 
-**Performance problems**
-- Review resource allocation settings
-- Check logging for error messages
-- Monitor system resource usage
+**Settings Not Saving**
+1. Check write permissions
+2. Clear settings cache
+3. Try different location
+4. Contact support
 
-### Reset to Defaults
+### Settings Location
 
-If you need to reset your configuration:
-
-1. **Close Reliant** completely
-2. **Delete configuration files** from the config directory
-3. **Restart Reliant** to generate fresh defaults
-4. **Reconfigure** your preferred settings
-
-## Export & Import
-
-### Configuration Backup
-
-- **Export Settings**: Save your current configuration to a file
-- **Import Settings**: Restore configuration from a backup file
-- **Sync Across Devices**: Share configuration between multiple installations
-- **Version Control**: Track configuration changes over time
-
-### Migration
-
-When upgrading Reliant:
-
-- **Backup Configuration**: Export your current settings
-- **Upgrade Application**: Install the new version
-- **Import Settings**: Restore your configuration
-- **Verify Compatibility**: Check that all settings work correctly
-
----
-
-**Next**: [Troubleshooting]({{< relref "troubleshooting" >}}) - Learn how to solve common issues and get help when needed.
+Settings are stored locally on your Mac:
+- **Configuration**: `~/Library/Application Support/Reliant/`
+- **Cache**: `~/Library/Caches/Reliant/`
+- **Logs**: `~/Library/Logs/Reliant/`

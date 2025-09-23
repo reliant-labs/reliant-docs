@@ -5,145 +5,196 @@ weight: 20
 icon: "play_arrow"
 ---
 
-# Getting Started with Reliant
-
-Welcome to Reliant! This guide will help you get up and running with your AI-powered coding assistant.
+Welcome to Reliant! This guide will help you set up and start using your AI-powered coding assistant in just a few minutes.
 
 ## First Launch
 
-### Launching Reliant
+### Starting Reliant
 
-1. **Find Reliant** in your Applications folder
-2. **Double-click to launch** the application
-3. **Wait for initialization** - Reliant will start its local backend services
-4. **Grant permissions** if prompted by your operating system
+1. **Open Reliant** from your Applications folder
+2. **Wait for initialization**
+3. **Welcome screen** appears when ready
 
-### What Happens During Launch
+### What's Happening Behind the Scenes
 
-When you first launch Reliant, the application:
+When Reliant starts:
+- Local Go backend launches on an available port
+- Electron app connects to the backend
+- WebSocket connection established for real-time chat
+- Everything runs locally on your Mac
 
-1. **Starts the local backend** - A Go-based server that handles AI processing
-2. **Initializes the web interface** - The React-based frontend loads
-3. **Establishes connection** - Frontend connects to the local backend
-4. **Loads AI models** - Prepares the AI assistant for use
+## Essential Setup
 
-**Note**: The first launch may take longer as Reliant sets up its environment and loads necessary components.
+### Step 1: Configure Your API Key
 
-## Initial Setup
+Before you can use AI features, you need an API key:
 
-### First-Time Configuration
+1. Click **Settings** in the sidebar (or press `Cmd+,`)
+2. Go to **API Configuration**
+3. Select your provider:
+   - **OpenAI** - GPT-4, GPT-3.5 ([Get API Key](https://platform.openai.com/api-keys))
+   - **Anthropic** - Claude models ([Get API Key](https://console.anthropic.com/))
+   - **Local Models** - Ollama, LM Studio
+4. Enter your API key
+5. Click **"Test Connection"**
+6. Click **"+ Add Provider"** when successful
 
-On your first launch, Reliant may ask for:
+### Step 2: Open or Create a Project
 
-- **File system permissions** - To access your projects and code
-- **Network permissions** - For local communication between components
-- **System integration** - To work with your development tools
+**Option A: Open Existing Project**
+1. Click **"Open Existing Project"** in the menu
+2. Navigate to your project folder
+3. Select the folder containing your code
+4. Reliant indexes your code (takes a few seconds)
 
-### Backend Connection
+**Option B: Create New Project**
+1. Click **"Create New Project"** if starting fresh
+2. Give your project a name
+3. Click **"Select Folder"** and choose where to create it
+4. Click **"Create"**
+5. Reliant sets up and indexes the project
 
-Reliant automatically:
-- Finds available ports for backend services
-- Configures the web interface to connect to the correct backend
-- Establishes WebSocket connections for real-time communication
-- Handles any port conflicts automatically
+### Step 3: Start Your First Chat
+
+1. With your project selected, click in the chat input
+2. Try one of these starter prompts:
+   - "Explain the structure of this project"
+   - "What does the main file do?"
+   - "How can I run this project?"
+3. Press `Enter` to send
+4. Watch as Reliant analyzes and responds
 
 ## Understanding the Interface
 
-### Main Components
+### Main Areas
 
-### 🗂️ Sidebar
-- **Chats**: Access your conversation history
-- **Projects**: Manage your development projects
-- **Worktrees**: Navigate Git worktrees
-- **Settings**: Configure the application
+**Navigation Bar (Far Left)**
+- **Chats**: Your AI conversations
+- **Worktrees**: Git branch management
+- **Agents**: Specialized AI assistants
+- **Flows**: Automated workflows
+- **Settings**: Configuration
 
-### 💬 Chat Interface
-- **Message Input**: Type your questions and requests
-- **Conversation History**: View ongoing discussions
-- **AI Responses**: See AI-generated code and explanations
-- **Tool Results**: View results from AI tool executions
+**Sidebar (Context Panel)**
+- Shows content based on selected navigation item
+- In Chats: List of all conversations
+- Search and filter capabilities
+- Quick actions
 
-### 🔧 Project Panel
-- **File Browser**: Navigate your project structure
-- **Code Context**: AI understands your codebase
-- **Git Integration**: Work with version control
+**Chat Area (Center)**
+- Message input at bottom
+- Conversation history above
 
-### Navigation
+### Key Features
 
-- **Tabs**: Switch between different views and conversations
-- **Breadcrumbs**: Navigate through project structure
-- **Search**: Find files and content quickly
-- **Keyboard Shortcuts**: Use `Cmd/Ctrl + K` for quick actions
+**Chat Interface**
+- Type naturally - no special syntax needed
+- Use the paperclip icon or drag files into the chat box to attach them.
+- Stop generation with `Esc` key or by clicking `Stop`
 
-## Your First Chat
+**Code Handling**
+- Automatic syntax highlighting
+- One-click copy for code blocks
+- Direct file editing from chat
+- Git-aware operations
 
-### Starting a Conversation
+## Common First Tasks
 
-1. **Click "New Chat"** in the sidebar or use the chat input area
-2. **Type your question** about your code or development task
-3. **Press Enter** to send your message
-4. **Wait for the AI response** - Reliant will process your request
+### Understanding Your Code
 
-### Example First Questions
+Ask Reliant to explain your project:
+```
+"Give me an overview of this codebase"
+"What are the main components?"
+"How is the project structured?"
+```
 
-Try asking Reliant:
+### Getting Help with Code
 
-- "What does this function do?"
-- "How can I improve this code?"
-- "Explain this error message"
-- "Help me refactor this method"
-- "What are the best practices for this pattern?"
+Get assistance with specific files:
+```
+"Explain what this function does" (with file attached)
+"How can I improve this code?"
+"Are there any bugs in this file?"
+```
 
-### Understanding AI Responses
+### Writing New Code
 
-Reliant's responses include:
-- **Code explanations** with detailed comments
-- **Suggestions** for improvements and alternatives
-- **Tool executions** when needed (file operations, code analysis)
-- **Context-aware** recommendations based on your project
+Generate code with context:
+```
+"Create a new component that does X"
+"Write a test for this function"
+"Add error handling to this method"
+```
 
-## Project Integration
+### Debugging
 
-### Opening Your First Project
+Get help fixing issues:
+```
+"Why is this throwing an error?" (paste error)
+"Help me debug this function"
+"What's causing this bug?"
+```
 
-1. **Click "Open Project"** in the sidebar
-2. **Navigate to your project folder** and select it
-3. **Wait for indexing** - Reliant analyzes your codebase
-4. **Start coding** with AI assistance
+## Quick Tips
 
-### What Reliant Learns
+### Effective Prompting
 
-When you open a project, Reliant:
-- **Scans your codebase** for structure and patterns
-- **Understands dependencies** and imports
-- **Recognizes frameworks** and libraries
-- **Builds context** for better AI responses
+✅ **Do:**
+- Be specific about what you want
+- Provide context and examples
+- Attach relevant files
+- Ask follow-up questions
 
-## Basic Workflow
+❌ **Don't:**
+- Use vague descriptions
+- Assume Reliant knows unstated requirements
+- Forget to review generated code
+- Skip testing suggestions
 
-### Typical Development Session
+### Keyboard Shortcuts
 
-1. **Open Reliant** and your project
-2. **Ask questions** about your code as you work
-3. **Get AI assistance** for debugging and improvements
-4. **Save and test** your changes
-5. **Continue the conversation** for ongoing development
+Essential shortcuts to remember:
+
+| Action | Shortcut |
+|--------|----------|
+| New Chat | `Cmd+N` |
+| Settings | `Cmd+,` |
+| Search | `Cmd+P` |
+| Search in Chat | `Cmd+F` |
+| Stop AI Response | `Esc` |
+| Send Message | `Enter` |
+| New Line in Input | `Shift+Enter` |
 
 ### Best Practices
 
-- **Be specific** in your questions for better responses
-- **Provide context** about what you're trying to achieve
-- **Use the project panel** to help Reliant understand your code
-- **Review AI suggestions** before implementing them
+1. **Start Simple**: Begin with basic questions before complex tasks
+2. **Iterate**: Refine responses with follow-up questions
+3. **Review Carefully**: Always review AI-generated code
+4. **Use Projects**: Keep code organized in projects
 
-## Next Steps
+## What's Next?
 
-Now that you're familiar with the basics:
+### Explore Features
 
-1. **[Using the App]({{< relref "using-the-app" >}})** - Learn advanced features and workflows
-2. **[Settings & Configuration]({{< relref "settings-configuration" >}})** - Customize your experience
-3. **[Troubleshooting]({{< relref "troubleshooting" >}})** - Solve common issues
+- **[Chat Interface]({{< relref "chat-interface" >}})** - Master the chat
+- **[Worktrees]({{< relref "worktrees" >}})** - Work on multiple branches
+- **[Agents]({{< relref "agents" >}})** - Use specialized assistants
+- **[Flows]({{< relref "flows" >}})** - Automate workflows
+
+### Customize Your Experience
+
+- **[Settings]({{< relref "settings-configuration" >}})** - Configure preferences
+- **[Appearance]({{< relref "appearance" >}})** - Choose your theme
+- **[Prompts]({{< relref "prompts" >}})** - Create templates
+
+### Get Help
+
+- **[Troubleshooting]({{< relref "troubleshooting" >}})** - Solve issues
+- **[FAQ]({{< relref "faq" >}})** - Common questions
+- **GitHub Issues** - Report bugs
+- **Support** - support@reliantlabs.com
 
 ---
 
-**Tip**: Don't hesitate to experiment! Reliant is designed to help you learn and improve your coding skills through interactive AI assistance.
+**Ready to code?** Open a project and start chatting with Reliant. The more you use it, the more you'll discover how it can accelerate your development workflow.

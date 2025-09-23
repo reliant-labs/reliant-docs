@@ -1,241 +1,231 @@
 ---
 title: "Legal & License"
 description: "Licensing terms, disclaimers, and legal information"
-weight: 70
+weight: 80
 icon: "gavel"
 ---
-
-# Legal & License
 
 Important legal information about using Reliant.
 
 ## License
 
-### MIT License
+### Proprietary Software
 
-Reliant is released under the MIT License, a permissive open-source license that allows you to:
-
-- Use the software for any purpose
-- Modify the software
-- Distribute the software
-- Use it commercially
-- Use it privately
-
-### License Terms
+Reliant is proprietary software owned by Reliant Labs:
 
 ```
-MIT License
+Copyright (c) 2025 Reliant Labs
 
-Copyright (c) 2024 Reliant Labs
+All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+This software and associated documentation files are proprietary and confidential.
+No part of this software may be reproduced, distributed, or transmitted in any form
+or by any means without the prior written permission of the copyright holder.
 ```
 
-## Third-Party Components
+### What This Means
 
-### Open Source Dependencies
+- **Reliant is not open source** - The source code is proprietary
+- **Usage is granted** through the application license
+- **Distribution requires permission** from Reliant Labs
+- **Commercial use** is subject to license terms
 
-Reliant includes several open-source components:
+## Terms of Use
 
-- **Electron**: Desktop application framework (Apache 2.0)
-- **React**: User interface library (MIT)
-- **Go**: Backend programming language (BSD 3-Clause)
-- **Various libraries**: See package.json and go.mod for complete lists
+### Permitted Use
 
-### Attribution Requirements
+By using Reliant, you are granted permission to:
+- Install and run Reliant on your personal Mac
+- Use Reliant for personal and commercial software development
+- Create and save projects, chats, and configurations
+- Export your data for backup purposes
 
-When using Reliant, you must:
+### Restrictions
 
-- Include the MIT license text
-- Maintain copyright notices
-- Acknowledge Reliant Labs as the original author
-- Include this legal documentation
+You may NOT:
+- Reverse engineer or decompile the software
+- Distribute or share the application without permission
+- Remove or alter copyright notices
+- Use Reliant for illegal or malicious purposes
+- Attempt to bypass license restrictions
 
-## Privacy & Data
+## Privacy Policy
 
-### Data Collection
+### Your Privacy Matters
 
-Reliant operates with a privacy-first approach:
+Reliant is designed with privacy as a core principle:
 
-- **No personal data collection** by default
-- **Local processing** of all AI requests
-- **Optional analytics** (can be disabled)
-- **No code or conversations** sent to external servers
+**Local Processing**
+- All processing happens on your Mac
+- Your code never leaves your machine
+- No cloud servers or external storage
+- Complete control over your data
 
-### User Data
+**No Data Collection**
+- We don't collect personal information
+- No usage analytics or telemetry
+- No tracking or profiling
+- No selling of user data
 
-Your data remains under your control:
+**API Providers**
+- You choose your AI provider (OpenAI, Anthropic, etc.)
+- API calls go directly to your chosen provider
+- We don't intercept or store API communications
+- Review your provider's privacy policy
 
-- **Local storage** on your machine
-- **Export capabilities** for your conversations
-- **Deletion options** for all stored data
-- **No cloud synchronization** unless explicitly configured
+### Data Storage
 
-### Third-Party Services
-
-Reliant may interact with:
-
-- **AI model providers** for model downloads
-- **Update servers** for application updates
-- **Analytics services** (if enabled by user)
-
-All interactions are clearly documented and can be controlled by the user.
+All data is stored locally:
+- **Location**: `~/Library/Application Support/Reliant/`
+- **What's Stored**: Projects, chats, settings, preferences
+- **Security**: Protected by macOS file permissions
+- **Deletion**: You can delete all data anytime
 
 ## Disclaimers
 
-### Software Warranty
+### No Warranty
 
-**THE SOFTWARE IS PROVIDED "AS IS"** without warranty of any kind:
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND:
 
-- No guarantee of fitness for any purpose
-- No warranty of merchantability
+- No guarantee of fitness for any particular purpose
+- No warranty of merchantability or quality
 - No assurance of error-free operation
-- No guarantee of compatibility with other software
+- No guarantee of compatibility with all systems
 
-### Use at Your Own Risk
+### Limitation of Liability
 
-By using Reliant, you acknowledge:
-
-- **No liability** for data loss or corruption
-- **No responsibility** for security breaches
-- **No guarantee** of system compatibility
-- **No assurance** of continued availability
+IN NO EVENT SHALL RELIANT LABS BE LIABLE FOR:
+- Any direct, indirect, or consequential damages
+- Loss of data, profits, or business interruption
+- Any damages arising from use or inability to use the software
+- Any claim by third parties
 
 ### AI-Generated Content
 
-Important disclaimers about AI features:
+**IMPORTANT**: AI-generated content requires human review:
 
-- **Review all AI output** before use
-- **Verify accuracy** of AI-generated code
-- **Test thoroughly** before production use
-- **No guarantee** of AI response quality
-- **Human oversight** is always recommended
+- **Not Legal Advice**: AI responses are not professional advice
+- **Verify Accuracy**: Always verify AI-generated code
+- **Test Thoroughly**: Test all code before production use
+- **Your Responsibility**: You are responsible for code you use
+- **No Guarantees**: We don't guarantee AI response quality
+
+## Third-Party Components
+
+### Open Source Libraries
+
+Reliant uses open source libraries under their respective licenses:
+
+- **Electron** - MIT License
+- **React** - MIT License
+- **Go Standard Library** - BSD License
+- Various npm packages - See package.json
+
+These components retain their original licenses.
+
+### AI Providers
+
+When using AI features:
+- You must comply with your AI provider's terms
+- API usage is subject to provider's pricing
+- Provider's privacy policy applies to API calls
+- We're not responsible for provider's service
 
 ## Intellectual Property
 
 ### Copyright
 
-- **Reliant Labs** owns the copyright to Reliant
-- **Contributors** retain rights to their contributions
-- **Users** own their code and conversations
-- **Third-party components** retain their original licenses
+- **Reliant Software**: © 2025 Reliant Labs, All Rights Reserved
+- **Your Code**: You retain all rights to your code
+- **Your Content**: You own all content you create
+- **Documentation**: © 2025 Reliant Labs
 
 ### Trademarks
 
-- **Reliant** is a trademark of Reliant Labs
-- **Third-party trademarks** belong to their respective owners
-- **No endorsement** implied by third-party mentions
-
-### Patents
-
-- Reliant Labs may hold patents related to the software
-- **No patent license** is granted beyond the MIT license
-- **Patent disputes** should be resolved separately from copyright
+- "Reliant" is a trademark of Reliant Labs
+- Mac, macOS are trademarks of Apple Inc.
+- Other trademarks belong to respective owners
 
 ## Compliance
 
 ### Export Control
 
-Reliant may be subject to export control regulations:
+This software may be subject to export regulations:
+- Comply with all applicable export laws
+- Don't export to prohibited countries
+- Check local laws before distribution
 
-- **Check local laws** before international distribution
-- **Comply with sanctions** and embargoes
-- **Verify licensing** for restricted jurisdictions
-- **Contact legal counsel** for compliance questions
+### Age Requirement
 
-### Regulatory Compliance
+You must be:
+- At least 13 years old to use Reliant
+- Or have parental consent if required by law
 
-Reliant is designed to comply with:
+## Updates to Terms
 
-- **GDPR** (General Data Protection Regulation)
-- **CCPA** (California Consumer Privacy Act)
-- **Local privacy laws** in your jurisdiction
-- **Industry standards** for software security
+### Changes
 
-## Support & Liability
+We may update these terms:
+- Check periodically for updates
+- Continued use means acceptance
+- Major changes will be announced
+- Previous versions available on request
 
-### Support Services
+### Effective Date
 
-Reliant Labs provides:
-
-- **Community support** through GitHub
-- **Documentation** and user guides
-- **Issue tracking** and bug reports
-- **Feature requests** and discussions
-
-### Limitation of Liability
-
-Reliant Labs' liability is limited to:
-
-- **Direct damages** up to the amount paid for the software
-- **No consequential damages**
-- **No indirect damages**
-- **No punitive damages**
-
-### Indemnification
-
-Users agree to:
-
-- **Indemnify Reliant Labs** against third-party claims
-- **Hold harmless** for any damages
-- **Defend against** legal actions
-- **Cover costs** of legal proceedings
-
-## Updates to Legal Terms
-
-### Changes to Terms
-
-Reliant Labs may update these terms:
-
-- **Notification** of significant changes
-- **Continued use** constitutes acceptance
-- **Version tracking** of legal documents
-- **Archive** of previous versions
-
-### Governing Law
-
-These terms are governed by:
-
-- **Applicable law** in your jurisdiction
-- **Dispute resolution** through appropriate channels
-- **Arbitration** if specified in your agreement
-- **Court jurisdiction** for legal proceedings
+These terms are effective as of January 2025.
 
 ## Contact Information
 
-### Legal Inquiries
+### General Inquiries
 
-For legal questions:
+**Reliant Labs**
+- Email: support@reliantlabs.com
+- Website: reliantlabs.com
+- GitHub: github.com/reliant-labs
 
-- **Email**: legal@reliantlabs.com
-- **Address**: [Reliant Labs Legal Address]
-- **Phone**: [Legal Contact Number]
+### Legal Questions
 
-### Copyright Claims
+For legal inquiries:
+- Email: legal@reliantlabs.com
 
-For copyright issues:
+### Privacy Concerns
 
-- **DMCA notices**: legal@reliantlabs.com
-- **Takedown requests**: Include required information
-- **Counter-notifications**: Follow legal procedures
-- **Repeat infringers**: May have access terminated
+For privacy-related questions:
+- Email: privacy@reliantlabs.com
+
+## Dispute Resolution
+
+### Governing Law
+
+These terms are governed by the laws of:
+- The jurisdiction where Reliant Labs is incorporated
+- Without regard to conflict of law principles
+
+### Dispute Process
+
+1. **Direct Resolution**: Contact us first
+2. **Mediation**: Attempt mediation if needed
+3. **Arbitration**: Binding arbitration if required
+4. **Jurisdiction**: Courts of applicable jurisdiction
+
+## Severability
+
+If any provision is found invalid:
+- Other provisions remain in effect
+- Invalid provision will be modified minimally
+- Intent of original provision preserved
+
+## Acceptance
+
+By using Reliant, you acknowledge that:
+- You have read these terms
+- You understand the terms
+- You agree to be bound by them
+- You have the authority to accept them
 
 ---
 
-**Note**: This legal information is provided for informational purposes only and does not constitute legal advice. Consult with qualified legal counsel for specific legal questions about your use of Reliant.
+**Questions?** Contact legal@reliantlabs.com for clarification on any legal matters.
+
+*Last Updated: January 2025*

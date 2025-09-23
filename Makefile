@@ -1,13 +1,15 @@
-.PHONY: help dev build clean serve install
+.PHONY: help dev build clean serve install setup setup-submodules
 
 # Default target
 help:
 	@echo "Available commands:"
+	@echo "  make setup       - Initial setup (install Hugo + init submodules)"
 	@echo "  make dev         - Start Hugo development server with dev config"
 	@echo "  make serve       - Start Hugo development server with production config"
 	@echo "  make build       - Build site for production"
 	@echo "  make clean       - Clean build artifacts"
 	@echo "  make install     - Install Hugo if not present"
+	@echo "  make setup-submodules - Initialize Git submodules (theme)"
 	@echo "  make help        - Show this help message"
 	@echo ""
 	@echo "Testing:"
@@ -18,8 +20,26 @@ help:
 	@echo "Assets:"
 	@echo "  make icons       - Generate favicon and icons from logo"
 
+# Initial setup for new users
+setup: install setup-submodules
+	@echo "🎉 Setup complete! You can now run 'make dev' to start the development server"
+
+# Initialize Git submodules (required for theme)
+setup-submodules:
+	@echo "🔧 Initializing Git submodules..."
+	@if [ ! -d ".git" ]; then \
+		echo "❌ Error: Not in a Git repository. Please run 'git init' first."; \
+		exit 1; \
+	fi
+	@git submodule update --init --recursive
+	@if [ ! -d "themes/lotusdocs/layouts" ]; then \
+		echo "❌ Error: LotusDocs theme not found. Check submodule configuration."; \
+		exit 1; \
+	fi
+	@echo "✅ Submodules initialized successfully!"
+
 # Development server (uses hugo.dev.toml)
-dev:
+dev: setup-submodules
 	@echo "🚀 Starting Hugo development server..."
 	@echo "📖 Site will be available at: http://localhost:1313/"
 	@echo "📁 Using development configuration (hugo.dev.toml)"
@@ -27,7 +47,7 @@ dev:
 	@hugo server --config hugo.dev.toml --port 1313
 
 # Development server with production config (for testing production build locally)
-serve:
+serve: setup-submodules
 	@echo "🚀 Starting Hugo server with production config..."
 	@echo "📖 Site will be available at: http://localhost:1313/reliant-docs/"
 	@echo "📁 Using production configuration (hugo.toml)"
@@ -35,7 +55,7 @@ serve:
 	@hugo server --port 1313
 
 # Build for production
-build:
+build: setup-submodules
 	@echo "🔨 Building site for production..."
 	@hugo --config hugo.toml
 	@echo "✅ Build complete! Site is in the 'public/' directory"
@@ -78,14 +98,14 @@ preview: build
 	@cd public && python3 -m http.server 1313
 
 # Quick build test (no server)
-test-build:
+test-build: setup-submodules
 	@echo "🧪 Testing production build..."
 	@hugo --config hugo.toml
 	@echo "✅ Build test successful!"
 	@echo "📁 Output in: public/"
 
 # PR build check (simulates CI build)
-pr-check:
+pr-check: setup-submodules
 	@echo "🔍 Running PR build check..."
 	@echo "📁 This simulates what GitHub Actions will do"
 	@hugo --config hugo.toml --gc --minify --baseURL "/reliant-docs/"
