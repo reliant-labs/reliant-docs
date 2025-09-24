@@ -182,4 +182,4 @@ For Git-based projects:
 
 ---
 
-**Next**: [Settings & Configuration]({{< relref "settings-configuration" >}}) - Learn how to customize Reliant for your preferences.
+**Next**: [Settings]({{< relref "settings" >}}) - Learn how to customize Reliant for your preferences.

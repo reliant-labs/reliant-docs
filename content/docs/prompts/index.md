@@ -5,285 +5,197 @@ weight: 60
 icon: "list_alt"
 ---
 
-Prompts in Reliant allow you to create, save, and reuse message templates for common tasks. Build a library of effective prompts to streamline your workflow and maintain consistency.
+Prompts in Reliant allow you to create reusable preambles and instructions that can be quickly added to your messages. These help maintain consistency and save time when performing common tasks.
 
-## Using Prompts
+## What are Prompts?
 
-### Quick Access
+Prompts are:
+- **Reusable text snippets** that get prepended to your messages
+- **Saved templates** for common instructions or context
+- **Scoped** to either global use or specific worktrees
+- **Selectable** via dropdown in the chat input
 
-Access your saved prompts:
-1. Click the **lightning bolt** icon in the chat input
-2. Or type `/` to open the prompt menu
-3. Browse or search for prompts
-4. Click to insert into your message
+## Using Prompts in Chat
 
-### Prompt Variables
+### Selecting Prompts
 
-Use variables in prompts that get filled in:
-- `{{selection}}` - Currently selected text
-- `{{file}}` - Active file path
-- `{{project}}` - Current project name
-- `{{language}}` - Detected programming language
-- `{{clipboard}}` - Clipboard contents
+In the chat input area:
+1. Click the **Prompts** dropdown button (shows count of selected prompts)
+2. Check/uncheck prompts you want to include
+3. Selected prompt contents are automatically added to your message
+4. Multiple prompts can be selected simultaneously
 
-### Running Prompts
+### Default Prompts
 
-1. Select a prompt from the menu
-2. Fill in any required variables
-3. Preview the complete prompt
-4. Press `Enter` to send
+Prompts marked as "default" are automatically selected when you:
+- Start a new chat
+- Open the prompts selector
+- Switch worktrees
 
-## Creating Prompts
+### Prompt Scope
 
-### Prompt Builder
+Prompts are loaded based on context:
+- **Global prompts**: Available across all projects
+- **Worktree prompts**: Specific to the current worktree
+- If a worktree is selected, both global and worktree prompts are available
 
-Create new prompts:
-1. Go to **Settings** → **Prompts**
-2. Click **"New Prompt"**
-3. Configure prompt details
+## Managing Prompts
 
-### Prompt Configuration
+### Creating New Prompts
 
-**Basic Settings**
-- **Name**: Descriptive title
-- **Description**: What the prompt does
-- **Category**: Organization group
-- **Icon**: Visual identifier
+1. Navigate to **Settings** → **Prompts**
+2. Select scope (Global or Worktree)
+3. Click **"+ New"** button
+4. Fill in prompt details:
+   - **Title**: Name for the prompt (required)
+   - **Category**: Optional grouping category
+   - **Content**: The actual prompt text
+   - **Default**: Check to auto-select this prompt
+5. Click **"Save Changes"**
 
-**Prompt Content**
-- **Template**: The actual prompt text
-- **Variables**: Define custom variables
-- **Context**: Include file/project context
-- **Examples**: Sample outputs
+### Prompt Fields
 
-### Prompt Templates
+Each prompt contains:
+- **Title**: Display name shown in the selector
+- **Category**: Optional organization category
+- **Content**: The actual text that gets added to messages
+- **Default**: Whether to auto-select this prompt
 
-Start with common templates:
+### Editing Prompts
 
-**Code Review**
+In the Prompts settings:
+1. Modify any field directly
+2. Changes are tracked (shows "unsaved changes")
+3. Click **"Save Changes"** to persist
+4. Click **"Discard"** to revert changes
+
+### Deleting Prompts
+
+- Click the **trash icon** next to any prompt
+- Deletion happens immediately (before save)
+- Save changes to persist the deletion
+
+## Example Prompts
+
+### Code Review
 ```
-Review this {{language}} code for:
-- Code quality and best practices
-- Potential bugs or issues
+Please review this code for:
+- Best practices and code quality
+- Potential bugs or edge cases
 - Performance optimizations
-- Security concerns
-
-Code:
-{{selection}}
+- Security vulnerabilities
+Provide specific, actionable feedback.
 ```
 
-**Documentation**
+### Debugging Assistant
 ```
-Generate documentation for this {{language}} code:
-- Function/method descriptions
-- Parameter explanations
-- Return value details
+I need help debugging an issue. Please:
+1. Analyze the error or problem
+2. Identify potential causes
+3. Suggest debugging strategies
+4. Provide a fix if possible
+Be systematic and explain your reasoning.
+```
+
+### Documentation Writer
+```
+Generate comprehensive documentation for this code:
+- Clear descriptions of functionality
+- Parameter and return value explanations
 - Usage examples
-
-Code:
-{{selection}}
+- Any important notes or warnings
+Use clear, concise language appropriate for developers.
 ```
 
-**Refactoring**
+### Test Generator
 ```
-Refactor this code to improve:
-- Readability
-- Performance
-- Maintainability
-- Follow {{language}} best practices
-
-Original code:
-{{selection}}
+Create comprehensive tests for this code:
+- Unit tests covering main functionality
+- Edge cases and error conditions
+- Mock any external dependencies
+- Include clear test descriptions
+Use appropriate testing patterns for the language/framework.
 ```
 
-**Bug Fix**
-```
-Debug this issue:
-Error: {{error}}
-File: {{file}}
-Line: {{line}}
+## Organizing Prompts
 
-Context:
-{{selection}}
+### Using Categories
 
-Provide:
-1. Root cause analysis
-2. Fix suggestion
-3. Prevention tips
-```
+Categories help organize prompts:
+- Add a category name when creating/editing
+- Prompts are grouped by category in the selector
+- Leave blank for uncategorized prompts
 
-## Prompt Library
+### Search and Filter
 
-### Categories
+In the Prompts settings:
+- Use the search box to filter by title, content, or category
+- Results update as you type
+- Helps find specific prompts quickly
 
-Organize prompts by purpose:
-- **Development**: Code generation, refactoring
-- **Documentation**: Comments, README, API docs
-- **Testing**: Test cases, mocks, fixtures
-- **Debugging**: Error analysis, troubleshooting
-- **Review**: Code review, security audit
+### Scope Selection
 
-### Managing Prompts
-
-**Organization**
-- Create folders for prompt groups
-- Add tags for easy filtering
-- Star frequently used prompts
-- Archive old prompts
-
-**Sharing**
-- Export prompts as JSON
-- Import from files
-- Share with team members
-- Version control integration
-
-## Advanced Features
-
-### Dynamic Prompts
-
-Create prompts that adapt:
-- **Conditional Sections**: Include/exclude based on context
-- **Multiple Languages**: Different templates per language
-- **Project Types**: Customize for different frameworks
-- **Skill Levels**: Adjust complexity
-
-### Prompt Chains
-
-Link prompts together:
-1. Initial prompt generates output
-2. Output becomes input for next prompt
-3. Chain continues until complete
-4. Final result returned
-
-### Smart Prompts
-
-Enhanced prompt features:
-- **Auto-detection**: Detect context automatically
-- **History**: Remember previous uses
-- **Learning**: Improve based on feedback
-- **Suggestions**: Recommend related prompts
-
-## Examples
-
-### Development Prompts
-
-**Component Generator**
-```
-Create a {{framework}} component named {{name}} that:
-- {{description}}
-- Has these props: {{props}}
-- Includes error handling
-- Follows project conventions
-```
-
-**API Endpoint**
-```
-Create a {{method}} endpoint at {{path}} that:
-- {{functionality}}
-- Validates input: {{validation}}
-- Returns: {{response}}
-- Handles errors appropriately
-```
-
-### Documentation Prompts
-
-**Function Documentation**
-```
-Document this function:
-{{selection}}
-
-Include:
-- Purpose and description
-- @param descriptions with types
-- @returns description
-- @throws for exceptions
-- @example usage
-```
-
-**README Section**
-```
-Write a README section for:
-Project: {{project}}
-Section: {{section}}
-
-Include:
-- Overview
-- Prerequisites
-- Installation steps
-- Usage examples
-- Configuration options
-```
-
-### Testing Prompts
-
-**Unit Test**
-```
-Write unit tests for:
-{{selection}}
-
-Cover:
-- Happy path scenarios
-- Edge cases
-- Error conditions
-- Mock dependencies
-Use {{testFramework}} framework
-```
-
-**Test Data**
-```
-Generate test data for:
-Schema: {{schema}}
-Count: {{count}}
-
-Requirements:
-- Realistic values
-- Edge cases included
-- Various scenarios
-- Consistent format
-```
+Choose where prompts are available:
+- **Global**: Available in all projects and worktrees
+- **Worktree**: Only available in the selected worktree
+- Switch scope using the dropdown in settings
 
 ## Best Practices
 
-### Prompt Design
+### Writing Effective Prompts
 
-1. **Be Specific**: Clear instructions get better results
-2. **Provide Context**: Include relevant information
-3. **Show Examples**: Demonstrate desired output
-4. **Set Constraints**: Define limits and requirements
+1. **Be Clear and Specific**: Provide detailed instructions
+2. **Set Context**: Explain what you're working on
+3. **Define Output Format**: Specify how you want results
+4. **Include Constraints**: Mention any limitations or requirements
 
-### Effective Variables
+### Prompt Organization
 
-1. **Meaningful Names**: Use descriptive variable names
-2. **Default Values**: Provide sensible defaults
-3. **Validation**: Ensure required variables are filled
-4. **Help Text**: Explain what each variable is for
+1. **Use Descriptive Titles**: Make prompts easy to identify
+2. **Add Categories**: Group related prompts together
+3. **Mark Defaults Wisely**: Only auto-select frequently needed prompts
+4. **Keep Content Focused**: One purpose per prompt
 
 ### Maintenance
 
-1. **Regular Review**: Update prompts as needed
-2. **User Feedback**: Incorporate improvements
-3. **Version Control**: Track prompt changes
-4. **Testing**: Validate prompts work correctly
-
-## Accessing Prompts
-
-Prompts can be accessed through:
-- The **lightning bolt** icon in the chat input
-- Type `/` to open the prompt menu
-- Settings → Prompts for management
+1. **Review Regularly**: Update prompts as your needs change
+2. **Remove Unused**: Delete prompts you no longer need
+3. **Test New Prompts**: Verify they produce desired results
+4. **Iterate and Improve**: Refine based on actual usage
 
 ## Tips
 
-### Productivity Tips
+### Productivity
 
-1. **Frequently Used**: Pin your most-used prompts
-2. **Quick Access**: Assign shortcuts to prompts
-3. **Templates**: Create base templates to modify
-4. **Categories**: Organize by project or task type
+- **Default Selection**: Mark your most-used prompts as default
+- **Multiple Selection**: Combine prompts for complex tasks
+- **Worktree-Specific**: Create project-specific prompts
+- **Categories**: Use categories to quickly find prompts
 
-### Quality Tips
+### Common Use Cases
 
-1. **Iterate**: Refine prompts based on results
-2. **Test**: Try prompts with various inputs
-3. **Document**: Add clear descriptions
-4. **Share**: Learn from team members' prompts
+- **Code Standards**: Prompts for consistent code style
+- **Review Templates**: Structured code review instructions
+- **Debug Helpers**: Systematic debugging approaches
+- **Documentation**: Consistent documentation formats
+- **Testing**: Standard test generation instructions
+
+## Troubleshooting
+
+### Prompts Not Appearing
+
+- Verify you're in the correct scope (Global vs Worktree)
+- Check if prompts were saved (click "Save Changes")
+- Refresh the chat interface if needed
+
+### Changes Not Saving
+
+- Ensure you click "Save Changes" after editing
+- Check for any validation errors (empty titles)
+- Try discarding and re-entering changes
+
+### Worktree Prompts Missing
+
+- Confirm a worktree is selected
+- Verify prompts were created in worktree scope
+- Check that the worktree ID matches

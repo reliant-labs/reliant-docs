@@ -56,7 +56,7 @@ Ready to get started with Reliant? Follow these simple steps:
 1. **[Install Reliant]({{< relref "installation" >}})** - Download and install for your platform
 2. **[First Launch]({{< relref "getting-started" >}})** - Learn how to start using the application
 3. **[Basic Usage]({{< relref "using-the-app" >}})** - Master the core features and interface
-4. **[Advanced Features]({{< relref "settings-configuration" >}})** - Customize and optimize your experience
+4. **[Advanced Features]({{< relref "settings" >}})** - Customize and optimize your experience
 
 ## Support & Community
 

@@ -11,16 +11,17 @@ Quick answers to the most common questions about Reliant.
 
 ### Q: What is Reliant?
 
-**A**: Reliant is an AI-powered coding assistant that runs locally on your Mac. It combines powerful language models with your development environment to help you code faster, debug smarter, and build better software.
+**A**: Reliant is an AI-powered coding assistant desktop app for Mac. It combines powerful language models with your development environment to help you code faster, debug smarter, and build better software.
 
 ### Q: How is Reliant different from other AI coding tools?
 
 **A**: Reliant stands out by:
-- Running completely locally on your Mac
-- Providing deep project context understanding
-- Integrating Git worktrees for parallel development
-- Offering customizable agents and flows
-- Ensuring complete privacy - your code never leaves your machine
+- Native Mac desktop application
+- Deep project context understanding
+- Git worktrees integration for parallel development
+- Customizable agents for specialized tasks
+- Your code stays on your machine
+<!-- - Multi-agent flows for complex workflows -->
 
 ### Q: What do I need to use Reliant?
 
@@ -28,8 +29,8 @@ Quick answers to the most common questions about Reliant.
 - A Mac running macOS 11.0 (Big Sur) or later
 - 8GB RAM minimum (16GB recommended)
 - 4GB free disk space
-- An API key from OpenAI, Anthropic, or a local model provider
-- Internet connection for AI features
+- An API key from a supported provider (Anthropic, OpenAI, OpenRouter, etc.)
+- Internet connection for AI API calls
 
 ## Installation & Setup
 
@@ -37,19 +38,13 @@ Quick answers to the most common questions about Reliant.
 
 **A**: Currently, Reliant is **macOS only**. We're focusing on delivering the best experience for Mac users first. Windows and Linux support may come in the future.
 
-### Q: Why does macOS block Reliant from opening?
-
-**A**: macOS security features (Gatekeeper) block unsigned apps. To fix:
-1. Right-click Reliant and select "Open"
-2. Click "Open" in the dialog
-3. Or go to System Settings → Privacy & Security → click "Open Anyway"
-
 ### Q: How do I get an API key?
 
-**A**: Get API keys from these providers:
-- **OpenAI**: [platform.openai.com/api-keys](https://platform.openai.com/api-keys)
-- **Anthropic**: [console.anthropic.com](https://console.anthropic.com)
-- **Local Models**: No key needed for Ollama or LM Studio
+**A**: Get API keys from your chosen provider:
+- Visit your provider's website (Anthropic, OpenAI, OpenRouter, etc.)
+- Create an account and generate an API key
+- Add billing information if required
+- Copy the key to Reliant's Settings → AI
 
 ### Q: Is the API key stored securely?
 
@@ -60,8 +55,8 @@ Quick answers to the most common questions about Reliant.
 ### Q: How do I start using Reliant?
 
 **A**: Three simple steps:
-1. **Configure API key** in Settings → API Configuration
-2. **Create a project** by selecting your code folder
+1. **Configure API key** in Settings → AI
+2. **Open a project** by selecting your code folder
 3. **Start chatting** - ask questions about your code
 
 ### Q: What can I ask Reliant to do?
@@ -78,20 +73,21 @@ Quick answers to the most common questions about Reliant.
 ### Q: Can Reliant modify my files directly?
 
 **A**: Yes, with your permission. Reliant can:
+- Read and analyze your code files
 - Suggest code changes
-- Apply modifications when you approve
+- Apply modifications when you approve tool executions
 - Create new files
 - Refactor existing code
-Always review changes before accepting them.
+You control what changes are made through the approval system.
 
 ### Q: How does Reliant understand my project?
 
 **A**: When you open a project, Reliant:
-- Indexes all code files
-- Analyzes structure and dependencies
-- Understands frameworks and patterns
-- Builds a context model
-- Updates as you make changes
+- Has access to read files in your project directory
+- Can search through code using grep and other tools
+- Understands Git status and history
+- Maintains context across your conversation
+- Can analyze file structure and dependencies on demand
 
 ## Features
 
@@ -108,35 +104,25 @@ Always review changes before accepting them.
 **A**: Agents are specialized AI assistants:
 - Pre-configured for specific tasks (testing, docs, reviews)
 - Custom system prompts and behaviors
-- Can be created and shared
 - Maintain consistent interaction patterns
-
-### Q: What are Flows?
-
-**A**: Flows are visual automation workflows:
-- Chain multiple operations together
-- No coding required
-- Reusable templates
-- Automate repetitive tasks
 
 ### Q: Can I customize the appearance?
 
 **A**: Yes! Reliant offers:
-- Multiple built-in themes (light/dark)
-- Custom theme creation
-- Font and size adjustments
-- Layout customization
-- System theme following
+- Multiple built-in themes (Light, Dark, Dracula, Nord, etc.)
+- System theme following (automatic light/dark)
+- Theme toggle button in header
+- Choose default themes for light and dark modes
 
 ## Privacy & Security
 
 ### Q: Does my code leave my computer?
 
-**A**: **No!** Everything runs locally:
-- Backend runs on your Mac
-- Code stays on your machine
+**A**: Your code stays on your machine:
+- Backend runs locally on your Mac
+- Files are read from your local disk
 - No cloud storage or servers
-- API calls go directly to your chosen provider
+- Only your messages and context go to your chosen AI provider's API
 
 ### Q: What data does Reliant collect?
 
@@ -150,20 +136,20 @@ Everything stays on your Mac.
 ### Q: Are my conversations saved?
 
 **A**: Yes, locally on your Mac:
-- Stored in `~/Library/Application Support/Reliant/`
+- Stored in your application data
 - Never uploaded anywhere
-- You can delete them anytime
-- Export for backup if needed
+- Persist across app restarts
+- You can start fresh with a new chat anytime
 
 ## Performance
 
 ### Q: Why is Reliant slow with large projects?
 
-**A**: Large projects take time to index. To improve:
-- Add `.reliantignore` file to exclude folders
-- Exclude `node_modules`, `build`, `dist`
-- Index specific directories only
-- Close unused projects
+**A**: Large projects can impact performance. To improve:
+- Open specific subdirectories instead of the entire repo
+- Avoid folders with large dependencies (node_modules, etc.)
+- Close unused chat tabs
+- Restart the app periodically
 
 ### Q: How much memory does Reliant use?
 
@@ -175,11 +161,11 @@ Everything stays on your Mac.
 
 ### Q: Can I limit resource usage?
 
-**A**: Yes, in Settings → Performance:
-- Set memory limits
-- Configure CPU usage
-- Limit concurrent operations
-- Adjust cache size
+**A**: To reduce resource usage:
+- Close unused chat tabs
+- Open smaller project directories
+- Use simpler themes
+- Restart the app periodically to free memory
 
 ## Troubleshooting
 
@@ -203,8 +189,8 @@ Everything stays on your Mac.
 ### Q: Reliant crashes on startup
 
 **A**: Solutions:
-1. Delete preferences: `defaults delete com.reliantlabs.reliant`
-2. Clear cache: `rm -rf ~/Library/Caches/Reliant`
+1. Clear cache: `rm -rf ~/Library/Caches/Reliant`
+2. Clear app support: `rm -rf ~/Library/Application\ Support/Reliant`
 3. Reinstall Reliant
 4. Check system requirements
 
@@ -212,11 +198,11 @@ Everything stays on your Mac.
 
 ### Q: How do I update Reliant?
 
-**A**: Reliant updates automatically:
-- Checks on startup
-- Notifies when available
-- One-click update
-- Or manually check: Reliant → Check for Updates
+**A**: To update Reliant:
+- Check Settings → About for update notifications
+- Download the latest version from our [downloads page]({{< relref "installation#download-reliant" >}})
+- Replace the old app with the new version
+- Your settings and chats are preserved
 
 ### Q: Will updates break my setup?
 
@@ -228,27 +214,26 @@ Everything stays on your Mac.
 
 ### Q: Where can I get help?
 
-**A**: Multiple support channels:
+**A**: Support options:
 - This documentation
-- [GitHub Issues](https://github.com/reliant-labs/reliant/issues)
 - Email: support@reliantlabs.com
-- Community discussions on GitHub
+- We aim to respond within 24-48 hours
 
 ### Q: Can I request features?
 
 **A**: Absolutely! We welcome feedback:
-- File feature requests on GitHub
-- Vote on existing requests
-- Contribute to discussions
-- Submit pull requests
+- Email your feature requests to support@reliantlabs.com
+- Include use cases and examples
+- We consider all suggestions for future updates
 
 ## Pricing & Licensing
 
 ### Q: How much does Reliant cost?
 
-**A**: Reliant itself is free and open source. You only pay for:
-- API keys from your chosen provider (OpenAI, Anthropic, etc.)
-- Usage is based on your API provider's pricing
+**A**: Reliant pricing:
+- The app itself requires a license (contact us for pricing)
+- You also need API keys from your chosen provider
+- API usage is billed by your provider based on their pricing
 
 ### Q: Is Reliant open source?
 
@@ -256,8 +241,16 @@ Everything stays on your Mac.
 
 ### Q: Can I use Reliant commercially?
 
-**A**: Yes, you can use Reliant for commercial software development. Your usage is governed by Reliant's license terms. Check your API provider's terms for their services.
+**A**: Yes, you can use Reliant for commercial software development. Your usage is governed by Reliant's license agreement. Also check your API provider's terms for their services.
 
 ---
 
 **Don't see your question?** Check [Troubleshooting]({{< relref "troubleshooting" >}}) or [contact support](mailto:support@reliantlabs.com).
+
+<!-- ### Q: What are Flows?
+
+**A**: Flows are multi-agent workflows:
+- Chain multiple agents together in sequence
+- Each agent handles a specific part of the task
+- Context passes between agents
+- Useful for complex, multi-step tasks -->

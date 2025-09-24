@@ -183,7 +183,7 @@ Essential shortcuts to remember:
 
 ### Customize Your Experience
 
-- **[Settings]({{< relref "settings-configuration" >}})** - Configure preferences
+- **[Settings]({{< relref "settings" >}})** - Configure preferences
 - **[Appearance]({{< relref "appearance" >}})** - Choose your theme
 - **[Prompts]({{< relref "prompts" >}})** - Create templates
 

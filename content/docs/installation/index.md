@@ -14,7 +14,7 @@ Before installing Reliant, ensure your Mac meets these requirements:
 ### macOS Version
 - **Minimum**: macOS 11.0 (Big Sur)
 - **Recommended**: macOS 13.0 (Ventura) or later
-- **Supported**: Both Intel and Apple Silicon (M1/M2/M3)
+- **Supported**: Both Intel and Apple Silicon (M1/M2/M3/M4)
 
 ### Hardware Requirements
 - **RAM**: Minimum 8GB, recommended 16GB+
@@ -32,8 +32,8 @@ Before installing Reliant, ensure your Mac meets these requirements:
 
 Choose the version for your Mac:
 
-- **Apple Silicon (M1/M2/M3/M4)**: [Download Reliant for Apple Silicon](https://downloads.reliantlabs.io/Reliant-latest-mac-arm64.dmg)
-- **Intel**: [Download Reliant for Intel](https://downloads.reliantlabs.io/Reliant-latest-mac-x64.dmg)
+- [Download Reliant for Apple Silicon](https://downloads.reliantlabs.io/Reliant-latest-mac-arm64.dmg) **(M1/M2/M3/M4)**
+- [Download Reliant for Intel](https://downloads.reliantlabs.io/Reliant-latest-mac-x64.dmg)
 
 Not sure which version you need? Check Apple menu → About This Mac → Chip
 
@@ -96,7 +96,7 @@ Reliant checks for updates automatically:
 
 To manually check for updates:
 1. Go to **Reliant** → **Check for Updates**
-2. Or download from [GitHub Releases](https://github.com/reliant-labs/reliant/releases)
+2. Or download from [here]({{< relref "installation#download-reliant" >}})
 3. Install over existing version
 4. Restart Reliant
 

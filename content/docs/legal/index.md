@@ -56,10 +56,10 @@ You may NOT:
 Reliant is designed with privacy as a core principle:
 
 **Local Processing**
-- All processing happens on your Mac
-- Your code never leaves your machine
-- No cloud servers or external storage
-- Complete control over your data
+- Backend runs locally on your Mac
+- Your code stays on your machine
+- No cloud storage of your files
+- You control your data
 
 **No Data Collection**
 - We don't collect personal information
@@ -68,9 +68,9 @@ Reliant is designed with privacy as a core principle:
 - No selling of user data
 
 **API Providers**
-- You choose your AI provider (OpenAI, Anthropic, etc.)
+- You choose your AI provider (Anthropic, OpenAI, OpenRouter, etc.)
 - API calls go directly to your chosen provider
-- We don't intercept or store API communications
+- Your messages and code context are sent to the provider
 - Review your provider's privacy policy
 
 ### Data Storage
@@ -119,9 +119,23 @@ Reliant uses open source libraries under their respective licenses:
 - **Electron** - MIT License
 - **React** - MIT License
 - **Go Standard Library** - BSD License
-- Various npm packages - See package.json
+- **Tailwind CSS** - MIT License
+- Various npm packages - See package.json for complete list
 
 These components retain their original licenses.
+
+### Theme Attributions
+
+Reliant includes color schemes inspired by popular open source themes:
+
+- **Dracula Theme** - Inspired by [Dracula Theme](https://draculatheme.com/) by Zeno Rocha
+- **Tokyo Night** - Inspired by [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme) by enkia
+- **Nord** - Inspired by [Nord](https://www.nordtheme.com/) by Arctic Ice Studio
+- **Solarized** - Inspired by [Solarized](https://ethanschoonover.com/solarized/) by Ethan Schoonover
+- **GitHub Light** - Inspired by GitHub's light theme
+- **One Light** - Inspired by Atom's One Light theme
+
+These are custom implementations of the color palettes, not direct ports of the original themes.
 
 ### AI Providers
 
@@ -182,7 +196,6 @@ These terms are effective as of January 2025.
 **Reliant Labs**
 - Email: support@reliantlabs.com
 - Website: reliantlabs.com
-- GitHub: github.com/reliant-labs
 
 ### Legal Questions
 
@@ -192,7 +205,7 @@ For legal inquiries:
 ### Privacy Concerns
 
 For privacy-related questions:
-- Email: privacy@reliantlabs.com
+- Email: support@reliantlabs.com
 
 ## Dispute Resolution
 

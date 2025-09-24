@@ -27,17 +27,20 @@ Find solutions to common issues and learn how to get help when you need it.
 
 3. **Reset Application**
    ```bash
-   # Remove preferences
-   defaults delete com.reliantlabs.reliant
-
    # Clear application support
    rm -rf ~/Library/Application\ Support/Reliant
+
+   # Clear cache
+   rm -rf ~/Library/Caches/Reliant
+
+   # Clear logs
+   rm -rf ~/.reliant/logs
    ```
 
 4. **Reinstall**
    - Delete Reliant from Applications
    - Empty Trash
-   - Download fresh copy from GitHub
+   - Download fresh copy from our [downloads page]({{< relref "installation#download-reliant" >}})
    - Reinstall
 
 ### Backend Connection Issues
@@ -53,9 +56,8 @@ Find solutions to common issues and learn how to get help when you need it.
 
 2. **Port Conflicts**
    ```bash
-   # Check if ports are in use
+   # Check if port is in use
    lsof -i :8080
-   lsof -i :8081
 
    # Kill conflicting processes if needed
    kill -9 [PID]
@@ -78,16 +80,16 @@ Find solutions to common issues and learn how to get help when you need it.
 **Solutions**:
 
 1. **Check API Key**
-   - Go to Settings → API Configuration
+   - Go to Settings → AI
    - Verify key is entered correctly
-   - Test connection
+   - Click "Validate" to test connection
    - Check API provider status
 
 2. **API Provider Issues**
-   - **OpenAI**: Check [status.openai.com](https://status.openai.com)
-   - **Anthropic**: Check [status.anthropic.com](https://status.anthropic.com)
-   - Verify billing is active
-   - Check rate limits
+   - Check your provider's status page
+   - Verify billing is active on provider's website
+   - Check rate limits for your tier
+   - Try a different provider if available
 
 3. **Network Connection**
    - Verify internet connection
@@ -113,10 +115,10 @@ Find solutions to common issues and learn how to get help when you need it.
    - Check Activity Monitor for CPU/Memory usage
 
 2. **Large Projects**
-   - Add `.reliantignore` file to exclude folders
-   - Exclude `node_modules`, `build`, `dist`
-   - Reduce project scope
-   - Use specific folders instead of entire repo
+   - Open specific subdirectories instead of entire repo
+   - Avoid opening folders with large dependencies (node_modules, etc.)
+   - Split project into smaller logical sections
+   - Close unnecessary projects to free memory
 
 3. **Clear Cache**
    ```bash
@@ -124,10 +126,9 @@ Find solutions to common issues and learn how to get help when you need it.
    ```
 
 4. **Optimize Settings**
-   - Reduce chat history length
-   - Disable unnecessary features
-   - Use simpler theme
-   - Disable animations
+   - Close old chat tabs
+   - Use simpler theme (Light or Dark default)
+   - Restart app periodically
 
 ### Project Issues
 
@@ -146,10 +147,10 @@ Find solutions to common issues and learn how to get help when you need it.
    - Try non-Git folder to test
 
 3. **Path Problems**
-   - Use absolute paths
-   - Avoid special characters in path
+   - Avoid special characters in path names
    - Don't use symlinks
    - Keep path length reasonable
+   - Ensure path doesn't contain spaces (or escape them properly)
 
 ### Chat Problems
 
@@ -158,7 +159,7 @@ Find solutions to common issues and learn how to get help when you need it.
 **Solutions**:
 
 1. **Input Issues**
-   - Press Enter to send (not Shift+Enter)
+   - Press Enter to send (Shift+Enter for new line)
    - Check for invisible characters
    - Clear input and retype
 
@@ -195,10 +196,10 @@ Find solutions to common issues and learn how to get help when you need it.
 - Contact API provider
 
 **"Project too large"**
-- Add `.reliantignore` file
-- Exclude unnecessary directories
-- Split into smaller projects
-- Increase memory limit in settings
+- Select specific subdirectories instead of root
+- Avoid folders with large dependencies (node_modules, build, dist)
+- Split into smaller logical sections
+- Close other projects to free memory
 
 **"Cannot read file"**
 - Check file permissions
@@ -212,19 +213,19 @@ Find solutions to common issues and learn how to get help when you need it.
 
 Reliant logs are stored in:
 ```
-~/Library/Logs/Reliant/
+~/.reliant/logs/
 ```
 
 View logs:
 ```bash
-# View main log
-tail -f ~/Library/Logs/Reliant/main.log
+# View current log
+tail -f ~/.reliant/logs/reliant-$(date +%Y-%m-%d).log
 
-# View backend log
-tail -f ~/Library/Logs/Reliant/backend.log
+# View all recent logs
+ls -la ~/.reliant/logs/
 
-# Search for errors
-grep -i error ~/Library/Logs/Reliant/*.log
+# Search for errors in today's log
+grep -i error ~/.reliant/logs/reliant-$(date +%Y-%m-%d).log
 ```
 
 ### Developer Tools
@@ -274,23 +275,7 @@ df -h
    - Reliant version
    - Relevant logs
 
-### Reporting Issues
-
-**GitHub Issues**
-
-File a bug report:
-1. Go to [GitHub Issues](https://github.com/reliant-labs/reliant/issues)
-2. Search existing issues first
-3. Click "New Issue"
-4. Use the template
-5. Include:
-   - macOS version
-   - Reliant version
-   - Steps to reproduce
-   - Expected vs actual behavior
-   - Screenshots if applicable
-   - Error messages
-   - Logs (remove sensitive data)
+### Getting Support
 
 **Support Email**
 
@@ -302,7 +287,12 @@ Include:
 - macOS version
 - Detailed issue description
 - Steps you've tried
-- Attachments (screenshots, logs)
+- Attachments (screenshots, logs - remove sensitive data)
+
+**Response Time**
+- We aim to respond within 24-48 hours
+- Priority given to critical issues
+- Include as much detail as possible for faster resolution
 
 ## Prevention Tips
 
@@ -316,7 +306,7 @@ Include:
 
 2. **Project Management**
    - Keep projects organized
-   - Use `.reliantignore` files
+   - Open specific subdirectories when possible
    - Archive old projects
    - Limit project size
 
@@ -327,10 +317,10 @@ Include:
    - Regular app restarts
 
 4. **Backup**
-   - Export settings regularly
-   - Save important chats
-   - Backup custom prompts
+   - Save important chat content manually
+   - Keep copies of custom prompts
    - Document custom agents
+   - Note your API provider settings
 
 ### Quick Fixes Checklist
 
