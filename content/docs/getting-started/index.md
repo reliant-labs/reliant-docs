@@ -121,13 +121,13 @@ Get help fixing issues:
 
 ### Effective Prompting
 
-✅ **Do:**
+**Do:**
 - Be specific about what you want
 - Provide context and examples
 - Attach relevant files
 - Ask follow-up questions
 
-❌ **Don't:**
+**Don't:**
 - Use vague descriptions
 - Assume Reliant knows unstated requirements
 - Forget to review generated code

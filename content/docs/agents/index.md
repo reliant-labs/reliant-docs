@@ -89,7 +89,7 @@ Create your own agents:
 - **Category**: Optional grouping
 
 **Model Configuration**
-- **Model**: Which AI model to use (GPT-4, GPT-3.5, etc.)
+- **Model**: Which AI model to use (GPT-5, GPT-4, etc.)
 - **Temperature**: Response creativity (0-1)
 - **Max Tokens**: Response length limit
 
