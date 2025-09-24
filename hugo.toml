@@ -23,6 +23,9 @@ theme = 'lotusdocs'
   # Site description
   description = "Documentation for Reliant AI Chat - A powerful AI chat application"
 
+  # Open Graph / Social Media images
+  images = ["og-image.png"]
+
   # GitHub repository
   github_repo = "https://github.com/reliant-labs/reliant-docs"
 
