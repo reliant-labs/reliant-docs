@@ -22,19 +22,19 @@ Reliant is a native macOS desktop application, providing:
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
 <div class="col">
-### 🤖 Intelligent AI Assistant
+### Intelligent AI Assistant
 - Multiple AI providers (Anthropic, OpenAI, OpenRouter)
 - Context-aware responses based on your project
 - Auto-approval mode for autonomous operation
 </div>
 <div class="col">
-### 💻 Developer-Focused
+### Developer-Focused
 - Custom agents for testing, docs, reviews
 - Git worktree integration for parallel work
 - Tool executions for file operations and searches
 </div>
 <div class="col">
-### 🔒 Privacy-First
+### Privacy-First
 - Backend runs locally on your Mac
 - Your code stays on your machine
 - Only chat messages go to your chosen AI provider

@@ -179,7 +179,3 @@ For Git-based projects:
 - **Files not found**: Ensure the project path is correct and accessible
 - **Indexing problems**: Try reopening the project or restarting Reliant
 - **Git integration issues**: Verify Git is properly configured in your project
-
----
-
-**Next**: [Settings]({{< relref "settings" >}}) - Learn how to customize Reliant for your preferences.

@@ -70,7 +70,7 @@ If you have an M1/M2/M3 Mac:
 
 1. **Launch Reliant** from Applications
 2. **Configure API Key**:
-   - Go to Settings → API Configuration
+   - Go to Settings → AI
    - Select your AI provider
    - Enter your API key
    - Test the connection

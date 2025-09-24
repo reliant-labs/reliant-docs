@@ -63,7 +63,7 @@ The theme toggle works differently based on current mode:
 When you change appearance settings:
 1. Changes apply immediately (live preview)
 2. Settings save to local storage
-3. Syncs with backend for persistence
+3. Syncs with local backend for persistence
 4. Theme persists across app restarts
 
 ### System Mode Behavior
@@ -77,9 +77,9 @@ When using System mode:
 ### Theme Persistence
 
 Your theme preferences are stored:
-- **Locally**: In browser local storage for instant access
-- **Backend**: Synced to backend for cross-session persistence
-- **Priority**: Local settings used first, backend settings for recovery
+- **Browser**: In local storage for instant access
+- **Local Backend**: Persisted to local backend database
+- **Priority**: Browser settings used first, backend settings for recovery
 
 ## Tips for Using Themes
 
