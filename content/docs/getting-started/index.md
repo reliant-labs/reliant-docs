@@ -177,7 +177,7 @@ Essential shortcuts to remember:
 
 ### Explore Features
 
-- **[Chat]({{< relref "chat-interface" >}})** - Master the chat
+- **[Chat]({{< relref "chat" >}})** - Master the chat
 - **[Worktrees]({{< relref "worktrees" >}})** - Work on multiple branches
 - **[Agents]({{< relref "agents" >}})** - Use specialized assistants
 

@@ -35,7 +35,7 @@ The chat is where you interact with Reliant's AI assistant. It provides a powerf
 - **Agent/Flow Selector**: Select specialized agents or multi-agent flows
 - **Worktree Selector**: Choose which Git worktree context to use
 - **Prompts**: Access saved prompt templates
-- **Auto-approve**: Toggle automatic approval of tool executions
+- **Auto-Approve Toggle**: Enable/disable automatic approval of tool executions (see Auto-Approval section below)
 - **Attach Files**: Click paperclip or drag & drop files
 - **Save Draft**: Manually save current message as draft
 - **View Drafts**: Access previously saved drafts
@@ -68,6 +68,7 @@ The AI can execute various tools:
 - **Terminal Commands**: Execute shell commands
 - **Web Search**: Search for information online
 - Each tool execution shows its status and results
+- **Requires Approval**: By default, all tool executions require your approval (see Auto-Approval section)
 
 ### File Attachments
 
@@ -102,21 +103,47 @@ Access your chat history from the sidebar:
 - Chats persist across app restarts
 - Filter by worktree
 
-### Pending Approvals
+### Auto-Approval Mode
 
-When tools require approval:
+**Speed up your workflow** by enabling auto-approval:
+- **Toggle Auto-Approve** in the chat input controls (lightning bolt icon)
+- When enabled, the AI executes tools without waiting for your approval
+- **Perfect for**:
+  - Trusted operations like reading files
+  - Repetitive tasks
+  - When you want the AI to work autonomously
+- **Stay in Control**: Disable anytime to review tool executions again
+- Auto-approval is **per-chat session** - each new chat starts with approvals required
+
+### Manual Approvals
+
+When auto-approve is disabled (default):
 - Approval requests appear inline in the chat
-- Review the proposed action
-- Click **Approve** or **Deny**
-- Enable auto-approve to skip approvals for the session
+- Review the proposed action carefully
+- Click **Approve** to execute or **Deny** to skip
+- Gives you full control over what the AI does to your codebase
 
-### Background Tasks
+### Tasks List
 
-Monitor ongoing operations:
-- Click the tasks button to view active tasks
-- See task progress and status
-- Shows completed/total task count
-- Tasks continue running even if you switch tabs
+View and track the AI's current tasks:
+- Click the **Tasks List** button in the chat input area to open the panel
+- Shows current tasks and their status (pending, in_progress, completed, failed, blocked, skipped, cancelled)
+- Displays progress percentage for overall task completion
+- Tasks grouped by status for easy overview
+- Each task shows title and optional description
+- Tasks automatically update as the AI works
+- Switch to **Processes** tab to view background terminal processes
+
+### Session Info Panel
+
+View current session details and settings:
+- Click the **history icon** in the header to toggle session info
+- Shows current model and agent being used
+- Displays context tokens used and window size
+- Shows temperature and thinking mode settings
+- Displays current worktree and project
+- View session-specific configuration
+- Monitor token usage in real-time
 
 ## Tips for Effective Chats
 
