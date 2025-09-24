@@ -56,3 +56,6 @@ out/
 .hugo_cache/
 resources/_gen/
 assets/_gen/
+
+# Local settings
+settings.local.json
