@@ -32,8 +32,8 @@ Before installing Reliant, ensure your Mac meets these requirements:
 
 Choose the version for your Mac:
 
-- **Apple Silicon (M1/M2/M3/M4)**: [Download Reliant for Apple Silicon](https://download.reliantlabs.io/Reliant-latest-mac-arm64.dmg)
-- **Intel**: [Download Reliant for Intel](https://download.reliantlabs.io/Reliant-latest-mac-x64.dmg)
+- **Apple Silicon (M1/M2/M3/M4)**: [Download Reliant for Apple Silicon](https://downloads.reliantlabs.io/Reliant-latest-mac-arm64.dmg)
+- **Intel**: [Download Reliant for Intel](https://downloads.reliantlabs.io/Reliant-latest-mac-x64.dmg)
 
 Not sure which version you need? Check Apple menu → About This Mac → Chip
 

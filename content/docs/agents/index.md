@@ -15,6 +15,45 @@ Agents are customized AI configurations that:
 - Maintain consistent behavior patterns
 - Focus on particular domains or tasks
 
+## Built-in Agents
+
+Reliant includes several pre-configured agents optimized for specific tasks:
+
+### General
+- **Description**: General-purpose agent for comprehensive software engineering tasks
+- **Best For**: Coding, debugging, refactoring, and general development tasks
+- **Approach**: Balanced between exploration and implementation
+
+### Code Reviewer
+- **Description**: Code review specialist providing comprehensive quality feedback
+- **Best For**: Code quality assessment, security review, performance analysis
+- **Focus Areas**: Best practices, SOLID principles, security vulnerabilities, performance bottlenecks
+
+### Debug With Me
+- **Description**: Collaborative debugging agent that works with users through an iterative process
+- **Best For**: Complex debugging sessions, systematic troubleshooting
+- **Approach**: Maximizes automation first, then provides clear handoffs for user assistance
+
+### Environment Setup
+- **Description**: Environment setup specialist for multiple environments (test, dev, prod)
+- **Best For**: Initial project setup, CI/CD configuration, deployment pipelines
+- **Capabilities**: Docker, Kubernetes, cloud platforms, dependency management
+
+### Repro
+- **Description**: Reproduces user-reported issues by recreating exact conditions
+- **Best For**: Bug reproduction, issue verification, regression testing
+- **Method**: Focuses solely on reproduction without attempting fixes
+
+### UX
+- **Description**: User experience specialist for UI/UX design and accessibility
+- **Best For**: Interface improvements, accessibility compliance, user flow optimization
+- **Expertise**: Design patterns, WCAG guidelines, responsive design, user testing
+
+### Planner
+- **Description**: Strategic planning specialist creating actionable plans with detailed breakdowns
+- **Best For**: Feature planning, project roadmaps, task decomposition
+- **Output**: Structured plans with priorities, dependencies, and time estimates
+
 ## Using Agents
 
 ### Selecting an Agent

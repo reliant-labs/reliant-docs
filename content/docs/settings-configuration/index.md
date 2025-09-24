@@ -21,7 +21,7 @@ To use Reliant's AI features, you need to configure an API key:
    - **Local Models** (Ollama, LM Studio)
 3. Enter your API key
 4. Click **"Test Connection"** to verify
-5. Click **"Save"**
+5. Click **"+ Add Provider"**
 
 ### Multiple API Keys
 

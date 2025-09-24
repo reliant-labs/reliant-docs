@@ -7,15 +7,16 @@ icon: "apps"
 
 Learn how to effectively use Reliant's AI-powered features to enhance your development workflow.
 
-## Chat Interface
+## Chat
 
 ### Starting Conversations
 
-The chat interface is your primary way to interact with Reliant's AI:
+The chat is your primary way to interact with Reliant's AI:
 
-- **New Chat**: Click the "New Chat" button to start a fresh conversation
-- **Continue Chat**: Select an existing chat from the sidebar to resume
-- **Chat Tabs**: Use multiple tabs to work on different topics simultaneously
+- **New Chat**: Click "New Chat" or press `Cmd+N` to open a new chat tab
+- **Chat History**: Access previous chats from the sidebar search
+- **Multiple Tabs**: Work on different topics simultaneously with tabs
+- **Tab Management**: Close with `Cmd+W`, switch with `Cmd+Shift+[/]`
 
 ### Writing Effective Prompts
 
@@ -30,10 +31,11 @@ To get the best responses from Reliant:
 
 Reliant's responses include several components:
 
-- **Code explanations** with detailed comments and reasoning
-- **Tool executions** when the AI needs to analyze files or perform operations
-- **Suggestions** for improvements and alternative approaches
-- **Context-aware** recommendations based on your project structure
+- **Message Actions**: Copy, branch, or rate responses with thumbs up/down
+- **Tool Executions**: File operations, searches, and terminal commands with visible results
+- **Code Blocks**: Syntax-highlighted code with copy buttons
+- **Inline Approvals**: Review and approve tool actions before execution
+- **File Attachments**: Drag & drop or add files for context
 
 ## Project Management
 

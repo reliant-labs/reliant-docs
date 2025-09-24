@@ -87,7 +87,7 @@ Before you can use AI features, you need an API key:
 
 ### Key Features
 
-**Chat Interface**
+**Chat**
 - Type naturally - no special syntax needed
 - Use the paperclip icon or drag files into the chat box to attach them.
 - Stop generation with `Esc` key or by clicking `Stop`
@@ -177,10 +177,9 @@ Essential shortcuts to remember:
 
 ### Explore Features
 
-- **[Chat Interface]({{< relref "chat-interface" >}})** - Master the chat
+- **[Chat]({{< relref "chat-interface" >}})** - Master the chat
 - **[Worktrees]({{< relref "worktrees" >}})** - Work on multiple branches
 - **[Agents]({{< relref "agents" >}})** - Use specialized assistants
-- **[Flows]({{< relref "flows" >}})** - Automate workflows
 
 ### Customize Your Experience
 

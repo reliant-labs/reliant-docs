@@ -13,7 +13,7 @@ icon: "home"
 
 Reliant is a desktop application that runs locally on your machine, providing:
 
-- **AI-Powered Chat Interface** - Ask questions about your code, get explanations, and receive intelligent suggestions
+- **AI-Powered Chat** - Ask questions about your code, get explanations, and receive intelligent suggestions
 - **Local Backend Processing** - All AI processing happens on your machine for privacy and speed
 - **Project Integration** - Seamlessly works with your existing codebase and development workflow
 - **macOS Native** - Built specifically for macOS with native performance

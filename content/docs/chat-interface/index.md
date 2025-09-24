@@ -1,118 +1,142 @@
 ---
-title: "Chat Interface"
-description: "Complete guide to using Reliant's AI-powered chat interface"
+title: "Chat"
+description: "Complete guide to using Reliant's AI-powered chat"
 weight: 35
 icon: "chat"
 ---
 
-The chat interface is where you interact with Reliant's AI assistant. It provides a powerful, context-aware conversation experience designed specifically for software development tasks.
+The chat is where you interact with Reliant's AI assistant. It provides a powerful, context-aware conversation experience designed specifically for software development tasks.
 
 ## Starting a Chat
 
 ### New Chat
 - Click the **"New Chat"** button or press `Cmd+N`
-- Each new chat starts with a fresh context
+- Each new chat opens in a new tab
+- Multiple chat tabs can be open simultaneously
 - Previous chats are saved in your history
 
-### Chat Input
-- Type your message in the input field at the bottom
-- Press `Enter` to send (or `Shift+Enter` for new line)
-- Support for markdown formatting in your messages
+### Chat Tabs
+- Work with multiple chats at once using tabs
+- Click the **+** button or press `Cmd+N` for a new tab
+- Close tabs with the **X** button or `Cmd+W`
+- Switch between tabs by clicking on them or `Cmd + Shift + ]`
+- Tabs show attention indicators for pending approvals or completed tasks
 
-## Chat Features
+## Chat Input
+
+### Message Input
+- Type your message in the text area at the bottom
+- Press `Enter` to send (or `Shift+Enter` for new line)
+- Supports markdown formatting in your messages
+- Auto-saves drafts as you type
+
+### Input Controls
+- **Model Selector**: Choose which AI model to use (GPT-5, Claude, etc.)
+- **Agent/Flow Selector**: Select specialized agents or multi-agent flows
+- **Worktree Selector**: Choose which Git worktree context to use
+- **Prompts**: Access saved prompt templates
+- **Auto-approve**: Toggle automatic approval of tool executions
+- **Attach Files**: Click paperclip or drag & drop files
+- **Save Draft**: Manually save current message as draft
+- **View Drafts**: Access previously saved drafts
+- **Tasks Panel**: View active tasks and background processes
+
+## Message Features
 
 ### Message Actions
 
-Each message in the chat has action buttons that appear on hover:
+Each message has action buttons that appear on hover:
 
 - **Copy**: Copy the message content to clipboard
-- **Branch**: Continue conversation from this message in a new chat window
-- **Upvote**: AI provided a good response
-- **Downvote**: AI provided a bad response
+- **Branch**: Start a new chat branching from this message
+- **Thumbs Up**: Mark response as helpful
+- **Thumbs Down**: Mark response as not helpful
 
 ### Code Blocks
 
 When the AI provides code:
 - **Syntax Highlighting**: Automatic language detection and highlighting
 - **Copy Button**: Quick copy entire code block
-- **Apply Changes**: Directly apply suggested code changes to your files
+- **Line Numbers**: Optional line numbers for reference
+- **Language Label**: Shows detected programming language
+
+### Tool Executions
+
+The AI can execute various tools:
+- **File Operations**: Read, write, and edit files
+- **Code Search**: Search for patterns in your codebase
+- **Terminal Commands**: Execute shell commands
+- **Web Search**: Search for information online
+- Each tool execution shows its status and results
 
 ### File Attachments
 
 Attach files to provide context:
-1. Click the **paperclip icon** or drag files into the chat
-2. Supported formats:
-   - Code files (`.js`, `.py`, `.java`, etc.)
-   - Text documents (`.txt`, `.md`, `.json`)
-   - Images for visual context (`.png`, `.jpg`, `.svg`)
-3. Attached files appear as chips above the input field
-4. Click the X on a chip to remove an attachment
+1. **Drag & Drop**: Drag files directly into the chat
+2. **Click to Upload**: Click the paperclip icon
+4. Supported formats:
+   - Images (`.png`, `.jpg`, `.gif`, `.webp`, `.svg`)
+   - Text files (`.txt`, `.md`, `.json`, `.csv`)
+   - Documents (`.pdf`, `.doc`, `.docx`)
+   - Code files (any text-based format)
+5. Attached files appear as preview chips
+6. Click the **X** to remove an attachment
+7. Maximum file size: 50MB
+8. Maximum files per message: 10
 
-### Context Awareness
+## Context Awareness
 
 The chat automatically includes:
-- **Current Project**: Active project files and structure
-- **Open Files**: Currently opened files in your editor
-- **Recent Changes**: Git diff and recent modifications
-- **Terminal Output**: Recent command outputs when relevant
+- **Current Worktree**: Active Git worktree and branch
+- **Project Context**: Project structure and configuration
+- **Recent Changes**: Git status and recent modifications
+- **Session State**: Maintains context across messages
 
 ## Chat Management
 
 ### Chat History
 
 Access your chat history from the sidebar:
-- All chats are automatically saved
+- All chats are automatically saved locally
 - Search through past conversations
+- Chats persist across app restarts
+- Filter by worktree
 
-## Interface Controls
+### Pending Approvals
 
-### Toolbar Actions
+When tools require approval:
+- Approval requests appear inline in the chat
+- Review the proposed action
+- Click **Approve** or **Deny**
+- Enable auto-approve to skip approvals for the session
 
-The chat toolbar provides quick access to:
-- **Stop Generation**: Halt the current AI response
-- **Chat Settings**: Configure chat-specific preferences
+### Background Tasks
 
-### Split View
-
-Work with multiple chats simultaneously:
-1. Right-click on a chat tab
-2. Select **"Split Right"** or **"Split Down"**
-3. Drag tabs between panes
-4. Adjust pane sizes by dragging borders
-
-### Focus Mode
-
-Minimize distractions with a cleaner interface:
-- Hides unnecessary UI elements
-- Centers content for better focus
-- Maximizes chat area
-
-## Chat Settings
-
-Configure chat behavior:
-- **Model Selection**: Choose AI model for responses
-- **Temperature**: Adjust creativity vs. consistency
-- **Max Tokens**: Set response length limits
-- **System Prompt**: Customize AI behavior
-- **Auto-save**: Enable/disable automatic saving
+Monitor ongoing operations:
+- Click the tasks button to view active tasks
+- See task progress and status
+- Shows completed/total task count
+- Tasks continue running even if you switch tabs
 
 ## Tips for Effective Chats
 
-1. **Be Specific**: Provide clear, detailed descriptions
+1. **Be Specific**: Provide clear, detailed descriptions of what you need
 2. **Include Context**: Attach relevant files or code snippets
-3. **Use Examples**: Show what you want with examples
-4. **Iterative Refinement**: Build on previous responses
-5. **Save Templates**: Create reusable prompts for common tasks
+3. **Use Examples**: Show what you want with concrete examples
+4. **Select the Right Model**: Different models excel at different tasks
+5. **Use Agents**: Select specialized agents for specific domains
+6. **Branch Conversations**: Branch from any message to explore alternatives
+7. **Save Useful Prompts**: Create reusable prompt templates
 
 ## Keyboard Shortcuts
 
 | Action | Shortcut |
 |--------|----------|
 | New Chat | `Cmd+N` |
+| Close Tab | `Cmd+W` |
 | Send Message | `Enter` |
-| New Line | `Shift+Enter` |
+| New Line in Message | `Shift+Enter` |
 | Search in Chat | `Cmd+F` |
-| Advanced Search | `Cmd+Shift+F` |
-| Quick Commands | `/` |
-| Mentions | `@` |
 | Stop AI Response | `Esc` |
+| Next Tab | `Cmd+Shift+]` |
+| Previous Tab | `Cmd+Shift+[` |
