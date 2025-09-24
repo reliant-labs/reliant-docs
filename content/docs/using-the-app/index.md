@@ -5,19 +5,18 @@ weight: 30
 icon: "apps"
 ---
 
-# Using Reliant
-
 Learn how to effectively use Reliant's AI-powered features to enhance your development workflow.
 
-## Chat Interface
+## Chat
 
 ### Starting Conversations
 
-The chat interface is your primary way to interact with Reliant's AI:
+The chat is your primary way to interact with Reliant's AI:
 
-- **New Chat**: Click the "New Chat" button to start a fresh conversation
-- **Continue Chat**: Select an existing chat from the sidebar to resume
-- **Chat Tabs**: Use multiple tabs to work on different topics simultaneously
+- **New Chat**: Click "New Chat" or press `Cmd+N` to open a new chat tab
+- **Chat History**: Access previous chats from the sidebar search
+- **Multiple Tabs**: Work on different topics simultaneously with tabs
+- **Tab Management**: Close with `Cmd+W`, switch with `Cmd+Shift+[/]`
 
 ### Writing Effective Prompts
 
@@ -32,19 +31,28 @@ To get the best responses from Reliant:
 
 Reliant's responses include several components:
 
-- **Code explanations** with detailed comments and reasoning
-- **Tool executions** when the AI needs to analyze files or perform operations
-- **Suggestions** for improvements and alternative approaches
-- **Context-aware** recommendations based on your project structure
+- **Message Actions**: Copy, branch, or rate responses with thumbs up/down
+- **Tool Executions**: File operations, searches, and terminal commands with visible results
+- **Code Blocks**: Syntax-highlighted code with copy buttons
+- **Inline Approvals**: Review and approve tool actions before execution
+- **File Attachments**: Drag & drop or add files for context
 
 ## Project Management
 
-### Opening Projects
+### Open or Create a Project
 
-1. **Click "Open Project"** in the sidebar
-2. **Navigate to your project directory** and select it
-3. **Wait for indexing** - Reliant analyzes your codebase structure
-4. **Start working** with full AI context
+**Option A: Open Existing Project**
+1. Click **"Open Existing Project"** in the menu
+2. Navigate to your project folder
+3. Select the folder containing your code
+4. Reliant indexes your code (takes a few seconds)
+
+**Option B: Create New Project**
+1. Click **"Create New Project"** if starting fresh
+2. Give your project a name
+3. Click **"Select Folder"** and choose where to create it
+4. Click **"Create"**
+5. Reliant sets up and indexes the project
 
 ### Project Panel Features
 
@@ -53,7 +61,6 @@ The project panel provides:
 - **File Browser**: Navigate through your project structure
 - **Quick Search**: Find files and content instantly
 - **Git Integration**: See file status and recent changes
-- **Context Building**: Help Reliant understand your codebase
 
 ### Working with Multiple Projects
 
@@ -77,7 +84,7 @@ Ask Reliant to:
 
 Reliant can help you:
 
-- **Write new functions** based on your requirements
+- **Build new features** based on your requirements
 - **Generate tests** for existing code
 - **Create documentation** and comments
 - **Implement patterns** and best practices
@@ -113,36 +120,30 @@ For Git-based projects:
 - **Understand commit history** and context
 - **Manage multiple branches** simultaneously
 
-### Session Management
-
-- **Save conversations** for future reference
-- **Export chat history** for documentation
-- **Share insights** with team members
-- **Track development progress** over time
-
 ## Keyboard Shortcuts
 
-### Navigation
+### Essential
 
-- `Cmd/Ctrl + K`: Quick search and actions
-- `Cmd/Ctrl + T`: Open new chat tab
-- `Cmd/Ctrl + W`: Close current tab
-- `Cmd/Ctrl + Shift + T`: Reopen closed tab
-- `Cmd/Ctrl + 1-9`: Switch to specific tab
+- `Cmd+N`: New chat
+- `Cmd+W`: Close tab
+- `Cmd+Shift+W`: Close all tabs
+- `Cmd+Shift+T`: Reopen closed tab
+- `Cmd+Shift+]`: Next tab
+- `Cmd+Shift+[`: Previous tab
 
-### Chat Interface
+### Search & Navigation
+
+- `Cmd+P`: Search
+- `Cmd+F`: Search in chat
+- `Cmd+Shift+F`: Advanced search
+- `Cmd+B`: Toggle sidebar
+
+### Chat Controls
 
 - `Enter`: Send message
-- `Shift + Enter`: New line in message
-- `Cmd/Ctrl + A`: Select all text in input
-- `Escape`: Clear input or close panels
-
-### Project Panel
-
-- `Cmd/Ctrl + P`: Quick file search
-- `Cmd/Ctrl + Shift + F`: Search in files
-- `Cmd/Ctrl + B`: Toggle sidebar
-- `Cmd/Ctrl + J`: Toggle project panel
+- `Shift+Enter`: New line in message
+- `Escape`: Stop AI response
+- `Cmd+,`: Open settings
 
 ## Best Practices
 
@@ -156,14 +157,12 @@ For Git-based projects:
 ### Project Organization
 
 - **Keep projects focused**: Open only the projects you're actively working on
-- **Use descriptive names**: Name your chats and projects clearly
+- **Use descriptive names**: Name your projects clearly
 - **Organize conversations**: Use separate chats for different features or issues
-- **Save important insights**: Export valuable conversations for future reference
 
 ### Performance Optimization
 
 - **Close unused tabs**: Keep only necessary conversations open
-- **Limit project size**: Very large projects may take longer to index
 - **Use specific queries**: Narrow searches for faster results
 - **Clear old sessions**: Archive or delete completed conversations
 
@@ -183,4 +182,4 @@ For Git-based projects:
 
 ---
 
-**Next**: [Settings & Configuration]({{< relref "settings-configuration" >}}) - Learn how to customize Reliant for your preferences.
+**Next**: [Settings]({{< relref "settings" >}}) - Learn how to customize Reliant for your preferences.

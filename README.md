@@ -34,7 +34,7 @@ reliant-docs/
 │   │   ├── getting-started/   # Getting started guides
 │   │   ├── installation/      # Installation instructions
 │   │   ├── using-the-app/    # Usage documentation
-│   │   ├── settings-configuration/ # Configuration guides
+│   │   ├── settings/ # Configuration guides
 │   │   ├── troubleshooting/   # Troubleshooting guides
 │   │   ├── faq/              # Frequently asked questions
 │   │   └── legal/            # Legal information
@@ -58,7 +58,7 @@ reliant-docs/
 - **Getting Started**: First steps with Reliant
 - **Installation**: macOS installation guide
 - **Using the App**: Core functionality and features
-- **Settings & Configuration**: App customization
+- **Settings**: App customization
 - **Troubleshooting**: Common issues and solutions
 - **FAQ**: Frequently asked questions
 - **Legal**: Licensing and legal information

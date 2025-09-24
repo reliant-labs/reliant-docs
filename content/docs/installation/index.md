@@ -1,80 +1,127 @@
 ---
 title: "Installation"
-description: "Download and install Reliant on your system"
+description: "Download and install Reliant on your Mac"
 weight: 10
-icon: "download"
+icon: "download_for_offline"
 ---
-
-# Installation Guide
 
 Get Reliant up and running on your system with these simple installation steps.
 
 ## System Requirements
 
-Before installing Reliant, ensure your system meets these requirements:
+Before installing Reliant, ensure your Mac meets these requirements:
 
-### Supported Operating Systems
-- **macOS**: 10.15 (Catalina) or later
+### macOS Version
+- **Minimum**: macOS 11.0 (Big Sur)
+- **Recommended**: macOS 13.0 (Ventura) or later
+- **Supported**: Both Intel and Apple Silicon (M1/M2/M3/M4)
 
 ### Hardware Requirements
 - **RAM**: Minimum 8GB, recommended 16GB+
-- **Storage**: At least 2GB of free disk space
-- **Processor**: Intel/AMD 64-bit processor or Apple Silicon (M1/M2)
+- **Storage**: At least 4GB of free disk space
+- **Processor**: Intel x86-64 or Apple Silicon
 
 ### Additional Requirements
-- **Internet Connection**: Required for initial download and AI model updates
-- **Git**: Recommended for project integration features
+- **Internet Connection**: Required for AI features and updates
+- **API Key**: Required for AI functionality (OpenAI, Anthropic, etc.)
+- **Git**: Optional but recommended for version control features
 
 ## Download Reliant
 
-### GitHub Releases
+### Download Links
 
-1. Visit the [Reliant GitHub Releases page](https://github.com/reliant-labs/reliant/releases)
-2. Find the latest stable release
-3. Download the macOS `.dmg` file (works with both Apple Silicon and Intel processors)
+Choose the version for your Mac:
 
-### Release Types
+- [Apple Silicon](https://downloads.reliantlabs.io/Reliant-latest-mac-arm64.dmg) **(M1/M2/M3/M4)**
+- [Intel](https://downloads.reliantlabs.io/Reliant-latest-mac-x64.dmg)
 
-- **Latest**: Most recent stable release (recommended for most users)
-- **Pre-release**: Beta versions with new features (for testing)
-- **Legacy**: Older versions for compatibility
+Not sure which version you need? Check Apple menu → About This Mac → Chip
 
-## macOS Installation
+## Installation Steps
 
-### Installation Steps
+### Installing from DMG
 
-1. **Download the DMG file** from GitHub Releases
+1. **Download the DMG file** using the links above
 2. **Open the DMG file** by double-clicking it
-3. **Drag Reliant to Applications folder** or run directly from the DMG
-4. **First Launch**: Right-click the app and select "Open" to bypass Gatekeeper
-5. **Move to Applications**: Drag the app to your Applications folder for permanent installation
+3. **Drag Reliant** to your Applications folder
+4. **Eject the DMG** once copying is complete
 
-**Note**: On first launch, macOS may show a security warning. Click "Open" in System Preferences > Security & Privacy to allow Reliant to run.
+### First Launch
+
+1. **Open Reliant** from your Applications folder
+2. **macOS Security**: If you see "Reliant can't be opened":
+   - Right-click the app and select **"Open"**
+   - Click **"Open"** in the dialog that appears
+   - This only needs to be done once
+3. **Grant Permissions** when prompted:
+   - File system access for project files
+   - Network access for API calls
+
+### Apple Silicon Users
+
+If you have an M1/M2/M3 Mac:
+- Reliant runs natively on Apple Silicon
+- No Rosetta required
+- Optimal performance out of the box
 
 ## Post-Installation Setup
 
-After installing Reliant:
+### Initial Configuration
 
-1. **Launch the application** from your Applications folder
-2. **Grant necessary permissions** when prompted
-3. **Complete the initial setup** (if any configuration is required)
-4. **Verify installation** by checking that the app launches successfully
+1. **Launch Reliant** from Applications
+2. **Configure API Key**:
+   - Go to Settings → API Configuration
+   - Select your AI provider
+   - Enter your API key
+   - Test the connection
+3. **Create Your First Project**:
+   - Click "New Project"
+   - Select your project folder
+   - Let Reliant index your code
+4. **Customize Settings** (optional):
+   - Choose your preferred theme
+   - Set keyboard shortcuts
 
 ## Updating Reliant
 
 ### Automatic Updates
-Reliant will check for updates automatically and notify you when new versions are available.
+
+Reliant checks for updates automatically:
+- Notification when new version available
+- One-click update from within the app
+- Your settings and projects are preserved
+- Automatic restart after update
 
 ### Manual Updates
-1. **Download the latest version** from GitHub Releases
-2. **Install over the existing version** (your settings and data will be preserved)
-3. **Restart the application** to apply updates
+
+To manually check for updates:
+1. Go to **Reliant** → **Check for Updates**
+2. Or download from [here]({{< relref "installation#download-reliant" >}})
+3. Install over existing version
+4. Restart Reliant
 
 ## Uninstalling Reliant
 
-### macOS
-1. **Drag Reliant to Trash** from Applications folder
-2. **Empty Trash** to complete removal
+### Complete Removal
+
+To fully uninstall Reliant:
+
+1. **Quit Reliant** if it's running
+2. **Delete the app**:
+   - Drag Reliant from Applications to Trash
+   - Empty Trash
+3. **Remove settings** (optional):
+   ```bash
+   rm -rf ~/Library/Application\ Support/Reliant
+   rm -rf ~/Library/Caches/Reliant
+   rm -rf ~/Library/Logs/Reliant
+   ```
+4. **Remove preferences**:
+   ```bash
+   defaults delete com.reliantlabs.reliant
+   ```
+
+Your projects and code remain untouched
 
 
 
@@ -82,12 +129,26 @@ Reliant will check for updates automatically and notify you when new versions ar
 
 ### Common Issues
 
-**App won't launch on macOS**
-- Check System Preferences > Security & Privacy
-- Right-click the app and select "Open"
-- Verify the app is not quarantined
+**App crashes on launch**
+- Ensure you meet minimum system requirements
+- Check for conflicting software
+- Try deleting preferences: `defaults delete com.reliantlabs.reliant`
+- Reinstall the app
 
+**"Reliant is damaged and can't be opened"**
+- Remove quarantine attribute:
+  ```bash
+  xattr -cr /Applications/Reliant.app
+  ```
+- Redownload from official source
 
+### Verifying Installation
+
+Check that Reliant is working:
+1. Launch from Applications
+2. Create a test project
+3. Send a test message in chat
+4. Verify AI responds correctly
 
 ### Getting Help
 

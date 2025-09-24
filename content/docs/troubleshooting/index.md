@@ -1,229 +1,339 @@
 ---
 title: "Troubleshooting"
 description: "Solve common issues and get help when needed"
-weight: 50
+weight: 70
 icon: "build"
 ---
 
-# Troubleshooting
-
 Find solutions to common issues and learn how to get help when you need it.
 
-## Common Problems
+## Common Issues
 
-### Application Won't Launch
+### Application Won't Start
 
-**Symptoms**: Reliant doesn't start or crashes immediately
+**Reliant doesn't launch or crashes immediately**
 
 **Solutions**:
 
-1. **Check System Requirements**
-   - Verify your OS version is supported
-   - Ensure you have sufficient RAM (8GB minimum)
-   - Check available disk space (2GB minimum)
+1. **macOS Security Block**
+   - Right-click Reliant and select "Open"
+   - Go to System Settings → Privacy & Security
+   - Click "Open Anyway" if Reliant is blocked
 
-2. **Permission Issues**
-   - **macOS**: Check System Preferences > Security & Privacy
-   - **macOS**: Check file permissions and execute rights
+2. **Check System Requirements**
+   - macOS 11.0 (Big Sur) or later
+   - 8GB RAM minimum
+   - 4GB free disk space
 
-3. **Port Conflicts**
-   - Close other applications that might use ports 8080 or 3000
-   - Restart your computer to clear port usage
-   - Check firewall settings
+3. **Reset Application**
+   ```bash
+   # Clear application support
+   rm -rf ~/Library/Application\ Support/Reliant
 
-4. **Corrupted Installation**
-   - Uninstall Reliant completely
-   - Download a fresh copy from GitHub Releases
-   - Reinstall the application
+   # Clear cache
+   rm -rf ~/Library/Caches/Reliant
+
+   # Clear logs
+   rm -rf ~/.reliant/logs
+   ```
+
+4. **Reinstall**
+   - Delete Reliant from Applications
+   - Empty Trash
+   - Download fresh copy from our [downloads page]({{< relref "installation#download-reliant" >}})
+   - Reinstall
 
 ### Backend Connection Issues
 
-**Symptoms**: "Backend not responding" or connection errors
+**"Backend not responding" or "Connection failed"**
 
 **Solutions**:
 
 1. **Check Backend Status**
-   - Look for backend process in Activity Monitor/Task Manager
-   - Check if ports are in use: `lsof -i :8080`
+   - Look for "reliant" process in Activity Monitor
+   - Backend should start automatically
+   - Takes 5-10 seconds to initialize
 
-2. **Restart Backend Services**
-   - Close Reliant completely
-   - Wait 10-15 seconds
-   - Relaunch the application
+2. **Port Conflicts**
+   ```bash
+   # Check if port is in use
+   lsof -i :8080
 
-3. **Port Configuration**
-   - Check if other services are using the default ports
-   - Configure custom ports in settings if needed
-   - Restart your computer to clear port conflicts
+   # Kill conflicting processes if needed
+   kill -9 [PID]
+   ```
+
+3. **Restart Backend**
+   - Quit Reliant completely (Cmd+Q)
+   - Wait 10 seconds
+   - Relaunch Reliant
 
 4. **Firewall Issues**
-   - Check system firewall settings
-   - Allow Reliant through macOS firewall
-   - Verify macOS firewall permissions
+   - Check System Settings → Network → Firewall
+   - Allow incoming connections for Reliant
+   - Disable VPN temporarily to test
 
 ### AI Not Responding
 
-**Symptoms**: Chat interface works but AI doesn't respond
+**Chat works but AI doesn't respond**
 
 **Solutions**:
 
-1. **Check Internet Connection**
-   - Verify you have internet access
-   - Check if AI model downloads are complete
-   - Try accessing other online services
+1. **Check API Key**
+   - Go to Settings → AI
+   - Verify key is entered correctly
+   - Click "Validate" to test connection
+   - Check API provider status
 
-2. **Model Loading Issues**
-   - Wait for initial model loading to complete
-   - Check available disk space for model storage
-   - Restart Reliant to reload models
+2. **API Provider Issues**
+   - Check your provider's status page
+   - Verify billing is active on provider's website
+   - Check rate limits for your tier
+   - Try a different provider if available
 
-3. **Backend Communication**
-   - Verify WebSocket connections are working
-   - Check browser console for connection errors
-   - Restart the application
+3. **Network Connection**
+   - Verify internet connection
+   - Check proxy settings
+   - Disable VPN if using one
+   - Try different network
 
-4. **Resource Constraints**
-   - Close other resource-intensive applications
-   - Check system memory usage
-   - Restart your computer
+4. **Clear Chat**
+   - Start a new chat
+   - Clear conversation history
+   - Restart Reliant
 
-### Performance Issues
+### Slow Performance
 
-**Symptoms**: Slow responses, laggy interface, high resource usage
+**Laggy interface or slow responses**
 
 **Solutions**:
 
-1. **Resource Management**
-   - Close unused chat tabs
-   - Limit the number of open projects
-   - Restart Reliant periodically
+1. **Free Up Resources**
+   - Close unused chats
+   - Limit open projects to 1-2
+   - Close other heavy applications
+   - Check Activity Monitor for CPU/Memory usage
 
-2. **System Optimization**
-   - Close unnecessary background applications
-   - Check for system updates
-   - Monitor resource usage in Activity Monitor/Task Manager
+2. **Large Projects**
+   - Open specific subdirectories instead of entire repo
+   - Avoid opening folders with large dependencies (node_modules, etc.)
+   - Split project into smaller logical sections
+   - Close unnecessary projects to free memory
 
-3. **Project Size**
-   - Very large projects may cause performance issues
-   - Consider excluding unnecessary directories
-   - Use `.gitignore` patterns to limit indexing
+3. **Clear Cache**
+   ```bash
+   rm -rf ~/Library/Caches/Reliant
+   ```
 
-4. **Cache Management**
-   - Clear application cache
-   - Reset project indexes if needed
-   - Restart the application
+4. **Optimize Settings**
+   - Close old chat tabs
+   - Use simpler theme (Light or Dark default)
+   - Restart app periodically
+
+### Project Issues
+
+**Can't open or index projects**
+
+**Solutions**:
+
+1. **Permission Issues**
+   - Grant file access when prompted
+   - Check folder permissions
+   - Try different project location
+
+2. **Git Issues**
+   - Ensure Git is installed
+   - Check `.git` folder exists
+   - Try non-Git folder to test
+
+3. **Path Problems**
+   - Avoid special characters in path names
+   - Don't use symlinks
+   - Keep path length reasonable
+   - Ensure path doesn't contain spaces (or escape them properly)
+
+### Chat Problems
+
+**Messages not sending or displaying**
+
+**Solutions**:
+
+1. **Input Issues**
+   - Press Enter to send (Shift+Enter for new line)
+   - Check for invisible characters
+   - Clear input and retype
+
+2. **Display Issues**
+   - Refresh the interface (Cmd+R)
+   - Clear chat history
+   - Check zoom level (Cmd+0 to reset)
+
+3. **WebSocket Issues**
+   - Check console for errors (View → Developer → Developer Tools)
+   - Restart Reliant
+   - Check network stability
 
 ## Error Messages
 
-### Common Error Messages
+### Common Errors and Solutions
 
-**"Backend connection failed"**
-- Backend service is not running
-- Port conflicts or firewall issues
-- Insufficient system resources
+**"API key is invalid"**
+- Double-check key in Settings
+- Ensure no extra spaces
+- Verify with provider's website
+- Generate new key if needed
 
-**"Project indexing failed"**
-- Insufficient permissions to access project files
-- Project path is invalid or inaccessible
-- Disk space issues
+**"Rate limit exceeded"**
+- Wait before sending more messages
+- Check API provider limits
+- Consider upgrading plan
+- Use different API key
 
-**"AI model not available"**
-- Model download incomplete or corrupted
-- Insufficient disk space
-- Network connectivity issues
+**"Model not available"**
+- Check API tier/access
+- Verify model name in settings
+- Try different model
+- Contact API provider
 
-**"File access denied"**
-- File permission issues
-- File is locked by another application
-- Antivirus software blocking access
+**"Project too large"**
+- Select specific subdirectories instead of root
+- Avoid folders with large dependencies (node_modules, build, dist)
+- Split into smaller logical sections
+- Close other projects to free memory
 
-### Understanding Error Codes
+**"Cannot read file"**
+- Check file permissions
+- Ensure file exists
+- Close file in other applications
+- Check file encoding (UTF-8 required)
 
-- **HTTP 500**: Internal server error in backend
-- **HTTP 404**: Resource not found
-- **HTTP 403**: Access forbidden
-- **Connection refused**: Backend not running or port blocked
-- **Timeout**: Request took too long to complete
+## Logs and Diagnostics
+
+### Finding Logs
+
+Reliant logs are stored in:
+```
+~/.reliant/logs/
+```
+
+View logs:
+```bash
+# View current log
+tail -f ~/.reliant/logs/reliant-$(date +%Y-%m-%d).log
+
+# View all recent logs
+ls -la ~/.reliant/logs/
+
+# Search for errors in today's log
+grep -i error ~/.reliant/logs/reliant-$(date +%Y-%m-%d).log
+```
+
+### Developer Tools
+
+Access browser console:
+1. View → Developer → Developer Tools
+2. Or press `Cmd+Option+I`
+3. Check Console tab for errors
+4. Check Network tab for failed requests
+
+### System Information
+
+Gather info for support:
+```bash
+# macOS version
+sw_vers
+
+# Reliant version
+cat /Applications/Reliant.app/Contents/Info.plist | grep -A1 CFBundleShortVersionString
+
+# System resources
+top -l 1 | head -n 10
+
+# Disk space
+df -h
+```
 
 ## Getting Help
 
-### Self-Help Resources
+### Before Asking for Help
 
-1. **Check this documentation** for your specific issue
-2. **Review the FAQ** for common questions
-3. **Search existing issues** on GitHub
-4. **Check system logs** for detailed error information
+1. **Check Documentation**
+   - Review relevant sections
+   - Search for your issue
+   - Check FAQ
 
-### GitHub Issues
+2. **Try Basic Fixes**
+   - Restart Reliant
+   - Clear cache/preferences
+   - Update to latest version
+   - Restart your Mac
 
-When filing an issue on GitHub:
-
-1. **Use the issue template** if available
-2. **Provide detailed information**:
-   - Operating system and version
+3. **Gather Information**
+   - Error messages (exact text)
+   - Steps to reproduce
+   - System info
    - Reliant version
-   - Steps to reproduce the problem
-   - Error messages and logs
-   - System specifications
+   - Relevant logs
 
-3. **Include relevant files**:
-   - Screenshots of the issue
-   - Log files (if available)
-   - Configuration files (remove sensitive information)
+### Getting Support
 
-### Contact Support
+**Support Email**
 
-For additional help:
+Contact: support@reliantlabs.com
 
-- **Email**: support@reliantlabs.com
-- **GitHub Discussions**: Community support and questions
-- **Documentation**: This comprehensive guide
+Include:
+- Subject: Clear problem description
+- Reliant version
+- macOS version
+- Detailed issue description
+- Steps you've tried
+- Attachments (screenshots, logs - remove sensitive data)
 
-## Diagnostic Tools
+**Response Time**
+- We aim to respond within 24-48 hours
+- Priority given to critical issues
+- Include as much detail as possible for faster resolution
 
-### Built-in Diagnostics
-
-Reliant includes several diagnostic tools:
-
-1. **Status Bar**: Shows connection status and backend health
-2. **Console Logs**: Access through Developer Tools (F12)
-3. **Connection Test**: Built-in connection diagnostics
-4. **Performance Monitor**: Resource usage information
-
-### System Diagnostics
-
-Use system tools to diagnose issues:
-
-**macOS**:
-```bash
-# Check port usage
-lsof -i :8080
-
-# Monitor system resources
-top -o cpu
-
-# Check application logs
-log show --predicate 'process == "Reliant"'
-```
-
-
-
-## Prevention
+## Prevention Tips
 
 ### Best Practices
 
-1. **Regular Updates**: Keep Reliant updated to the latest version
-2. **System Maintenance**: Regular system updates and maintenance
-3. **Resource Management**: Don't overload your system with too many applications
-4. **Backup Configuration**: Export your settings regularly
+1. **Regular Maintenance**
+   - Keep Reliant updated
+   - Update macOS regularly
+   - Clear cache periodically
+   - Restart app weekly
 
-### Monitoring
+2. **Project Management**
+   - Keep projects organized
+   - Open specific subdirectories when possible
+   - Archive old projects
+   - Limit project size
 
-1. **Watch for Warning Signs**: Slow performance, frequent crashes
-2. **Check System Resources**: Monitor memory and CPU usage
-3. **Review Logs**: Periodically check for error patterns
-4. **Test Functionality**: Verify core features work after system changes
+3. **Resource Management**
+   - Monitor system resources
+   - Close unused features
+   - Limit concurrent operations
+   - Regular app restarts
+
+4. **Backup**
+   - Save important chat content manually
+   - Keep copies of custom prompts
+   - Document custom agents
+   - Note your API provider settings
+
+### Quick Fixes Checklist
+
+When something goes wrong, try these in order:
+
+1. ✓ Restart Reliant
+2. ✓ Check API key and connection
+3. ✓ Clear cache
+4. ✓ Check for updates
+5. ✓ Restart your Mac
+6. ✓ Reinstall Reliant
+7. ✓ Contact support
 
 ---
 
-**Next**: [FAQ]({{< relref "faq" >}}) - Find answers to frequently asked questions.
+**Still having issues?** Don't hesitate to reach out for help. We're here to ensure Reliant works perfectly for your development workflow.
