@@ -1,7 +1,7 @@
 ---
 title: "Quick Start"
 description: "Get up and running with Reliant in 5 minutes"
-weight: 15
+weight: 3
 icon: "rocket_launch"
 ---
 
