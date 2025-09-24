@@ -7,22 +7,6 @@ icon: "play_arrow"
 
 Welcome to Reliant! This guide will help you set up and start using your AI-powered coding assistant in just a few minutes.
 
-## First Launch
-
-### Starting Reliant
-
-1. **Open Reliant** from your Applications folder
-2. **Wait for initialization**
-3. **Welcome screen** appears when ready
-
-### What's Happening Behind the Scenes
-
-When Reliant starts:
-- Local Go backend launches on an available port
-- Electron app connects to the backend
-- WebSocket connection established for real-time chat
-- Everything runs locally on your Mac
-
 ## Essential Setup
 
 ### Step 1: Configure Your API Key
@@ -30,11 +14,8 @@ When Reliant starts:
 Before you can use AI features, you need an API key:
 
 1. Click **Settings** in the sidebar (or press `Cmd+,`)
-2. Go to **API Configuration**
-3. Select your provider:
-   - **OpenAI** - GPT-4, GPT-3.5 ([Get API Key](https://platform.openai.com/api-keys))
-   - **Anthropic** - Claude models ([Get API Key](https://console.anthropic.com/))
-   - **Local Models** - Ollama, LM Studio
+2. Go to **AI**
+3. Select your provider
 4. Enter your API key
 5. Click **"Test Connection"**
 6. Click **"+ Add Provider"** when successful

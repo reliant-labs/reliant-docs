@@ -226,12 +226,12 @@ Everything stays on your Mac.
 - Include use cases and examples
 - We consider all suggestions for future updates
 
-## Pricing & Licensing
+## Pricing
 
 ### Q: How much does Reliant cost?
 
 **A**: Reliant pricing:
-- The app itself requires a license (contact us for pricing)
+- Contact us for pricing details at support@reliantlabs.com
 - You also need API keys from your chosen provider
 - API usage is billed by your provider based on their pricing
 
@@ -241,7 +241,7 @@ Everything stays on your Mac.
 
 ### Q: Can I use Reliant commercially?
 
-**A**: Yes, you can use Reliant for commercial software development. Your usage is governed by Reliant's license agreement. Also check your API provider's terms for their services.
+**A**: Yes, you can use Reliant for commercial software development. Check with your API provider about their terms for commercial use.
 
 ---
 

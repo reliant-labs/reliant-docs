@@ -34,7 +34,7 @@ Find solutions to common issues and learn how to get help when you need it.
    rm -rf ~/Library/Caches/Reliant
 
    # Clear logs
-   rm -rf ~/.reliant/logs
+   rm -rf ~/Library/Logs/Reliant
    ```
 
 4. **Reinstall**
@@ -213,19 +213,19 @@ Find solutions to common issues and learn how to get help when you need it.
 
 Reliant logs are stored in:
 ```
-~/.reliant/logs/
+~/Library/Logs/Reliant/
 ```
 
 View logs:
 ```bash
 # View current log
-tail -f ~/.reliant/logs/reliant-$(date +%Y-%m-%d).log
+tail -f ~/Library/Logs/Reliant/main.log
 
 # View all recent logs
-ls -la ~/.reliant/logs/
+ls -la ~/Library/Logs/Reliant/
 
-# Search for errors in today's log
-grep -i error ~/.reliant/logs/reliant-$(date +%Y-%m-%d).log
+# Search for errors in logs
+grep -i error ~/Library/Logs/Reliant/main.log
 ```
 
 ### Developer Tools
