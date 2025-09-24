@@ -19,6 +19,7 @@ help:
 	@echo ""
 	@echo "Assets:"
 	@echo "  make icons       - Generate favicon and icons from logo"
+	@echo "  make update-version - Update version from Reliant project"
 
 # Initial setup for new users
 setup: install setup-submodules
@@ -39,7 +40,7 @@ setup-submodules:
 	@echo "✅ Submodules initialized successfully!"
 
 # Development server (uses hugo.dev.toml)
-dev: setup-submodules
+dev: setup-submodules update-version
 	@echo "🚀 Starting Hugo development server..."
 	@echo "📖 Site will be available at: http://localhost:1313/"
 	@echo "📁 Using development configuration (hugo.dev.toml)"
@@ -47,7 +48,7 @@ dev: setup-submodules
 	@hugo server --config hugo.dev.toml --port 1313
 
 # Development server with production config (for testing production build locally)
-serve: setup-submodules
+serve: setup-submodules update-version
 	@echo "🚀 Starting Hugo server with production config..."
 	@echo "📖 Site will be available at: http://localhost:1313/reliant-docs/"
 	@echo "📁 Using production configuration (hugo.toml)"
@@ -55,7 +56,7 @@ serve: setup-submodules
 	@hugo server --port 1313
 
 # Build for production
-build: setup-submodules
+build: setup-submodules update-version
 	@echo "🔨 Building site for production..."
 	@hugo --config hugo.toml
 	@echo "✅ Build complete! Site is in the 'public/' directory"
@@ -127,3 +128,8 @@ pr-check: setup-submodules
 icons:
 	@echo "🎨 Generating icons from logo..."
 	@./tools/generate-icons.sh
+
+# Update version from Reliant project
+update-version:
+	@echo "📦 Updating version from Reliant project..."
+	@./scripts/update-version.sh
