@@ -126,8 +126,8 @@ pr-check: setup-submodules
 
 # Generate icons from logo
 icons:
-	@echo "🎨 Generating icons from logo..."
-	@./tools/generate-icons.sh
+	@echo "🎨 Generating favicon files from logo..."
+	@./scripts/generate-favicons.sh
 
 # Update version from Reliant project
 update-version:
