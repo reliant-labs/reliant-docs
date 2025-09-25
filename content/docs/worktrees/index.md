@@ -1,7 +1,7 @@
 ---
 title: "Worktrees"
 description: "Managing Git worktrees for parallel development workflows"
-weight: 40
+weight: 50
 icon: "account_tree"
 ---
 
