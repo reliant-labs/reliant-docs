@@ -37,62 +37,10 @@ Choose the version for your Mac:
 
 Not sure which version you need? Check Apple menu → About This Mac → Chip
 
-## Installation Steps
-
-### Installing from DMG
-
-1. **Download the DMG file** using the links above
-2. **Open the DMG file** by double-clicking it
-3. **Drag Reliant** to your Applications folder
-4. **Eject the DMG** once copying is complete
-
-### First Launch
-
-1. **Open Reliant** from your Applications folder
-2. **macOS Security**: If you see "Reliant can't be opened":
-   - Right-click the app and select **"Open"**
-   - Click **"Open"** in the dialog that appears
-   - This only needs to be done once
-3. **Grant Permissions** when prompted:
-   - File system access for project files
-   - Network access for API calls
-
-### Apple Silicon Users
-
-If you have an M1/M2/M3 Mac:
-- Reliant runs natively on Apple Silicon
-- No Rosetta required
-- Optimal performance out of the box
-
 ## Post-Installation Setup
 
-### Initial Configuration
-
-1. **Launch Reliant** from Applications
-2. **Configure API Key**:
-   - Go to Settings → AI
-   - Select your AI provider
-   - Enter your API key
-   - Test the connection
-3. **Create Your First Project**:
-   - Click "New Project"
-   - Select your project folder
-   - Let Reliant index your code
-4. **Customize Settings** (optional):
-   - Choose your preferred theme
-   - Set keyboard shortcuts
 
 ## Updating Reliant
-
-### Automatic Updates
-
-Reliant checks for updates automatically:
-- Notification when new version available
-- One-click update from within the app
-- Your settings and projects are preserved
-- Automatic restart after update
-
-### Manual Updates
 
 To manually check for updates:
 1. Go to **Reliant** → **Check for Updates**
@@ -123,40 +71,10 @@ To fully uninstall Reliant:
 
 Your projects and code remain untouched
 
-
-
-## Troubleshooting Installation
-
-### Common Issues
-
-**App crashes on launch**
-- Ensure you meet minimum system requirements
-- Check for conflicting software
-- Try deleting preferences: `defaults delete com.reliantlabs.reliant`
-- Reinstall the app
-
-**"Reliant is damaged and can't be opened"**
-- Remove quarantine attribute:
-  ```bash
-  xattr -cr /Applications/Reliant.app
-  ```
-- Redownload from official source
-
-### Verifying Installation
-
-Check that Reliant is working:
-1. Launch from Applications
-2. Create a test project
-3. Send a test message in chat
-4. Verify AI responds correctly
-
 ### Getting Help
 
 If you encounter installation issues:
-1. Check the [Troubleshooting section]({{< relref "troubleshooting" >}})
-2. Review the [FAQ]({{< relref "faq" >}})
-3. File an issue on [GitHub](https://github.com/reliant-labs/reliant/issues)
-4. Contact support at support@reliantlabs.com
+2. Contact support at support@reliantlabs.com
 
 ---
 

@@ -79,81 +79,6 @@ Before you can use AI features, you need an API key:
 - Direct file editing from chat
 - Git-aware operations
 
-## Common First Tasks
-
-### Understanding Your Code
-
-Ask Reliant to explain your project:
-```
-"Give me an overview of this codebase"
-"What are the main components?"
-"How is the project structured?"
-```
-
-### Getting Help with Code
-
-Get assistance with specific files:
-```
-"Explain what this function does" (with file attached)
-"How can I improve this code?"
-"Are there any bugs in this file?"
-```
-
-### Writing New Code
-
-Generate code with context:
-```
-"Create a new component that does X"
-"Write a test for this function"
-"Add error handling to this method"
-```
-
-### Debugging
-
-Get help fixing issues:
-```
-"Why is this throwing an error?" (paste error)
-"Help me debug this function"
-"What's causing this bug?"
-```
-
-## Quick Tips
-
-### Effective Prompting
-
-**Do:**
-- Be specific about what you want
-- Provide context and examples
-- Attach relevant files
-- Ask follow-up questions
-
-**Don't:**
-- Use vague descriptions
-- Assume Reliant knows unstated requirements
-- Forget to review generated code
-- Skip testing suggestions
-
-### Keyboard Shortcuts
-
-Essential shortcuts to remember:
-
-| Action | Shortcut |
-|--------|----------|
-| New Chat | `Cmd+N` |
-| Settings | `Cmd+,` |
-| Search | `Cmd+P` |
-| Search in Chat | `Cmd+F` |
-| Stop AI Response | `Esc` |
-| Send Message | `Enter` |
-| New Line in Input | `Shift+Enter` |
-
-### Best Practices
-
-1. **Start Simple**: Begin with basic questions before complex tasks
-2. **Iterate**: Refine responses with follow-up questions
-3. **Review Carefully**: Always review AI-generated code
-4. **Use Projects**: Keep code organized in projects
-
 ## What's Next?
 
 ### Explore Features
@@ -165,14 +90,9 @@ Essential shortcuts to remember:
 ### Customize Your Experience
 
 - **[Settings]({{< relref "settings" >}})** - Configure preferences
-- **[Appearance]({{< relref "appearance" >}})** - Choose your theme
-- **[Prompts]({{< relref "prompts" >}})** - Create templates
 
 ### Get Help
 
-- **[Troubleshooting]({{< relref "troubleshooting" >}})** - Solve issues
-- **[FAQ]({{< relref "faq" >}})** - Common questions
-- **GitHub Issues** - Report bugs
 - **Support** - support@reliantlabs.com
 
 ---

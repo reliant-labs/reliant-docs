@@ -3,6 +3,7 @@ title: "Troubleshooting"
 description: "Solve common issues and get help when needed"
 weight: 70
 icon: "build"
+draft: true
 ---
 
 Find solutions to common issues and learn how to get help when you need it.

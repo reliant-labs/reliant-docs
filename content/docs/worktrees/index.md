@@ -147,38 +147,3 @@ Work on multiple features simultaneously:
 3. **Quick Switches**: Use worktrees for context switching without stashing
 4. **Dependency Management**: Different package versions per worktree
 
-## Tips
-
-### Performance
-
-- Worktrees share the same Git repository, saving disk space
-- Each worktree has independent working files
-- Building in one worktree doesn't affect others
-- Can run tests in parallel across worktrees
-
-### Integration
-
-- Worktrees integrate with the chat
-- File attachments use the current worktree context
-- Git operations respect worktree boundaries
-- Each worktree maintains its own Git history view
-
-## Troubleshooting
-
-### Common Issues
-
-**Worktree Creation Failed**
-- Ensure the branch name doesn't already exist
-- Check that the project has Git initialized
-- Verify you have write permissions
-
-**Cannot Switch Worktrees**
-- The worktree list may need refreshing (click refresh button)
-- Ensure the worktree still exists on disk
-- Check for file permission issues
-
-**Git Operations Not Working**
-- Verify Git is installed and configured
-- Check that the worktree has a valid Git repository
-- Ensure you're connected to the network for remote operations
-

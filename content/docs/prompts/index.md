@@ -3,6 +3,7 @@ title: "Prompts"
 description: "Create and manage reusable prompt templates"
 weight: 60
 icon: "list_alt"
+draft: true
 ---
 
 Prompts in Reliant allow you to create reusable preambles and instructions that can be quickly added to your messages. These help maintain consistency and save time when performing common tasks.
