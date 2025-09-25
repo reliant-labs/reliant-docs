@@ -14,7 +14,7 @@ Before installing Reliant, ensure your Mac meets these requirements:
 ### macOS Version
 - **Minimum**: macOS 11.0 (Big Sur)
 - **Recommended**: macOS 13.0 (Ventura) or later
-- **Supported**: Both Intel and Apple Silicon (M1/M2/M3/M4)
+- **Supported**: Both Intel and Apple Silicon
 
 ### Hardware Requirements
 - **RAM**: Minimum 8GB, recommended 16GB+
@@ -28,14 +28,28 @@ Before installing Reliant, ensure your Mac meets these requirements:
 
 ## Download Reliant
 
-### Download Links
-
 Choose the version for your Mac:
 
-- [Apple Silicon](https://downloads.reliantlabs.io/Reliant-latest-mac-arm64.dmg) **(M1/M2/M3/M4)**
-- [Intel](https://downloads.reliantlabs.io/Reliant-latest-mac-x64.dmg)
+<div class="row g-3 mb-4">
+<div class="col-md-3">
+<a href="https://downloads.reliantlabs.io/Reliant-latest-mac-arm64.dmg" class="btn btn-outline-primary d-flex align-items-center justify-content-center">
+<span class="material-icons me-2">download</span>
+Reliant for Apple Silicon
+</a>
+<p class="text-muted small mt-2 mb-0">For all Apple M Series Macs</p>
+</div>
+<div class="col-md-3">
+<a href="https://downloads.reliantlabs.io/Reliant-latest-mac-x64.dmg" class="btn btn-outline-primary d-flex align-items-center justify-content-center">
+<span class="material-icons me-2">download</span>
+Reliant for Intel Macs
+</a>
+<p class="text-muted small mt-2 mb-0">For Intel-based Macs</p>
+</div>
+</div>
 
-Not sure which version you need? Check Apple menu → About This Mac → Chip
+<div class="alert alert-info col-md-6">
+<strong>Not sure which version?</strong> Check Apple menu → About This Mac → Chip
+</div>
 
 ## Post-Installation Setup
 
