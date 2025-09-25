@@ -29,10 +29,7 @@ Find solutions to common issues and learn how to get help when you need it.
 3. **Reset Application**
    ```bash
    # Clear application support
-   rm -rf ~/Library/Application\ Support/Reliant
-
-   # Clear cache
-   rm -rf ~/Library/Caches/Reliant
+   rm -rf ~/Library/Application\ Support/reliant
 
    # Clear logs
    rm -rf ~/Library/Logs/Reliant
@@ -121,12 +118,8 @@ Find solutions to common issues and learn how to get help when you need it.
    - Split project into smaller logical sections
    - Close unnecessary projects to free memory
 
-3. **Clear Cache**
-   ```bash
-   rm -rf ~/Library/Caches/Reliant
-   ```
 
-4. **Optimize Settings**
+3. **Optimize Settings**
    - Close old chat tabs
    - Use simpler theme (Light or Dark default)
    - Restart app periodically

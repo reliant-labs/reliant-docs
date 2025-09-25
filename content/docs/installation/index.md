@@ -60,8 +60,7 @@ To fully uninstall Reliant:
    - Empty Trash
 3. **Remove settings** (optional):
    ```bash
-   rm -rf ~/Library/Application\ Support/Reliant
-   rm -rf ~/Library/Caches/Reliant
+   rm -rf ~/Library/Application\ Support/reliant
    rm -rf ~/Library/Logs/Reliant
    ```
 4. **Remove preferences**:
@@ -73,8 +72,7 @@ Your projects and code remain untouched
 
 ### Getting Help
 
-If you encounter installation issues:
-2. Contact support at support@reliantlabs.com
+If you encounter installation issues contact support at support@reliantlabs.com
 
 ---
 
