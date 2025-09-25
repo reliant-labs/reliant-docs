@@ -31,24 +31,24 @@ Before installing Reliant, ensure your Mac meets these requirements:
 Choose the version for your Mac:
 
 <div class="row g-3 mb-4">
-<div class="col-md-3">
-<a href="https://downloads.reliantlabs.io/Reliant-latest-mac-arm64.dmg" class="btn btn-outline-primary d-flex align-items-center justify-content-center">
-<span class="material-icons me-2">download</span>
-Reliant for Apple Silicon
-</a>
-<p class="text-muted small mt-2 mb-0">For all Apple M Series Macs</p>
-</div>
-<div class="col-md-3">
-<a href="https://downloads.reliantlabs.io/Reliant-latest-mac-x64.dmg" class="btn btn-outline-primary d-flex align-items-center justify-content-center">
-<span class="material-icons me-2">download</span>
-Reliant for Intel Macs
-</a>
-<p class="text-muted small mt-2 mb-0">For Intel-based Macs</p>
-</div>
+   <div class="col-md-6">
+      <a href="https://downloads.reliantlabs.io/Reliant-latest-mac-arm64.dmg" class="btn btn-outline-primary d-flex align-items-center justify-content-center">
+         <span class="material-icons me-2">download</span>
+         Reliant for Apple Silicon
+      </a>
+      <p class="text-muted small mt-2 mb-0">For Apple M Series Macs</p>
+   </div>
+   <div class="col-md-6">
+      <a href="https://downloads.reliantlabs.io/Reliant-latest-mac-x64.dmg" class="btn btn-outline-primary d-flex align-items-center justify-content-center">
+         <span class="material-icons me-2">download</span>
+         Reliant for Intel Macs
+      </a>
+      <p class="text-muted small mt-2 mb-0">For Intel based Macs</p>
+   </div>
 </div>
 
-<div class="alert alert-info col-md-6">
-<strong>Not sure which version?</strong> Check Apple menu → About This Mac → Chip
+<div class="alert alert-info">
+   <strong>Not sure which version?</strong> Check Apple menu → About This Mac → Chip
 </div>
 
 ## Post-Installation Setup
