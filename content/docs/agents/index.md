@@ -7,7 +7,7 @@ icon: "smart_toy"
 
 Agents in Reliant are specialized AI assistants configured for specific tasks. They combine custom instructions, model settings, and behaviors to provide expert assistance in particular domains.
 
-{{< figure src="images/screenshots/agents-list.png" alt="Placeholder: Agents panel showing list of available agents with icons, names, descriptions, and a Create Agent button at the top" caption="Browse and select specialized AI agents" width="50%" >}}
+{{< figure src="/images/screenshots/agents-list.png" alt="Placeholder: Agents panel showing list of available agents with icons, names, descriptions, and a Create Agent button at the top" caption="Browse and select specialized AI agents" width="50%" >}}
 
 ## What are Agents?
 
@@ -19,7 +19,7 @@ Agents are customized AI configurations that:
 
 ## Built-in Agents
 
-{{< figure src="images/screenshots/agent-selector.png" alt="Placeholder: Agent selection dropdown in chat interface showing agent icons, names, and brief descriptions - General, Code Reviewer, Debug With Me, Environment Setup, etc." caption="Select an agent from the dropdown to specialize your chat" width="50%">}}
+{{< figure src="/images/screenshots/agent-selector.png" alt="Placeholder: Agent selection dropdown in chat interface showing agent icons, names, and brief descriptions - General, Code Reviewer, Debug With Me, Environment Setup, etc." caption="Select an agent from the dropdown to specialize your chat" width="50%">}}
 
 Reliant includes several pre-configured agents optimized for specific tasks:
 
@@ -62,7 +62,7 @@ Reliant includes several pre-configured agents optimized for specific tasks:
 
 ### Agent Builder
 
-{{< figure src="images/screenshots/agent-builder.png" alt="Placeholder: Agent creation form with fields for name, description, system prompt textarea, model dropdown, temperature slider, and max tokens input" caption="Build custom agents tailored to your needs" width="50%" >}}
+{{< figure src="/images/screenshots/agent-builder.png" alt="Placeholder: Agent creation form with fields for name, description, system prompt textarea, model dropdown, temperature slider, and max tokens input" caption="Build custom agents tailored to your needs" width="50%" >}}
 
 Create your own agents:
 
