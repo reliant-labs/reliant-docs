@@ -11,8 +11,6 @@
   width: 100%;
   max-width: 100%;
   height: auto;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -58,25 +56,34 @@
   }
 
   .responsive-figure img {
+    width: auto;
     max-width: 100%;
   }
 }
 
-/* Tablet portrait */
+/* Tablet portrait - also center on tablets */
 @media (min-width: 481px) and (max-width: 767px) {
   .responsive-figure {
-    margin: 2rem 0;
+    margin: 2rem auto;
+    text-align: center;
   }
 
   .responsive-figure img {
     border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .responsive-figure figcaption {
+    text-align: center;
   }
 }
 
 /* Mobile - optimized for small screens */
 @media (max-width: 480px) {
   .responsive-figure {
-    margin: 1.5rem -1rem;
+    margin: 1.5rem auto;
+    text-align: center;
   }
 
   .responsive-figure img {
@@ -84,24 +91,29 @@
     border-left: none;
     border-right: none;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .responsive-figure figcaption {
     font-size: 0.813rem;
     padding: 0 1rem;
     margin-top: 0.75rem;
+    text-align: center;
   }
 }
 
 /* Very small screens */
 @media (max-width: 360px) {
   .responsive-figure {
-    margin: 1rem -0.75rem;
+    margin: 1rem auto;
+    text-align: center;
   }
 
   .responsive-figure figcaption {
     font-size: 0.75rem;
     padding: 0 0.75rem;
+    text-align: center;
   }
 }
 
