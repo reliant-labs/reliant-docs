@@ -4,6 +4,10 @@
 {{- $width := .Get "width" -}}
 {{- $class := .Get "class" -}}
 
+{{- if not (hasPrefix $src "/") -}}
+  {{- $src = printf "/%s" $src -}}
+{{- end -}}
+
 <figure{{ if $class }} class="{{ $class }}"{{ end }}>
   <img src="{{ $src }}" alt="{{ $alt }}"{{ if $width }} width="{{ $width }}"{{ end }}>
   {{- if $caption -}}

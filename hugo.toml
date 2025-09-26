@@ -95,6 +95,8 @@ theme = 'lotusdocs'
 [build]
   # Don't fail on warnings
   noTimes = true
+  # Disable minification to prevent quote removal issues
+  minify = false
 
 # Logging configuration
 [log]
