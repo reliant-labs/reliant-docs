@@ -4,8 +4,9 @@
 {{- $width := .Get "width" -}}
 {{- $class := .Get "class" -}}
 
-{{- if not (hasPrefix $src "/") -}}
-  {{- $src = printf "/%s" $src -}}
+{{- /* For GitHub Pages, we need to use the baseURL for absolute paths */ -}}
+{{- if hasPrefix $src "/" -}}
+  {{- $src = (printf "%s%s" (strings.TrimSuffix "/" $.Site.BaseURL) $src) | safeURL -}}
 {{- end -}}
 
 <figure{{ if $class }} class="{{ $class }}"{{ end }}>
