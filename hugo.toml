@@ -1,4 +1,4 @@
-baseURL = 'https://reliant-labs.github.io/reliant-docs/'
+baseURL = 'https://docs.reliantlabs.io/'
 languageCode = 'en-us'
 title = 'Reliant AI Docs'
 theme = 'lotusdocs'
