@@ -1,6 +1,6 @@
-baseURL = 'https://reliant-labs.github.io/reliant-docs/'
+baseURL = 'http://localhost:1313/'
 languageCode = 'en-us'
-title = 'Reliant AI Docs'
+title = 'Reliant AI Docs (Local)'
 theme = 'lotusdocs'
 
 # Enable Hugo modules
