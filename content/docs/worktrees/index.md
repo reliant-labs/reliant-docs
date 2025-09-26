@@ -7,6 +7,8 @@ icon: "account_tree"
 
 Worktrees in Reliant allow you to work on multiple branches of your project simultaneously without switching contexts. This feature leverages Git's worktree functionality, providing isolated working directories for each branch while sharing the same repository.
 
+{{< figure src="/images/screenshots/worktree-page.png" alt="Placeholder: Worktrees panel showing list of worktrees with branch names, status badges (Active, Completed, Abandoned), and Create Worktree button" caption="Manage multiple Git worktrees in parallel" width="50%">}}
+
 ## What are Worktrees?
 
 Worktrees create separate working directories for different branches, allowing you to:
@@ -19,6 +21,8 @@ Worktrees create separate working directories for different branches, allowing y
 ## Creating Worktrees
 
 ### From the Worktree Panel
+
+{{< figure src="/images/screenshots/create-worktree.png" alt="Placeholder: Create worktree dialog with fields for branch name, worktree name, base branch dropdown, working directory path, and Create/Cancel buttons" caption="Create a new worktree with custom settings" width="50%">}}
 
 1. Navigate to the **Worktrees** tab in the left navigation
 2. Click **"Create Worktree"** button
@@ -87,6 +91,8 @@ The worktree detail view displays real-time Git status:
 - **Clean status**: When no changes present
 
 ### Git Actions
+
+{{< figure src="/images/screenshots/git-commit.png" alt="Placeholder: Git actions toolbar showing Commit, Push, and Create PR buttons with a commit dialog overlay displaying message field and file change list" caption="Perform Git operations directly from the worktree panel" width="50%">}}
 
 Available Git operations for each worktree:
 

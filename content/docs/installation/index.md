@@ -53,6 +53,11 @@ Choose the version for your Mac:
 
 ## Post-Installation Setup
 
+After installation, you'll need to:
+1. **Launch Reliant** from Applications
+2. **Choose a project folder** to work with
+3. **Select your preferred AI provider**
+4. **Configure API Key** in the settings
 
 ## Updating Reliant
 
