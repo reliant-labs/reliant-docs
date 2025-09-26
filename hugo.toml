@@ -17,8 +17,8 @@ theme = 'lotusdocs'
   # Enable search functionality
   search = true
 
-  # Custom CSS for landing page
-  custom_css = ["css/landing.css"]
+  # Custom CSS for landing page and responsive images
+  custom_css = ["css/landing.css", "css/responsive-images.css"]
 
   # Site description
   description = "Documentation for Reliant AI Chat - A powerful AI chat application"

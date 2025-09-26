@@ -1,0 +1,108 @@
+/* Responsive Figure Styles */
+.responsive-figure {
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 100%;
+}
+
+.responsive-figure img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect for desktop */
+@media (hover: hover) {
+  .responsive-figure img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    cursor: zoom-in;
+  }
+}
+
+.responsive-figure figcaption {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  padding: 0 1rem;
+}
+
+/* Dark mode support */
+[data-dark-mode] .responsive-figure img {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+[data-dark-mode] .responsive-figure figcaption {
+  color: #999;
+}
+
+/* Desktop - optimal viewing size */
+@media (min-width: 1024px) {
+  .responsive-figure img {
+    max-width: 85%;
+  }
+}
+
+/* Tablet landscape */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .responsive-figure img {
+    max-width: 90%;
+  }
+}
+
+/* Tablet portrait */
+@media (min-width: 481px) and (max-width: 767px) {
+  .responsive-figure img {
+    max-width: 95%;
+  }
+
+  .responsive-figure figcaption {
+    font-size: 0.88rem;
+  }
+}
+
+/* Mobile - full width for better visibility */
+@media (max-width: 480px) {
+  .responsive-figure {
+    margin: 1.5rem -1rem;
+    padding: 0 1rem;
+  }
+
+  .responsive-figure img {
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .responsive-figure figcaption {
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .responsive-figure {
+    margin: 1rem -0.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .responsive-figure figcaption {
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .responsive-figure img {
+    max-width: 100%;
+    box-shadow: none;
+  }
+}

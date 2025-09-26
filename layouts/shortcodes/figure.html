@@ -1,7 +1,6 @@
 {{- $src := .Get "src" -}}
 {{- $alt := .Get "alt" -}}
 {{- $caption := .Get "caption" -}}
-{{- $width := .Get "width" -}}
 {{- $class := .Get "class" -}}
 
 {{- /* For GitHub Pages, we need to use the baseURL for absolute paths */ -}}
@@ -9,8 +8,17 @@
   {{- $src = (printf "%s%s" (strings.TrimSuffix "/" $.Site.BaseURL) $src) | safeURL -}}
 {{- end -}}
 
-<figure{{ if $class }} class="{{ $class }}"{{ end }}>
-  <img src="{{ $src }}" alt="{{ $alt }}"{{ if $width }} width="{{ $width }}"{{ end }}>
+{{- /* Build figure classes */ -}}
+{{- $figureClass := "responsive-figure" -}}
+{{- if $class -}}
+  {{- $figureClass = printf "%s %s" $figureClass $class -}}
+{{- end -}}
+
+<figure class="{{ $figureClass }}">
+  <img src="{{ $src }}"
+       alt="{{ $alt }}"
+       loading="lazy"
+       decoding="async">
   {{- if $caption -}}
     <figcaption>{{ $caption }}</figcaption>
   {{- end -}}
