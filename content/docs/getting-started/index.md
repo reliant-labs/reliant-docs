@@ -11,7 +11,7 @@ Welcome to Reliant! This guide will help you set up and start using your AI-powe
 
 ### Step 1: Configure Your API Key
 
-{{< figure src="/images/screenshots/configured-providers.png" alt="Placeholder: Settings screen showing AI provider configuration with API key input field, provider dropdown (showing Anthropic, OpenAI, OpenRouter options), and Test Connection button" caption="Configure your AI provider and API key" width="50%">}}
+{{< figure src="images/screenshots/configured-providers.png" alt="Placeholder: Settings screen showing AI provider configuration with API key input field, provider dropdown (showing Anthropic, OpenAI, OpenRouter options), and Test Connection button" caption="Configure your AI provider and API key" width="50%">}}
 
 Before you can use AI features, you need an API key:
 
@@ -24,7 +24,7 @@ Before you can use AI features, you need an API key:
 
 ### Step 2: Open or Create a Project
 
-{{< figure src="/images/screenshots/recent-projects.png" alt="Placeholder: Project selection screen showing Open Existing Project and Create New Project buttons, with recent projects list below" caption="Choose to open an existing project or create a new one" width="50%">}}
+{{< figure src="images/screenshots/recent-projects.png" alt="Placeholder: Project selection screen showing Open Existing Project and Create New Project buttons, with recent projects list below" caption="Choose to open an existing project or create a new one" width="50%">}}
 
 **Option A: Open Existing Project**
 1. Click **"Open Existing Project"** in the menu
@@ -41,7 +41,7 @@ Before you can use AI features, you need an API key:
 
 ### Step 3: Start Your First Chat
 
-{{< figure src="/images/screenshots/new-chat-session-info.png" alt="Placeholder: Chat interface showing the message input box at bottom with example prompt 'Explain the structure of this project', send button, and empty conversation area above" caption="Start chatting with AI about your code" width="50%">}}
+{{< figure src="images/screenshots/new-chat-session-info.png" alt="Placeholder: Chat interface showing the message input box at bottom with example prompt 'Explain the structure of this project', send button, and empty conversation area above" caption="Start chatting with AI about your code" width="50%">}}
 
 1. With your project selected, click in the chat input
 2. Try one of these starter prompts:
@@ -53,7 +53,7 @@ Before you can use AI features, you need an API key:
 
 ## Understanding the Interface
 
-{{< figure src="/images/screenshots/chat-interface.png" alt="Placeholder: Full Reliant interface showing three-panel layout - navigation bar on far left with icons for Chats, Worktrees, Agents, Flows, Settings; sidebar showing chat history list; main chat area in center with conversation and input box" caption="The Reliant interface with navigation, sidebar, and chat area" width="50%">}}
+{{< figure src="images/screenshots/chat-interface.png" alt="Placeholder: Full Reliant interface showing three-panel layout - navigation bar on far left with icons for Chats, Worktrees, Agents, Flows, Settings; sidebar showing chat history list; main chat area in center with conversation and input box" caption="The Reliant interface with navigation, sidebar, and chat area" width="50%">}}
 
 ### Main Areas
 

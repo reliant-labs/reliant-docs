@@ -9,7 +9,7 @@ Configure Reliant to work seamlessly with your development workflow. Access sett
 
 ## Supported Model Providers
 
-{{< figure src="/images/screenshots/ai-providers.png" alt="Placeholder: AI providers configuration screen showing list of available providers with logos, API key input fields, model selection dropdowns, and Test Connection buttons for each provider" caption="Configure multiple AI providers" width="50%">}}
+{{< figure src="images/screenshots/ai-providers.png" alt="Placeholder: AI providers configuration screen showing list of available providers with logos, API key input fields, model selection dropdowns, and Test Connection buttons for each provider" caption="Configure multiple AI providers" width="50%">}}
 
 Reliant supports multiple model providers:
 
@@ -27,7 +27,7 @@ Reliant supports multiple model providers:
 
 ## Default Keyboard Shortcuts
 
-{{< figure src="/images/screenshots/keyboard-shortcuts.png" alt="Placeholder: Keyboard shortcuts settings panel showing searchable list of actions with current key bindings, edit buttons, and reset to default option" caption="Customize keyboard shortcuts to your preference" width="50%">}}
+{{< figure src="images/screenshots/keyboard-shortcuts.png" alt="Placeholder: Keyboard shortcuts settings panel showing searchable list of actions with current key bindings, edit buttons, and reset to default option" caption="Customize keyboard shortcuts to your preference" width="50%">}}
 
 All shortcuts can be customized in the Keyboard Shortcuts settings.
 
