@@ -7,7 +7,7 @@ icon: "chat"
 
 The chat is where you interact with Reliant's AI assistant. It provides a powerful, context-aware conversation experience designed specifically for software development tasks.
 
-{{< figure src="/images/screenshots/chat-interface.png" alt="Placeholder: Main chat interface showing conversation area with AI responses and code blocks, input field at bottom with model selector, agent selector, and control buttons" caption="The Reliant chat interface" width="50%">}}
+{{< figure src="/images/screenshots/chat-interface.png" alt="Placeholder: Main chat interface showing conversation area with AI responses and code blocks, input field at bottom with model selector, agent selector, and control buttons" caption="The Reliant chat interface">}}
 
 ## Chat Input Controls
 
@@ -24,7 +24,7 @@ The chat is where you interact with Reliant's AI assistant. It provides a powerf
 
 ## Tool Executions
 
-{{< figure src="/images/screenshots/tool-execution.png" alt="Placeholder: Tool execution panel showing pending file edit with Approve/Reject buttons, diff preview of changes, and execution status indicator" caption="Review and approve AI tool executions" width="50%">}}
+{{< figure src="/images/screenshots/tool-execution.png" alt="Placeholder: Tool execution panel showing pending file edit with Approve/Reject buttons, diff preview of changes, and execution status indicator" caption="Review and approve AI tool executions">}}
 
 The AI can execute various tools:
 - **File Operations**: Read, write, and edit files
@@ -45,7 +45,7 @@ The chat automatically includes:
 
 ## Auto-Approval Mode
 
-{{< figure src="/images/screenshots/auto-approval.png" alt="Placeholder: Auto-approval toggle activated (lightning bolt glowing) with notification showing 'Auto-approval enabled - AI will execute tools automatically'" caption="Enable auto-approval for autonomous AI operation" width="50%">}}
+{{< figure src="/images/screenshots/auto-approval.png" alt="Placeholder: Auto-approval toggle activated (lightning bolt glowing) with notification showing 'Auto-approval enabled - AI will execute tools automatically'" caption="Enable auto-approval for autonomous AI operation">}}
 
 **Speed up your workflow** by enabling auto-approval:
 - **Toggle Auto-Approve** in the chat input controls (lightning bolt icon)
