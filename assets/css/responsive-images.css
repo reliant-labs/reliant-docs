@@ -1,6 +1,7 @@
 /* Professional Documentation Image Styles */
 .responsive-figure {
-  margin: 2.5rem 0;
+  margin: 2rem auto;
+  max-width: 100%;
   text-align: left;
   position: relative;
 }
@@ -8,10 +9,13 @@
 .responsive-figure img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.08);
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
   background: #fff;
 }
@@ -19,19 +23,19 @@
 /* Professional hover effect for desktop */
 @media (hover: hover) and (min-width: 768px) {
   .responsive-figure img:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.12);
-    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
     cursor: pointer;
   }
 }
 
 .responsive-figure figcaption {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   font-size: 0.875rem;
   line-height: 1.5;
   color: #6b7280;
   font-style: normal;
-  text-align: center;
+  text-align: left;
 }
 
 /* Dark mode support */
@@ -45,30 +49,16 @@
   color: #9ca3af;
 }
 
-/* Large desktop - constrained width for readability */
-@media (min-width: 1440px) {
+/* Desktop and larger - constrain to reasonable width */
+@media (min-width: 768px) {
   .responsive-figure {
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
-}
 
-/* Desktop - professional contained width */
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .responsive-figure {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* Small desktop / large tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .responsive-figure {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+  .responsive-figure img {
+    max-width: 100%;
   }
 }
 

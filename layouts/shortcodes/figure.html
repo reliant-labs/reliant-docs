@@ -2,14 +2,20 @@
 {{- $alt := .Get "alt" -}}
 {{- $caption := .Get "caption" -}}
 {{- $class := .Get "class" -}}
+{{- $size := .Get "size" | default "normal" -}}
 
 {{- /* For GitHub Pages, we need to use the baseURL for absolute paths */ -}}
 {{- if hasPrefix $src "/" -}}
   {{- $src = (printf "%s%s" (strings.TrimSuffix "/" $.Site.BaseURL) $src) | safeURL -}}
 {{- end -}}
 
-{{- /* Build figure classes */ -}}
+{{- /* Build figure classes based on size parameter */ -}}
 {{- $figureClass := "responsive-figure" -}}
+{{- if eq $size "small" -}}
+  {{- $figureClass = printf "%s small" $figureClass -}}
+{{- else if eq $size "inline" -}}
+  {{- $figureClass = printf "%s inline" $figureClass -}}
+{{- end -}}
 {{- if $class -}}
   {{- $figureClass = printf "%s %s" $figureClass $class -}}
 {{- end -}}
