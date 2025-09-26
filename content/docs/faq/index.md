@@ -3,6 +3,7 @@ title: "FAQ"
 description: "Frequently asked questions about Reliant"
 weight: 75
 icon: "help"
+draft: true
 ---
 
 Quick answers to the most common questions about Reliant.
@@ -189,10 +190,9 @@ Everything stays on your Mac.
 ### Q: Reliant crashes on startup
 
 **A**: Solutions:
-1. Clear cache: `rm -rf ~/Library/Caches/Reliant`
-2. Clear app support: `rm -rf ~/Library/Application\ Support/Reliant`
-3. Reinstall Reliant
-4. Check system requirements
+1. Clear app support: `rm -rf ~/Library/Application\ Support/reliant`
+2. Reinstall Reliant
+3. Check system requirements
 
 ## Updates & Support
 

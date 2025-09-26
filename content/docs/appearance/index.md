@@ -3,6 +3,7 @@ title: "Appearance"
 description: "Customize themes and visual preferences"
 weight: 65
 icon: "palette"
+draft: true
 ---
 
 Customize Reliant's appearance with different themes and modes to match your preferences and reduce eye strain during long coding sessions.
@@ -47,81 +48,3 @@ Choose how Reliant determines which theme to use:
 Quickly switch between light and dark themes:
 - Click the **sun/moon icon** in the header
 - Toggles between your default light and dark themes
-- When in System mode, switches to explicit light/dark mode
-
-### Toggle Behavior
-
-The theme toggle works differently based on current mode:
-- **System Mode**: Switches to the opposite of current system preference
-- **Light Mode**: Switches to your default dark theme
-- **Dark Mode**: Switches to your default light theme
-
-## How Themes Work
-
-### Theme Application
-
-When you change appearance settings:
-1. Changes apply immediately (live preview)
-2. Settings save to local storage
-3. Syncs with local backend for persistence
-4. Theme persists across app restarts
-
-### System Mode Behavior
-
-When using System mode:
-- Follows macOS Light/Dark appearance
-- Updates automatically when macOS changes
-- Uses your selected default themes for each mode
-- Respects system preference changes in real-time
-
-### Theme Persistence
-
-Your theme preferences are stored:
-- **Browser**: In local storage for instant access
-- **Local Backend**: Persisted to local backend database
-- **Priority**: Browser settings used first, backend settings for recovery
-
-## Tips for Using Themes
-
-### Choosing the Right Mode
-
-- **System Mode**: Best for following your daily routine
-- **Light Mode**: When working in bright environments
-- **Dark Mode**: For low-light conditions or reducing eye strain
-
-### Theme Recommendations
-
-**For Long Coding Sessions**
-- Dark themes reduce eye strain in dim lighting
-- Tokyo Night and Nord offer good contrast without being harsh
-- Dracula provides vibrant colors that are easy to distinguish
-
-**For Documentation Work**
-- Light themes often better for reading/writing docs
-- GitHub Light familiar for documentation
-- Solarized Light offers excellent readability
-
-**For Presentations**
-- Use explicit Light or Dark mode (not System)
-- Choose high-contrast themes for visibility
-- Light theme often better for projectors
-
-## Troubleshooting
-
-### Theme Not Changing
-
-- Check that settings saved properly
-- Try refreshing the application
-- Verify System mode isn't overriding manual selection
-
-### System Mode Not Following macOS
-
-- Ensure macOS appearance settings are configured
-- Check that Reliant has necessary permissions
-- Try toggling between modes manually first
-
-### Theme Toggle Not Working
-
-- The toggle cycles through modes based on current state
-- In System mode, it switches to explicit opposite theme
-- Settings are saved automatically when toggling
