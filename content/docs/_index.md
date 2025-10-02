@@ -7,14 +7,14 @@ icon: "home"
 
 # Welcome to Reliant
 
-**Reliant** is an AI-powered coding assistant for macOS that helps you code faster, debug smarter, and build better software. Built specifically for professional software developers, Reliant combines powerful language models with deep project understanding to provide context-aware assistance.
+**Reliant** is an AI-powered coding assistant for macOS and Linux that helps you code faster, debug smarter, and build better software. Built specifically for professional software developers, Reliant combines powerful language models with deep project understanding to provide context-aware assistance.
 
 ## What is Reliant?
 
-Reliant is a native macOS desktop application, providing:
+Reliant is a native desktop application, providing:
 
 - **AI-Powered Chat** - Ask questions about your code, get explanations, and receive intelligent suggestions
-- **Local Backend** - Backend runs locally on your Mac for privacy and control
+- **Local Backend** - Backend runs locally on your machine for privacy and control
 - **Project Context** - Deep understanding of your codebase for accurate, relevant assistance
 - **Git Worktrees** - Work on multiple branches simultaneously without stashing changes
 
@@ -35,7 +35,7 @@ Reliant is a native macOS desktop application, providing:
 </div>
 <div class="col">
 ### Privacy-First
-- Backend runs locally on your Mac
+- Backend runs locally on your machine
 - Your code stays on your machine
 - Only chat messages go to your chosen AI provider
 </div>
@@ -44,7 +44,7 @@ Reliant is a native macOS desktop application, providing:
 ## Who is Reliant For?
 
 Reliant is designed for:
-- **macOS Developers** who want powerful AI assistance in their workflow
+- **Developers** who want powerful AI assistance in their workflow
 - **Teams** looking to accelerate development with AI automation
 - **Individuals** who value privacy and local-first architecture
 - **Professionals** building complex software that requires deep context understanding
@@ -53,7 +53,7 @@ Reliant is designed for:
 
 Ready to get started with Reliant? Follow these simple steps:
 
-1. **[Install Reliant]({{< relref "installation" >}})** - Download and install for macOS
+1. **[Install Reliant]({{< relref "installation" >}})** - Download and install for macOS or Linux
 2. **[First Launch]({{< relref "getting-started" >}})** - Learn how to start using the application
 3. **[Advanced Features]({{< relref "settings" >}})** - Customize and optimize your experience
 
