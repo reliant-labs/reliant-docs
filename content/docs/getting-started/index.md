@@ -15,6 +15,22 @@ Welcome to Reliant! This guide will help you set up and start using your AI-powe
 
 Before you can use AI features, you need an API key:
 
+**Option A: Use Your Claude Code Subscription**
+
+If you have an existing Claude Code subscription, you can use it with Reliant:
+
+1. Open your terminal
+2. Run: `claude setup-token`
+3. Copy the API key that's displayed
+4. In Reliant, click **Settings** in the sidebar (or press `Cmd+,`)
+5. Go to **AI**
+6. Select **Anthropic** as your provider
+7. Paste your API key
+8. Click **"Test Connection"**
+9. Click **"+ Add Provider"** when successful
+
+**Option B: Use Another Provider**
+
 1. Click **Settings** in the sidebar (or press `Cmd+,`)
 2. Go to **AI**
 3. Select your provider
