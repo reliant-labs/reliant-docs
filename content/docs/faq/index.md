@@ -41,7 +41,14 @@ Quick answers to the most common questions about Reliant.
 
 ### Q: How do I get an API key?
 
-**A**: Get API keys from your chosen provider:
+**A**: You have two options:
+
+**Option 1: Use Your Claude Code Subscription**
+- Open your terminal and run: `claude setup-token`
+- Copy the API key that's displayed
+- Paste it into Reliant's Settings → AI (select Anthropic as provider)
+
+**Option 2: Get a Provider API Key**
 - Visit your provider's website (Anthropic, OpenAI, OpenRouter, etc.)
 - Create an account and generate an API key
 - Add billing information if required

@@ -23,8 +23,21 @@ Before installing Reliant, ensure your Mac meets these requirements:
 
 ### Additional Requirements
 - **Internet Connection**: Required for AI features and updates
-- **API Key**: Required for AI functionality (OpenAI, Anthropic, etc.)
+- **API Key**: Required for AI functionality (see options below)
 - **Git**: Optional but recommended for version control features
+
+#### Getting an API Key
+
+**Option 1: Use Your Claude Code Subscription**
+
+If you have a Claude Code subscription, you can use it with Reliant:
+- Run `claude setup-token` in your terminal
+- Copy the displayed API key
+- Use it with the Anthropic provider in Reliant
+
+**Option 2: Get a Provider API Key**
+
+Sign up directly with any supported provider (Anthropic, OpenAI, etc.) and generate an API key from their dashboard.
 
 ## Download Reliant
 

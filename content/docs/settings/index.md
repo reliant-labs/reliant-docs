@@ -11,6 +11,12 @@ Configure Reliant to work seamlessly with your development workflow. Access sett
 
 {{< figure src="/images/screenshots/ai-providers.png" alt="Placeholder: AI providers configuration screen showing list of available providers with logos, API key input fields, model selection dropdowns, and Test Connection buttons for each provider" caption="Configure multiple AI providers">}}
 
+### Using Claude Code Subscription
+
+If you have an existing Claude Code subscription, you can use it with Reliant by running `claude setup-token` in your terminal to get your API key. Use this key with the Anthropic provider.
+
+### All Supported Providers
+
 Reliant supports multiple model providers:
 
 - **Anthropic**
