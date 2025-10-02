@@ -12,12 +12,12 @@ Quick answers to the most common questions about Reliant.
 
 ### Q: What is Reliant?
 
-**A**: Reliant is an AI-powered coding assistant desktop app for Mac. It combines powerful language models with your development environment to help you code faster, debug smarter, and build better software.
+**A**: Reliant is an AI-powered coding assistant desktop app for macOS and Linux. It combines powerful language models with your development environment to help you code faster, debug smarter, and build better software.
 
 ### Q: How is Reliant different from other AI coding tools?
 
 **A**: Reliant stands out by:
-- Native Mac desktop application
+- Native desktop application for macOS and Linux
 - Deep project context understanding
 - Git worktrees integration for parallel development
 - Customizable agents for specialized tasks
@@ -27,7 +27,7 @@ Quick answers to the most common questions about Reliant.
 ### Q: What do I need to use Reliant?
 
 **A**: You need:
-- A Mac running macOS 11.0 (Big Sur) or later
+- **macOS** 11.0 (Big Sur) or later, or **Linux** with x86_64/ARM64 architecture
 - 8GB RAM minimum (16GB recommended)
 - 4GB free disk space
 - An API key from a supported provider (Anthropic, OpenAI, OpenRouter, etc.)
@@ -35,9 +35,9 @@ Quick answers to the most common questions about Reliant.
 
 ## Installation & Setup
 
-### Q: Is Reliant available for Windows or Linux?
+### Q: Is Reliant available for Windows?
 
-**A**: Currently, Reliant is **macOS only**. We're focusing on delivering the best experience for Mac users first. Windows and Linux support may come in the future.
+**A**: Currently, Reliant supports **macOS and Linux**. Windows support may come in the future.
 
 ### Q: How do I get an API key?
 
@@ -56,7 +56,7 @@ Quick answers to the most common questions about Reliant.
 
 ### Q: Is the API key stored securely?
 
-**A**: Yes! API keys are stored securely in the macOS Keychain, not in plain text files.
+**A**: Yes! API keys are stored securely in your system's secure storage (macOS Keychain or Linux equivalent), not in plain text files.
 
 ## Using Reliant
 
@@ -127,7 +127,7 @@ You control what changes are made through the approval system.
 ### Q: Does my code leave my computer?
 
 **A**: Your code stays on your machine:
-- Backend runs locally on your Mac
+- Backend runs locally on your system
 - Files are read from your local disk
 - No cloud storage or servers
 - Only your messages and context go to your chosen AI provider's API
@@ -139,11 +139,11 @@ You control what changes are made through the approval system.
 - No usage tracking
 - No code uploading
 - No user profiling
-Everything stays on your Mac.
+Everything stays on your machine.
 
 ### Q: Are my conversations saved?
 
-**A**: Yes, locally on your Mac:
+**A**: Yes, locally on your machine:
 - Stored in your application data
 - Never uploaded anywhere
 - Persist across app restarts
@@ -197,7 +197,7 @@ Everything stays on your Mac.
 ### Q: Reliant crashes on startup
 
 **A**: Solutions:
-1. Clear app support: `rm -rf ~/Library/Application\ Support/reliant`
+1. Clear app support data (macOS: `rm -rf ~/Library/Application\ Support/reliant`, Linux: `rm -rf ~/.config/reliant`)
 2. Reinstall Reliant
 3. Check system requirements
 

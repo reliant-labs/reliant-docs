@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-description: "Download and install Reliant on your Mac"
+description: "Download and install Reliant on macOS and Linux"
 weight: 10
 icon: "download_for_offline"
 ---
@@ -9,17 +9,22 @@ Get Reliant up and running on your system with these simple installation steps.
 
 ## System Requirements
 
-Before installing Reliant, ensure your Mac meets these requirements:
+Before installing Reliant, ensure your system meets these requirements:
 
-### macOS Version
+### Operating System
+**macOS**
 - **Minimum**: macOS 11.0 (Big Sur)
 - **Recommended**: macOS 13.0 (Ventura) or later
 - **Supported**: Both Intel and Apple Silicon
 
+**Linux**
+- **Supported**: x86_64 and ARM64 architectures
+- **Format**: AppImage (compatible with most distributions)
+
 ### Hardware Requirements
 - **RAM**: Minimum 8GB, recommended 16GB+
 - **Storage**: At least 4GB of free disk space
-- **Processor**: Intel x86-64 or Apple Silicon
+- **Processor**: Intel x86-64, Apple Silicon, or ARM64
 
 ### Additional Requirements
 - **Internet Connection**: Required for AI features and updates
@@ -40,6 +45,8 @@ If you have a Claude Code subscription, you can use it with Reliant:
 Sign up directly with any supported provider (Anthropic, OpenAI, etc.) and generate an API key from their dashboard.
 
 ## Download Reliant
+
+### macOS
 
 Choose the version for your Mac:
 
@@ -64,10 +71,35 @@ Choose the version for your Mac:
    <strong>Not sure which version?</strong> Check Apple menu → About This Mac → Chip
 </div>
 
+### Linux
+
+Choose the version for your Linux system:
+
+<div class="row g-3 mb-4">
+   <div class="col-md-6">
+      <a href="https://downloads.reliantlabs.io/Reliant-latest-linux-x86_64.AppImage" class="btn btn-outline-primary d-flex align-items-center justify-content-center">
+         <span class="material-icons me-2">download</span>
+         Reliant for x86_64
+      </a>
+      <p class="text-muted small mt-2 mb-0">For Intel/AMD 64-bit systems</p>
+   </div>
+   <div class="col-md-6">
+      <a href="https://downloads.reliantlabs.io/Reliant-latest-linux-arm64.AppImage" class="btn btn-outline-primary d-flex align-items-center justify-content-center">
+         <span class="material-icons me-2">download</span>
+         Reliant for ARM64
+      </a>
+      <p class="text-muted small mt-2 mb-0">For ARM 64-bit systems</p>
+   </div>
+</div>
+
+<div class="alert alert-info">
+   <strong>Linux installation:</strong> After downloading, make the AppImage executable with <code>chmod +x Reliant-latest-linux-*.AppImage</code> and run it.
+</div>
+
 ## Post-Installation Setup
 
 After installation, you'll need to:
-1. **Launch Reliant** from Applications
+1. **Launch Reliant** (from Applications on macOS, or run the AppImage on Linux)
 2. **Choose a project folder** to work with
 3. **Select your preferred AI provider**
 4. **Configure API Key** in the settings
@@ -82,9 +114,9 @@ To manually check for updates:
 
 ## Uninstalling Reliant
 
-### Complete Removal
+### macOS
 
-To fully uninstall Reliant:
+To fully uninstall Reliant on macOS:
 
 1. **Quit Reliant** if it's running
 2. **Delete the app**:
@@ -98,6 +130,18 @@ To fully uninstall Reliant:
 4. **Remove preferences**:
    ```bash
    defaults delete com.reliantlabs.reliant
+   ```
+
+### Linux
+
+To fully uninstall Reliant on Linux:
+
+1. **Quit Reliant** if it's running
+2. **Delete the AppImage** file
+3. **Remove settings** (optional):
+   ```bash
+   rm -rf ~/.config/reliant
+   rm -rf ~/.local/share/reliant
    ```
 
 Your projects and code remain untouched
