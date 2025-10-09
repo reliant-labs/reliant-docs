@@ -3,10 +3,11 @@ title: "Troubleshooting"
 description: "Solve common issues and get help when needed"
 weight: 70
 icon: "build"
-draft: true
 ---
 
 Find solutions to common issues and learn how to get help when you need it.
+
+> **Need more help?** See our [Feedback & Community]({{< relref "feedback" >}}) page for how to report bugs and get support.
 
 ## Common Issues
 

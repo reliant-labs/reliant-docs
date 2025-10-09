@@ -1,0 +1,22 @@
+/* Make sidebar sections non-collapsible and always expanded */
+.sidebar-section-title {
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    color: var(--bs-body-color);
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.sidebar-section {
+    list-style: none;
+}
+
+.sidebar-section .sidebar-submenu {
+    display: block !important;
+}
+
+/* Remove any collapse/expand indicators */
+.sidebar-section-title::after {
+    display: none !important;
+}
