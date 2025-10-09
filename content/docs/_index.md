@@ -30,6 +30,7 @@ Reliant is a native desktop application, providing:
 <div class="col">
 ### Developer-Focused
 - Custom agents for testing, docs, reviews
+- Multi-agent taskforces for complex workflows
 - Git worktree integration for parallel work
 - Tool executions for file operations and searches
 </div>

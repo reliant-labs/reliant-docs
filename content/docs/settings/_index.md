@@ -1,35 +1,45 @@
 ---
 title: "Settings"
-description: "Configure API keys, customize preferences, and set up keyboard shortcuts"
+description: "Configure Reliant to work seamlessly with your development workflow"
 weight: 55
 icon: "settings"
 ---
 
 Configure Reliant to work seamlessly with your development workflow. Access settings through the **Settings** tab in the left navigation.
 
-## Supported Model Providers
+## Configuration Overview
 
-{{< figure src="/images/screenshots/ai-providers.png" alt="Placeholder: AI providers configuration screen showing list of available providers with logos, API key input fields, model selection dropdowns, and Test Connection buttons for each provider" caption="Configure multiple AI providers">}}
+Reliant can be configured through:
+- **Settings UI** - User-friendly interface for common settings
+- **Configuration File** - `.reliant.json` in application data directory for advanced settings
+- **Environment Variables** - For temporary or CI/CD configurations
 
-### Using Claude Code Subscription
+See detailed guides for:
+- **[API Keys & Model Providers]({{< relref "api-keys" >}})** - Configure AI models and authentication
+- **[Context Files & Agent Memory]({{< relref "context-files" >}})** - Auto-include project context in every chat
+- **[MCP Servers]({{< relref "mcp-servers" >}})** - Extend capabilities with external tools
 
-If you have an existing Claude Code subscription, you can use it with Reliant by running `claude setup-token` in your terminal to get your API key. Use this key with the Anthropic provider.
+## Quick Links
 
-### All Supported Providers
+### Essential Configuration
 
-Reliant supports multiple model providers:
+**Set Up AI Providers**: Configure API keys for Claude, GPT, Gemini, and other models
+→ [API Keys Guide]({{< relref "api-keys" >}})
 
-- **Anthropic**
-- **OpenAI**
-- **Google Gemini**
-- **OpenRouter**
-- **Azure OpenAI**
-- **AWS Bedrock**
-- **GitHub Copilot**
-- **Groq**
-- **Vertex AI**
-- **xAI**
-- **Local Models**
+**Configure Context Files**: Automatically include project conventions and patterns in every chat
+→ [Context Files Guide]({{< relref "context-files" >}})
+
+**Extend with MCP Servers**: Add external tools and data sources
+→ [MCP Servers Guide]({{< relref "mcp-servers" >}})
+
+**Customize Agents**: Create specialized AI assistants for your workflow  
+→ [Custom Agents Guide]({{< relref "/docs/agents/custom-agents" >}})
+
+**Build Taskforces**: Coordinate multiple agents for complex workflows  
+→ [Custom Taskforces Guide]({{< relref "../agents/custom-taskforces" >}})
+
+**Privacy Settings**: Control data collection and security
+→ [Privacy & Security]({{< relref "privacy" >}})
 
 ## Default Keyboard Shortcuts
 
