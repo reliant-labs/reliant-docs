@@ -28,7 +28,7 @@ setup: install setup-submodules
 # Initialize Git submodules (required for theme)
 setup-submodules:
 	@echo "🔧 Initializing Git submodules..."
-	@if [ ! -d ".git" ]; then \
+	@if [ ! -e ".git" ]; then \
 		echo "❌ Error: Not in a Git repository. Please run 'git init' first."; \
 		exit 1; \
 	fi
