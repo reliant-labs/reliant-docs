@@ -197,8 +197,10 @@ Everything stays on your machine.
 ### Q: Reliant crashes on startup
 
 **A**: Solutions:
-1. Clear app support data (macOS: `rm -rf ~/Library/Application\ Support/reliant`, Linux: `rm -rf ~/.config/reliant`)
-2. Reinstall Reliant
+1. Clear app support data:
+   - macOS: `rm -rf ~/Library/Application\ Support/reliant`
+   - Linux: `rm -rf ~/.config/reliant`
+2. Reinstall Reliant (via Homebrew: `brew reinstall --cask reliant`, or download manually)
 3. Check system requirements
 
 ## Updates & Support
@@ -206,8 +208,15 @@ Everything stays on your machine.
 ### Q: How do I update Reliant?
 
 **A**: To update Reliant:
+
+Via Homebrew (recommended):
+```bash
+brew upgrade --cask reliant
+```
+
+Or manually:
 - Check Settings → About for update notifications
-- Download the latest version from our [downloads page]({{< relref "installation#download-reliant" >}})
+- Download the latest version from our [downloads page]({{< relref "installation#direct-download" >}})
 - Replace the old app with the new version
 - Your settings and chats are preserved
 

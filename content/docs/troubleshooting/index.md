@@ -37,9 +37,16 @@ Find solutions to common issues and learn how to get help when you need it.
    ```
 
 4. **Reinstall**
+   
+   Via Homebrew:
+   ```bash
+   brew uninstall --cask reliant && brew install --cask reliant
+   ```
+   
+   Or manually:
    - Delete Reliant from Applications
    - Empty Trash
-   - Download fresh copy from our [downloads page]({{< relref "installation#download-reliant" >}})
+   - Download fresh copy from our [downloads page]({{< relref "installation#direct-download" >}})
    - Reinstall
 
 ### Backend Connection Issues
