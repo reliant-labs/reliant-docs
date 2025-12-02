@@ -7,6 +7,23 @@ icon: "download_for_offline"
 
 Get Reliant up and running on your system with these simple installation steps.
 
+## Install via Homebrew (Recommended)
+
+The easiest way to install Reliant is via Homebrew:
+
+```bash
+brew install --cask reliant-labs/reliant/reliant
+```
+
+Or add the tap first, then install:
+
+```bash
+brew tap reliant-labs/reliant
+brew install --cask reliant
+```
+
+Homebrew automatically downloads the correct version for your Mac (Apple Silicon or Intel).
+
 ## System Requirements
 
 Before installing Reliant, ensure your system meets these requirements:
@@ -44,7 +61,9 @@ If you have a Claude Code subscription, you can use it with Reliant:
 
 Sign up directly with any supported provider (Anthropic, OpenAI, etc.) and generate an API key from their dashboard.
 
-## Download Reliant
+## Direct Download
+
+Alternatively, you can download Reliant directly.
 
 ### macOS
 
@@ -106,17 +125,41 @@ After installation, you'll need to:
 
 ## Updating Reliant
 
+### Via Homebrew
+
+If you installed via Homebrew:
+
+```bash
+brew upgrade --cask reliant
+```
+
+### Manual Update
+
 To manually check for updates:
 1. Go to **Reliant** → **Check for Updates**
-2. Or download from [here]({{< relref "installation#download-reliant" >}})
+2. Or download from [here]({{< relref "installation#direct-download" >}})
 3. Install over existing version
 4. Restart Reliant
 
 ## Uninstalling Reliant
 
-### macOS
+### Via Homebrew
 
-To fully uninstall Reliant on macOS:
+If you installed via Homebrew:
+
+```bash
+brew uninstall --cask reliant
+```
+
+To also remove settings and logs:
+
+```bash
+brew uninstall --cask reliant --zap
+```
+
+### macOS (Manual Removal)
+
+To fully uninstall Reliant manually on macOS:
 
 1. **Quit Reliant** if it's running
 2. **Delete the app**:
