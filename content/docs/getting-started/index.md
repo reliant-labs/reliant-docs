@@ -90,13 +90,43 @@ If you have an existing Claude Code subscription, you can use it with Reliant:
 - Message input at bottom
 - Conversation history above
 
+## Optional: Set Up Memory Files
+
+For better AI assistance, create memory files with your coding guidelines:
+
+**Global Memory (applies to all projects)**:
+```bash
+mkdir -p ~/.reliant
+cat > ~/.reliant/reliant.md << 'EOF'
+# My Coding Guidelines
+- Always write tests
+- Use descriptive variable names
+- Follow clean code principles
+EOF
+```
+
+**Project Memory (in your project root)**:
+```bash
+cat > reliant.md << 'EOF'
+# Project Context
+- This is a [language] project
+- Uses [framework/tools]
+- Follow [specific conventions]
+EOF
+```
+
+The AI will automatically use these guidelines in every conversation!
+
+Learn more: [Context Files & Agent Memory]({{< relref "settings/context-files" >}})
+
 ## What's Next?
 
 ### Explore Features
 
-- **[Chat]({{< relref "chat" >}})** - Master the chat
-- **[Worktrees]({{< relref "worktrees" >}})** - Work on multiple branches
-- **[Agents]({{< relref "agents" >}})** - Use specialized assistants
+- **[Chat]({{< relref "chat" >}})** - Master the chat interface
+- **[Worktrees]({{< relref "worktrees" >}})** - Work on multiple branches simultaneously
+- **[Agents]({{< relref "agents" >}})** - Use specialized AI assistants
+- **[Context Files]({{< relref "settings/context-files" >}})** - Provide persistent context
 
 ### Customize Your Experience
 

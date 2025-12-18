@@ -1,0 +1,45 @@
+baseURL = 'https://docs.reliantlabs.io/'
+languageCode = 'en-us'
+title = 'Reliant AI Docs'
+theme = 'hugo-book'
+
+# Enable Hugo modules
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.100.0"
+
+# Site parameters
+[params]
+  description = "Documentation for Reliant AI Chat - A powerful AI chat application"
+
+  # Book theme specific settings
+  BookTheme = 'auto'
+  BookToC = true
+  BookRepo = 'https://github.com/reliant-labs/reliant-docs'
+  BookEditPath = 'edit/main'
+  BookSearch = true
+  BookComments = false
+
+# Menu configuration
+[menu]
+  [[menu.after]]
+    name = "GitHub"
+    url = "https://github.com/reliant-labs/reliant-docs"
+    weight = 1
+
+# Markup configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style = "github"
+  [markup.tableOfContents]
+    startLevel = 1
+
+# Build configuration
+[build]
+  noTimes = true
+  minify = false

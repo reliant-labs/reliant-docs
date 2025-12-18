@@ -7,6 +7,140 @@ icon: "memory"
 
 Reliant can automatically include specific files in every AI chat session, providing persistent context about your project's patterns, conventions, and architectural decisions. This feature is similar to Claude Code's `.claude.json` functionality.
 
+## Memories Feature (Dynamic Context Loading)
+
+**New in latest version**: Reliant now supports a **memories feature** that dynamically loads context from `reliant.md` files at both global and project levels on every LLM interaction.
+
+### How Memories Work
+
+Memories are loaded dynamically and injected into the system prompt on each LLM call, providing:
+- **Global guidelines** from `~/.reliant/reliant.md` - applies to all projects
+- **Project-specific context** from `{project_root}/reliant.md` - applies to current project
+- **Dynamic loading** - changes take effect immediately on next interaction
+- **Graceful handling** - missing files don't break the system
+
+### Setting Up Memories
+
+#### Global Memory (`~/.reliant/reliant.md`)
+
+Create a file at `~/.reliant/reliant.md` for context that applies across all your projects:
+
+```bash
+mkdir -p ~/.reliant
+cat > ~/.reliant/reliant.md << 'EOF'
+# My Global Development Guidelines
+
+- Always use descriptive variable names
+- Write comprehensive tests for all features
+- Follow clean code principles
+- Prefer composition over inheritance
+- Use conventional commits
+EOF
+```
+
+#### Project Memory (`{project_root}/reliant.md`)
+
+Create a file in your project root for project-specific context:
+
+```bash
+# In your project directory
+cat > reliant.md << 'EOF'
+# Project Context
+
+This is a Go-based microservices application using:
+- Temporal for workflow orchestration
+- PostgreSQL for data storage
+- gRPC for service communication
+
+## Architecture Decisions
+- Use structured logging with slog
+- Follow standard Go project layout
+- All services must be containerized
+EOF
+```
+
+### Memory Loading Priority
+
+When both files exist:
+1. Global memory (`~/.reliant/reliant.md`) is loaded first
+2. Project memory (`{project}/reliant.md`) is loaded second
+3. Both are combined and included in the system prompt
+4. Each memory section is clearly labeled ("# Global Context", "# Project Context")
+
+### Benefits of Memories
+
+✅ **Persistent Context**: Set guidelines once, they apply to all interactions  
+✅ **Project Customization**: Each project can have specific instructions  
+✅ **Dynamic Loading**: Changes take effect immediately without restart  
+✅ **Graceful Degradation**: System works fine without memory files  
+✅ **Layered Context**: Combine global + project-specific context  
+
+### Example Memory Files
+
+**Global Memory (`~/.reliant/reliant.md`)**:
+```markdown
+# Global Development Standards
+
+## Code Review Guidelines
+- All PRs require 2 approvals
+- Address all review comments
+- No force-pushing after review starts
+
+## Security
+- Never commit secrets or credentials
+- Use environment variables for configuration
+- Follow OWASP best practices
+
+## Testing
+- Write tests for all new features
+- Aim for >80% code coverage
+- Use table-driven tests in Go
+```
+
+**Project Memory (`reliant.md`)**:
+```markdown
+# Reliant AI Agent Project
+
+## Tech Stack
+- Backend: Go with Temporal workflows
+- Frontend: TypeScript with React
+- Database: PostgreSQL with sqlc
+
+## Key Conventions
+
+### Go Code
+- Follow standard Go project layout
+- Use `internal/` for private packages
+- Structured logging with slog
+
+### Testing
+- Unit tests in `*_test.go` files
+- Integration tests in `internal/v2/integration/`
+- Use testify for assertions
+
+## Common Tasks
+
+### Adding a New Tool
+1. Create tool in `internal/llm/tools/`
+2. Register in tool factory
+3. Write tests
+4. Update documentation
+```
+
+### When to Use Memories vs Context Files
+
+**Use Memories (`reliant.md`)** for:
+- Core project guidelines that should always be present
+- Architecture decisions and patterns
+- Development workflows
+- Coding conventions
+
+**Use Context Paths Configuration** for:
+- Multiple specific documentation files
+- Compatibility with other AI tools (`.cursorrules`, `CLAUDE.md`)
+- Custom file locations
+- Advanced configuration scenarios
+
 ## What are Context Files?
 
 Context files are documentation, guidelines, or reference files that you want the AI to always have access to during conversations. They help the AI better understand your project's:
@@ -17,29 +151,37 @@ Context files are documentation, guidelines, or reference files that you want th
 - **Common workflows** and development practices
 - **Testing strategies** and quality standards
 
-## Default Context Files
+## Context Files vs Memories
 
-Reliant automatically looks for these files in your project and includes them if found:
+Reliant supports two ways to provide context:
 
+### 1. Memories (Recommended - New Feature)
+- **Global**: `~/.reliant/reliant.md` - applies to all projects
+- **Project**: `{project_root}/reliant.md` - applies to current project
+- Dynamically loaded on every LLM interaction
+- Simple, straightforward setup
+
+### 2. Context Files Configuration (Legacy/Advanced)
+For backwards compatibility and advanced use cases, Reliant can also be configured to load specific context files via `.reliant.json` configuration.
+
+**Default context file paths** (checked if configured):
 ```
 .github/copilot-instructions.md
 .cursorrules
 .cursor/rules/
 CLAUDE.md
 CLAUDE.local.md
-reliant.md
 reliant.local.md
-Reliant.md
 Reliant.local.md
 ```
 
-These files are checked in the project root directory. If any exist, they're automatically included in the AI's context.
+Note: With the new memories feature, simply using `~/.reliant/reliant.md` and `reliant.md` in your project root is the simplest approach.
 
 ## Recommended File Usage
 
-### `.reliant.md` or `Reliant.md`
+### `reliant.md` (Recommended with Memories Feature)
 
-Your main project context file for Reliant-specific instructions and conventions.
+With the new memories feature, simply create `reliant.md` in your project root. This file is automatically loaded on every LLM interaction.
 
 **Example content**:
 ```markdown
@@ -80,9 +222,30 @@ React components should follow this structure:
 - Minimum 80% code coverage
 ```
 
-### `.reliant.local.md` or `Reliant.local.md`
+### `~/.reliant/reliant.md` (Global Memory)
 
-Personal or machine-specific context that shouldn't be committed to version control.
+Create a global memory file for guidelines that apply to all your projects. This file lives in your home directory and is automatically loaded for every project.
+
+**Example content**:
+```markdown
+# My Global Guidelines
+
+## Code Quality
+- Always use meaningful variable names
+- Write comprehensive tests
+- Follow clean code principles
+
+## Git Practices
+- Use conventional commits
+- Write descriptive commit messages
+- Keep commits atomic
+```
+
+**Note**: This is not committed to any repository - it's personal to your machine.
+
+### `reliant.local.md` (Local Overrides - Legacy)
+
+Personal or machine-specific context that shouldn't be committed to version control. With the memories feature, consider using `~/.reliant/reliant.md` instead for global personal preferences.
 
 **Example content**:
 ```markdown
@@ -331,13 +494,15 @@ Frontend optimistically updates UI before backend confirmation for better percei
 
 ### Works With MCP Servers
 
-Context files complement MCP servers:
-- **Context Files**: Static project knowledge and conventions
+Memories and context files complement MCP servers:
+- **Memories/Context Files**: Static project knowledge and conventions
 - **MCP Servers**: Dynamic tools and data access
+
+Example: Your `reliant.md` describes your architecture, while MCP servers provide access to your database or APIs.
 
 ### Works With Custom Agents
 
-Your custom agents automatically inherit the project context:
+Your custom agents automatically inherit memories and project context:
 
 ```yaml
 # .reliant/agents/code-reviewer.yaml
@@ -416,7 +581,9 @@ For complete API documentation, see `docs/api/README.md`
 
 ### Context Not Updating
 
-Context files are loaded when:
+**For Memories Feature**: Memory files (`~/.reliant/reliant.md` and `reliant.md`) are loaded dynamically on every LLM interaction. Changes take effect immediately on the next message.
+
+**For Context Files Configuration**: Context files configured via `.reliant.json` are loaded when:
 - Starting a new chat session
 - Opening a new project
 - Reliant restarts
@@ -424,6 +591,40 @@ Context files are loaded when:
 To refresh:
 1. Start a new chat (`Cmd+N`)
 2. Or restart Reliant
+
+### Verifying Memories are Loaded
+
+To verify your memory files are being loaded, start a new chat and ask:
+
+```
+What conventions should I follow for this project?
+```
+
+The AI should reference the guidelines from your `reliant.md` and `~/.reliant/reliant.md` files.
+
+### Memory Files Not Found
+
+If memories aren't being loaded:
+
+**Check global memory**:
+```bash
+# Verify file exists
+ls -la ~/.reliant/reliant.md
+
+# View contents
+cat ~/.reliant/reliant.md
+```
+
+**Check project memory**:
+```bash
+# In your project directory
+ls -la reliant.md
+
+# View contents
+cat reliant.md
+```
+
+**File must be named exactly**: `reliant.md` (lowercase, no variations)
 
 ## Related Topics
 
