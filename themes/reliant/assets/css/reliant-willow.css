@@ -1,0 +1,334 @@
+/* Reliant Willow Theme - Custom Styles */
+/* Inspired by Mintlify's Willow theme with Reliant brand colors */
+
+/* Enhanced Typography */
+body {
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ====== LAYOUT CUSTOMIZATIONS ====== */
+
+/* Remove centering margin from main container */
+.hextra-max-page-width {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  padding-left: 256px !important; /* Account for fixed sidebar */
+}
+
+@media (max-width: 768px) {
+  .hextra-max-page-width {
+    padding-left: 0 !important;
+  }
+}
+
+/* Constrain main content area for readability */
+article main {
+  max-width: 900px !important;
+}
+
+/* 1. Sidebar styling - grey background with padding, extends to top */
+.hextra-sidebar-container {
+  @apply hx:p-0!;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #f8f9fa !important; /* Light grey */
+  top: 0 !important; /* Extend to very top of page */
+  left: 0 !important; /* Pin to left edge */
+  height: 100vh !important;
+  position: fixed !important;
+  z-index: 50 !important; /* Above header */
+  overflow: visible !important;
+}
+
+.dark .hextra-sidebar-container {
+  background-color: #1a1a1a !important; /* Dark grey for dark mode */
+}
+
+.hextra-sidebar-container .hextra-scrollbar {
+  @apply hx:p-0!;
+  padding: 0 !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+/* Keep search bar within sidebar */
+.hextra-sidebar-container .hextra-search-wrapper,
+.hextra-sidebar-container [role="search"] {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Sidebar links - minimal padding */
+.hextra-sidebar-container a {
+  @apply hx:px-2 hx:py-1!;
+}
+
+/* Remove padding from list items */
+.hextra-sidebar-container ul {
+  @apply hx:p-0!;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.hextra-sidebar-container li {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* 2. Top-level sections (level 0) styling */
+/* Make top-level items bold and always expanded */
+.hextra-sidebar-container > .hextra-scrollbar > ul > li {
+  /* Always show as open */
+}
+
+.hextra-sidebar-container > .hextra-scrollbar > ul > li > a {
+  @apply hx:font-bold hx:text-gray-900 hx:dark:text-gray-100!;
+  @apply hx:text-base!; /* Slightly larger font */
+}
+
+/* Hide chevron for top-level items */
+.hextra-sidebar-container > .hextra-scrollbar > ul > li > a .hextra-sidebar-collapsible-button {
+  @apply hx:hidden!;
+}
+
+/* Force top-level sections to always show their children */
+.hextra-sidebar-container > .hextra-scrollbar > ul > li > div {
+  @apply hx:h-auto! hx:pt-1!;
+}
+
+/* 3. Float TOC farther to the right - minimal padding */
+.hextra-toc {
+  padding: 0 !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+  margin-left: 2rem;
+  align-self: flex-start !important; /* Prevent stretching to full height */
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.hextra-toc .hextra-scrollbar {
+  padding-right: 0.5rem !important;
+  background: transparent !important;
+}
+
+/* Remove any backgrounds from TOC container and children */
+.hextra-toc,
+.hextra-toc > *,
+.hextra-toc nav,
+.hextra-toc nav > * {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Gradient Accents */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Enhanced Link Styling */
+a:not(.hx\:no-underline) {
+  @apply hx:transition-colors hx:duration-200;
+}
+
+a:not(.hx\:no-underline):hover {
+  color: var(--reliant-blue);
+}
+
+/* Sidebar Enhancements - Willow Style */
+.sidebar-container {
+  @apply hx:border-r hx:border-gray-200 hx:dark:border-gray-800;
+}
+
+.sidebar-container a {
+  @apply hx:transition-all hx:duration-200 hx:ease-in-out;
+  border-left: 2px solid transparent;
+}
+
+.sidebar-container a:hover {
+  @apply hx:bg-gray-50 hx:dark:bg-gray-900;
+  border-left-color: var(--reliant-blue);
+}
+
+.sidebar-container a.active,
+.sidebar-container a[aria-current="page"] {
+  @apply hx:font-semibold;
+  color: var(--reliant-blue);
+  border-left-color: var(--reliant-blue);
+  background: linear-gradient(90deg, rgba(13, 140, 255, 0.08) 0%, transparent 100%);
+}
+
+/* Search Bar - Willow Style */
+.search-input {
+  @apply hx:transition-all hx:duration-200;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 0 3px rgba(13, 140, 255, 0.1);
+  border-color: var(--reliant-blue);
+}
+
+/* Button Enhancements */
+.btn-primary,
+button.primary {
+  background: var(--gradient-primary);
+  @apply hx:transition-all hx:duration-200;
+  box-shadow: 0 2px 8px rgba(13, 140, 255, 0.2);
+}
+
+.btn-primary:hover,
+button.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(13, 140, 255, 0.3);
+}
+
+/* Code Block Enhancements */
+pre {
+  @apply hx:rounded-lg hx:border hx:border-gray-200 hx:dark:border-gray-800;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Card Hover Effects - Willow Style */
+.hextra-card {
+  @apply hx:transition-all hx:duration-300 hx:ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hextra-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(13, 140, 255, 0.15);
+  border-color: rgba(13, 140, 255, 0.3);
+}
+
+/* Table of Contents - Enhanced */
+.toc-container {
+  @apply hx:border-l-2 hx:border-gray-200 hx:dark:border-gray-800;
+}
+
+.toc-container a {
+  @apply hx:transition-colors hx:duration-150;
+}
+
+.toc-container a:hover {
+  color: var(--reliant-blue);
+}
+
+.toc-container a.active {
+  color: var(--reliant-blue);
+  font-weight: 600;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced Focus States */
+*:focus-visible {
+  outline: 2px solid var(--reliant-blue);
+  outline-offset: 2px;
+}
+
+/* Breadcrumb Enhancements */
+.breadcrumb a {
+  @apply hx:transition-colors hx:duration-150;
+}
+
+.breadcrumb a:hover {
+  color: var(--reliant-blue);
+}
+
+/* Dark Mode Background Enhancement */
+.dark body {
+  background-color: #0a0a0a;
+}
+
+.dark .sidebar-container {
+  background-color: #0f0f0f;
+}
+
+/* Navbar Gradient Hint */
+.navbar-container {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(8px);
+}
+
+.dark .navbar-container {
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Badge/Tag Styling */
+.badge {
+  @apply hx:inline-flex hx:items-center hx:px-2.5 hx:py-0.5 hx:rounded-full hx:text-xs hx:font-medium;
+  background: linear-gradient(135deg, rgba(13, 140, 255, 0.1) 0%, rgba(110, 57, 255, 0.1) 100%);
+  color: var(--reliant-blue);
+  border: 1px solid rgba(13, 140, 255, 0.2);
+}
+
+/* Callout Boxes */
+.callout {
+  border-left: 3px solid var(--reliant-blue);
+  @apply hx:rounded-r-lg hx:bg-gray-50 hx:dark:bg-gray-900 hx:p-4;
+}
+
+.callout.info {
+  border-left-color: var(--reliant-blue);
+  background: linear-gradient(90deg, rgba(13, 140, 255, 0.05) 0%, transparent 100%);
+}
+
+.callout.tip {
+  border-left-color: var(--reliant-purple);
+  background: linear-gradient(90deg, rgba(110, 57, 255, 0.05) 0%, transparent 100%);
+}
+
+/* Smooth Transitions */
+* {
+  @apply hx:transition-colors hx:duration-150;
+}
+
+a, button, .clickable {
+  @apply hx:transition-all hx:duration-200;
+}
+
+/* Section Dividers */
+hr {
+  @apply hx:border-gray-200 hx:dark:border-gray-800;
+  border-width: 1px;
+}
+
+/* Mobile Menu Enhancements */
+@media (max-width: 768px) {
+  .mobile-menu {
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .dark .mobile-menu {
+    background: rgba(10, 10, 10, 0.95);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply hx:bg-gray-100 hx:dark:bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply hx:bg-gray-300 hx:dark:bg-gray-700 hx:rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--reliant-blue);
+}

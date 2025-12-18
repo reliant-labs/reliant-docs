@@ -1,0 +1,53 @@
+@media (max-width: 48rem) {
+  .hextra-sidebar-container {
+    @apply hx:fixed hx:pt-[calc(var(--navbar-height)+var(--hextra-banner-height))] hx:top-0 hx:w-full hx:bottom-0 hx:z-[15] hx:overscroll-contain hx:bg-white hx:dark:bg-dark;
+    transition: transform 0.4s cubic-bezier(0.52, 0.16, 0.04, 1);
+    will-change: transform, opacity;
+    contain: layout style;
+    backface-visibility: hidden;
+  }
+}
+
+.hextra-sidebar-container {
+  /* Willow-style sidebar border */
+  @apply hx:border-r hx:border-gray-200 hx:dark:border-gray-800/50;
+
+  li > div {
+    @apply hx:h-0;
+  }
+  li.open > div {
+    @apply hx:h-auto hx:pt-1;
+  }
+  li.open > a > span > svg > path {
+    @apply hx:rotate-90;
+  }
+
+  /* Enhanced link styling */
+  a {
+    @apply hx:relative hx:flex hx:items-center hx:gap-2 hx:rounded-md hx:px-3 hx:py-2 hx:text-sm;
+    @apply hx:text-gray-700 hx:dark:text-gray-300;
+    @apply hx:transition-all hx:duration-200 hx:ease-in-out;
+    border-left: 2px solid transparent;
+    margin-left: -2px;
+  }
+
+  a:hover {
+    @apply hx:bg-gray-100 hx:dark:bg-gray-900/50;
+    @apply hx:text-gray-900 hx:dark:text-gray-100;
+    border-left-color: var(--reliant-blue);
+  }
+
+  /* Active/current page styling */
+  a.active,
+  a[aria-current="page"] {
+    @apply hx:font-semibold hx:text-gray-900 hx:dark:text-white;
+    border-left-color: var(--reliant-blue);
+    background: linear-gradient(90deg, rgba(13, 140, 255, 0.08) 0%, transparent 100%);
+  }
+
+  /* Section headers */
+  .section-header {
+    @apply hx:px-3 hx:py-1 hx:text-xs hx:font-semibold hx:uppercase hx:tracking-wider;
+    @apply hx:text-gray-500 hx:dark:text-gray-400;
+  }
+}

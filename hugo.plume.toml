@@ -1,0 +1,40 @@
+baseURL = 'https://docs.reliantlabs.io/'
+languageCode = 'en-us'
+title = 'Reliant AI Docs'
+theme = 'plume'
+
+# Enable Hugo modules
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.100.0"
+
+# Site parameters
+[params]
+  description = "Documentation for Reliant AI Chat - A powerful AI chat application"
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    name = "Documentation"
+    url = "/docs/"
+    weight = 1
+
+  [[menu.main]]
+    name = "GitHub"
+    url = "https://github.com/reliant-labs/reliant-docs"
+    weight = 2
+
+# Markup configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style = "github"
+
+# Build configuration
+[build]
+  noTimes = true
+  minify = false
