@@ -206,11 +206,11 @@ How important is this feature to your workflow?
 - [ ] Low
 ```
 
-## Community (Coming Soon)
+## Community
 
-We're building a community around Reliant. Stay tuned for:
+We're building a community around Reliant. Join us on Slack and stay tuned for more:
 
-### Slack Community (Launching Soon)
+### Slack Community
 
 Connect with other Reliant users to:
 - Share custom agents and configurations
@@ -219,7 +219,7 @@ Connect with other Reliant users to:
 - Share workflows and tips
 - Vote on feature priorities
 
-**Join the waitlist**: Email community@reliant.ai with subject \"Slack Access\"
+**[Join our Slack Community](https://join.slack.com/t/reliant-pn51441/shared_invite/zt-3g6mhfnhx-~CWMzNRZUylWHevlJXO89A)**
 
 ### Discord Server (Planned)
 

@@ -97,3 +97,10 @@ enableGitInfo = true
   weight = 3
   [menu.main.params]
     icon = "github"
+
+[[menu.main]]
+  name = "Slack"
+  url = "https://join.slack.com/t/reliant-pn51441/shared_invite/zt-3g6mhfnhx-~CWMzNRZUylWHevlJXO89A"
+  weight = 4
+  [menu.main.params]
+    icon = "slack"

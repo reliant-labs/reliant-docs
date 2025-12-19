@@ -32,12 +32,12 @@ setup-submodules:
 		echo "❌ Error: Not in a Git repository. Please run 'git init' first."; \
 		exit 1; \
 	fi
-	@git submodule update --init --recursive
-	@if [ ! -d "themes/lotusdocs/layouts" ]; then \
-		echo "❌ Error: LotusDocs theme not found. Check submodule configuration."; \
+	@git submodule update --init --recursive 2>/dev/null || true
+	@if [ ! -d "themes/reliant/layouts" ]; then \
+		echo "❌ Error: Reliant theme not found at themes/reliant/layouts."; \
 		exit 1; \
 	fi
-	@echo "✅ Submodules initialized successfully!"
+	@echo "✅ Theme initialized successfully!"
 
 # Development server (uses hugo.dev.toml)
 dev: setup-submodules update-version
