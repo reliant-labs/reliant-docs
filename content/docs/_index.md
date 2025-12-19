@@ -58,11 +58,12 @@ Ready to get started with Reliant? Follow these simple steps:
 2. **[First Launch]({{< relref "getting-started" >}})** - Learn how to start using the application
 3. **[Advanced Features]({{< relref "settings" >}})** - Customize and optimize your experience
 
-## Support
+## Get Involved
 
-- **Documentation**: This comprehensive guide covers everything you need to know
+- **[Slack Community](https://join.slack.com/t/reliant-pn51441/shared_invite/zt-3g6mhfnhx-~CWMzNRZUylWHevlJXO89A)**: Join our community to get help, share tips, and connect with other users
+- **[Report Issues](https://github.com/reliant-labs/reliant-docs/issues)**: Found a bug? Let us know on GitHub
+- **[Feature Requests](https://github.com/reliant-labs/reliant-docs/issues)**: Submit your ideas and suggestions on GitHub
 - **Email Support**: Contact us at support@reliantlabs.com for help
-- **Feature Requests**: Send your ideas and feedback to our support team
 
 ---
 
